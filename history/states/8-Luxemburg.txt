@@ -1,0 +1,31 @@
+state=
+{
+	id=8
+	name="STATE_8"
+	
+	state_category = madness
+	
+	manpower = 29474863 # 29,474,863
+	resources={
+		steel=56
+		aluminium=73
+		oil=520
+		chromium=210
+		rubber=54
+		Tungsten=78
+	}
+
+	history=
+	{
+		owner = LUX
+		buildings = {
+			infrastructure = 10
+			arms_factory = 10
+			industrial_complex = 10
+		}
+		victory_points = { 6583 30 }
+		add_core_of = LUX
+	}
+
+	provinces={ 6583 }
+}
