@@ -170,10 +170,10 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = conservatism
 	traits = {
-		Dictator
+		#Dictator
 		Economic_Reformer
-		Empire_Builder
-		Great_War_Hero
+		#Empire_Builder
+		#Great_War_Hero
 	}
 }
 
@@ -184,9 +184,9 @@ create_corps_commander = { #Jacob
 	skill = 1
 	attack_skill = 3
 	defense_skill = 3 # was 2
-	planning_skill = 6 # was 4
-	logistics_skill = 4 # was 3
-	traits = { politically_connected trait_engineer infantry_officer }
+	planning_skill = 7 # was 4
+	logistics_skill = 5 # was 3
+	traits = { politically_connected career_officer infantry_officer }
 }
 create_corps_commander = { #Joel
 	name = "TheAngryPopo"
