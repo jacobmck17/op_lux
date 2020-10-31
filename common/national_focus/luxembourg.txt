@@ -40,6 +40,25 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = hjalmar_schacht
 		}
-		
+	}
+
+	#POLITICAL
+
+
+
+	# MILITARY
+	focus = {
+		id = LUX_army_training
+		icon = GFX_goal_generic_construction
+		x = 50
+		y = 0
+		cost = 1
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = {}
+		completion_reward = {
+			army_experience = 50
+		}
 	}
 }
