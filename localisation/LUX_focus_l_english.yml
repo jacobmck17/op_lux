@@ -1,3 +1,9 @@
 ﻿l_english:
  LUX_prepare_industry:0 "Prepare for Industrial Expansion"
  LUX_prepare_industry_desc:0 "Luxembourg seeks to become a large industrial power and they must initiate their industrial expansion to do so."
+ LUX_army_training:0 "Reforming the Army of Luxembourg"
+ LUX_army_training_desc:0 "For too long our great nation of Luxembourg has had a less than ideal fighting force, and this is only the beginning of many improvements to come."
+ LUX_pilot_training:0 "Pilot Training Exercises"
+ LUX_pilot_training_desc:0 "Our Pilots have no experience in combat, so we should make them as prepared as we can."
+ LUX_new_gun_developments:0 "New Gun Developments"
+ LUX_new_gun_developments_desc:0 "We recently had a scientific breakthough and can now produce many more guns for less factories"
