@@ -21,24 +21,24 @@ focus_tree = {
 	default = no
 
 	focus = {
-		id = GER_four_year_plan
+		id = LUX_prepare_industry
 		icon = GFX_goal_generic_construction
 		x = 6
 		y = 0
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 12
 		}
 		search_filters = {  }
 		completion_reward = {
 			add_tech_bonus = {
-				name = GER_four_year_plan
+				name = LUX_prepare_industry
 				bonus = 1.0
 				uses = 2
 				category = industry
 			}
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = hjalmar_schacht
+			show_ideas_tooltip = LUX_pierre_krier
 		}
 		
 	}
