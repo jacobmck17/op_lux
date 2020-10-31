@@ -56,6 +56,7 @@ focus_tree = {
 	############
 	# MILITARY #
 	############
+
 	#ARMY 
 	focus = {
 		id = LUX_army_training
@@ -78,7 +79,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = LUX_army_training
-		cost = 1
+		cost = 10
 		ai_will_do = {
 			factor = 5
 		}
