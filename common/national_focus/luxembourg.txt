@@ -19,7 +19,8 @@ focus_tree = {
 	}
 	
 	default = no
-
+	
+	#INDUSTRY
 	focus = {
 		id = LUX_prepare_industry
 		icon = GFX_goal_generic_construction2
