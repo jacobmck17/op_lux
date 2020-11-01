@@ -142,5 +142,25 @@ ideas = {
 				research_speed_factor = +0.25
 			}
 		}
+		received_research_aid = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = USA
+				tag = GER
+				tag = SOV
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = +0.20
+			}
+		}
 	}
 }
