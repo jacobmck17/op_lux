@@ -66,15 +66,44 @@ focus_tree = {
 		icon = GFX_focus_chi_army_reform
 		x = 0
 		y = 1
-		cost = 1
+		relative_position_id = LUX_army_training
+		cost = 5
 		ai_will_do = {
 			factor = 7
 		}
 		search_filters = {}
 		completion_reward = {
-			research_bonus = {
-				land_doctrine = 0.10
-			}
+			swap_ideas = {remove_idea = LUX_army_innovations_0 add_idea = LUX_army_innovations_1}
+		}
+	}
+	focus = {
+		id = LUX_army_innovations_2
+		icon = GFX_focus_chi_army_reform
+		x = 0
+		y = 1
+		relative_position_id = LUX_army_innovations_1
+		cost = 5
+		ai_will_do = {
+			factor = 7
+		}
+		search_filters = {}
+		completion_reward = {
+			swap_ideas = {remove_idea = LUX_army_innovations_1 add_idea = LUX_army_innovations_2}
+		}
+	}
+	focus = {
+		id = LUX_army_innovations_3
+		icon = GFX_focus_chi_army_reform
+		x = 0
+		y = 1
+		relative_position_id = LUX_army_innovations_2
+		cost = 5
+		ai_will_do = {
+			factor = 7
+		}
+		search_filters = {}
+		completion_reward = {
+			swap_ideas = {remove_idea = LUX_army_innovations_2 add_idea = LUX_army_innovations_3}
 		}
 	}
 

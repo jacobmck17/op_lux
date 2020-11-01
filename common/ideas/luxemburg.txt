@@ -1,4 +1,71 @@
 ideas = {
+	country = {
+		LUX_army_innovations_0 = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				research_bonus = {
+					land_doctrine = -0.25
+				}
+			}
+		}
+		LUX_army_innovations_1 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				research_bonus = {
+					land_doctrine = 0
+				}
+			}
+		}
+		LUX_army_innovations_2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				research_bonus = {
+					land_doctrine = 0.25
+				}
+			}
+		}
+		LUX_army_innovations_3 = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				research_bonus = {
+					land_doctrine = 0.5
+				}
+			}
+		}
+	}
+	
 	political_advisor = {
 
 		LUX_pierre_dupong = {
