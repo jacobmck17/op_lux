@@ -1,0 +1,146 @@
+ideas = {
+	country = {
+		LUX_new_gun_developments = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.20
+					instant = yes
+				}
+			}
+		}
+		
+		big_brain1 = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = -0.15
+			}
+		}
+		big_brain2 = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = -0.10
+			}
+		}
+		big_brain3 = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = +0.15
+			}
+		}
+		big_brain4_sov_aid = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				research_speed_factor = +0.25
+			}
+		}
+		big_brain4_ger_aid = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				research_speed_factor = +0.25
+			}
+		}
+		big_brain4_usa_aid = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				research_speed_factor = +0.25
+			}
+		}
+		big_brain4_no_aid = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = idea_jap_duplicate_research
+			
+			modifier = {
+				research_speed_factor = +0.25
+			}
+		}
+	}
+}

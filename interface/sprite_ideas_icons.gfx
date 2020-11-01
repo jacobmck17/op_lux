@@ -1,0 +1,14 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_idea_big_brain4_usa_aid"
+		texturefile = "gfx/interface/ideas/request_american_aid_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_big_brain4_ger_aid"
+		texturefile = "gfx/interface/ideas/request_german_aid_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_big_brain4_sov_aid"
+		texturefile = "gfx/interface/ideas/request_soviet_aid_icon.dds"
+	}
+}

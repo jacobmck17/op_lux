@@ -69,17 +69,16 @@ set_technology = {
 #politial and economy
 add_ideas = {
 	#economy
-	tot_economic_mobilisation
-	free_trade
+	partial_economic_mobilisation
+	limited_exports
 	limited_conscription
 	
 	#ideas
-	trained_for_battle
-	big_brain
+	big_brain1
 }
-set_research_slots = 4
-set_war_support = 1
-set_stability = 1
+set_research_slots = 3
+set_war_support = 0.65
+set_stability = 0.65
 1939.1.1 = {
 
 	add_political_power = 1198
