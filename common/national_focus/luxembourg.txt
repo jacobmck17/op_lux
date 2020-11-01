@@ -64,6 +64,7 @@ focus_tree = {
 	focus = {
 		id = LUX_army_innovations_1
 		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = LUX_army_training }
 		x = 0
 		y = 1
 		relative_position_id = LUX_army_training
@@ -79,6 +80,7 @@ focus_tree = {
 	focus = {
 		id = LUX_army_innovations_2
 		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = LUX_army_innovations_1 }
 		x = 0
 		y = 1
 		relative_position_id = LUX_army_innovations_1
@@ -94,6 +96,7 @@ focus_tree = {
 	focus = {
 		id = LUX_army_innovations_3
 		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = LUX_army_innovations_2 }
 		x = 0
 		y = 1
 		relative_position_id = LUX_army_innovations_2
@@ -104,6 +107,24 @@ focus_tree = {
 		search_filters = {}
 		completion_reward = {
 			swap_ideas = {remove_idea = LUX_army_innovations_2 add_idea = LUX_army_innovations_3}
+		}
+	}
+	focus = {
+		id = LUX_extra_recruitment
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = LUX_army_innovations_3 }
+		x = 0
+		y = 1
+		relative_position_id = LUX_army_innovations_3
+		cost = 5
+		ai_will_do = {
+			factor = 7
+		}
+		search_filters = {}
+		completion_reward = {
+			if = {
+				limit = {}
+			}
 		}
 	}
 
