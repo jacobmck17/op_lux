@@ -163,6 +163,12 @@ set_popularities = {
 		}
 	}
 }
+
+	########################
+	# LEADERS + COMMANDERS #
+	########################
+
+#LEADERS
 create_country_leader = {
 	name = "The Council"
 	desc = "POLITICS_JOSEPH_BECH_DESC"
@@ -177,7 +183,19 @@ create_country_leader = {
 	}
 }
 
-# GENERALS
+#FIELD MARSHALS
+create_field_marshal = {
+	name = "The Chad"
+	picture = "Portrait_LUX_The_Chad.dds"
+	traits = { brilliant_strategist inflexible_strategist war_hero media_personality skilled_staffer expert_delegator aggressive_assaulter infantry_officer cavalry_officer armor_officer desert_fox swamp_fox trait_mountaineer hill_fighter jungle_rat ranger urban_assault_specialist adaptable winter_specialist winter_expert}
+	skill = 1
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+#GENERALS
 create_corps_commander = { #Jacob
 	name = "Jacrox"
 	picture = "Portrait_LUX_Jacrox.dds"
