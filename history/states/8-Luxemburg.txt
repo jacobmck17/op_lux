@@ -7,21 +7,18 @@ state=
 	
 	manpower = 29474863 # 29,474,863
 	resources={
-		steel=56
-		aluminium=73
-		oil=520
-		chromium=210
-		rubber=54
-		Tungsten=78
+		steel=34
+		aluminium=6
+		Tungsten=16
 	}
 
 	history=
 	{
 		owner = LUX
 		buildings = {
-			infrastructure = 10
-			arms_factory = 10
-			industrial_complex = 10
+			infrastructure = 7
+			arms_factory = 12
+			industrial_complex = 14
 		}
 		victory_points = { 6583 30 }
 		add_core_of = LUX

@@ -193,10 +193,10 @@ create_corps_commander = { #Joel
 	picture = "Portrait_LUX_TheAngryPopo.dds"
 	skill = 1
 	attack_skill = 3
-	defense_skill = 5 # was 4
-	planning_skill = 2
-	logistics_skill = 4 # was 3
-	traits = { inflexible_strategist ranger } 				#only has 2
+	defense_skill = 7 # was 4
+	planning_skill = 3 # was 2
+	logistics_skill = 5 # was 3
+	traits = { inflexible_strategist infantry_officer trait_cautious }
 }
 create_corps_commander = { #Eric
 	name = "Stoßtruppen910"
