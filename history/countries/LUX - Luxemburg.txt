@@ -2,7 +2,10 @@
 
 oob = "LUX_1936"
 
-# Starting tech
+	############
+	# RESEARCH #
+	############
+	
 set_technology = {
 	#weapons
 	support_weapons = 1
@@ -18,9 +21,13 @@ set_technology = {
 	#support
 	tech_support = 1
 	tech_engineers = 1
+	tech_recon = 1
 	
 	#armor
 	gwtank = 1
+	basic_light_tank = 1
+	improved_light_tank = 1
+	basic_heavy_tank = 1
 	
 	#arty
 	gw_artillery = 1
@@ -35,16 +42,16 @@ set_technology = {
 	CAS1 = 1
 	
 	#engineering
+	radio = 1
 	electronic_mechanical_engineering = 1
 	mechanical_computing = 1
-	computing_machine = 1
-	improved_computing_machine = 1
-	advanced_computing_machine = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	fuel_refining = 1
 	
 	#industry
 	basic_machine_tools = 1
 	improved_machine_tools = 1
-	fuel_silos = 1
 	construction1 = 1
 	construction2 = 1
 	concentrated_industry = 1
@@ -66,6 +73,16 @@ set_technology = {
 	formation_flying = 1
 	force_rotation = 1
 }
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+
 #politial and economy
 add_ideas = {
 	#economy
@@ -77,8 +94,8 @@ add_ideas = {
 	big_brain1
 }
 set_research_slots = 3
-set_war_support = 0.65
-set_stability = 0.65
+set_war_support = 0.69
+set_stability = 0.66
 1939.1.1 = {
 
 	add_political_power = 1198
@@ -151,7 +168,7 @@ set_popularities = {
 	create_country_leader = {
 		name = "The Council"
 		desc = "POLITICS_JOSEPH_BECH_DESC"
-		picture = "Portrait_LUX_The_council"
+		picture = "Portrait_LUX_Leader_The_Council.dds"
 		expire = "1965.1.1"
 		ideology = conservatism
 		traits = {
@@ -170,22 +187,59 @@ set_popularities = {
 #LEADERS
 create_country_leader = {
 	name = "The Council"
-	desc = "POLITICS_JOSEPH_BECH_DESC"
-	picture = "Portrait_LUX_The_council.dds"
+	desc = ""
+	picture = "Portrait_LUX_Leader_The_Council.dds"
 	expire = "1965.1.1"
 	ideology = conservatism
 	traits = {
-		#Dictator
 		Economic_Reformer
-		#Empire_Builder
-		#Great_War_Hero
+	}
+}
+create_country_leader = {
+	name = "The Chad"
+	desc = ""
+	picture = "Portrait_LUX_Leader_The_Chad.dds"
+	expire = "1965.1.1"
+	ideology = rexism
+	traits = {
+		Dictator
+		Great_War_Hero
+	}
+}
+create_country_leader = {
+	name = "Ludwig the High Priest"
+	desc = ""
+	picture = "Portrait_LUX_Leader_Ludwig.dds"
+	expire = "1965.1.1"
+	ideology = anarchism
+	traits = {
+		Empire_Builder
+	}
+}
+create_country_leader = {
+	name = "Kaiser Scott"
+	desc = ""
+	picture = "Portrait_LUX_Leader_Scott.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		Empire_Builder
+	}
+}
+create_country_leader = {
+	name = "Reorganized Council"
+	desc = ""
+	picture = "Portrait_LUX_Purged_Council.dds"
+	expire = "1965.1.1"
+	ideology = Marxism
+	traits = {
 	}
 }
 
 #FIELD MARSHALS
 create_field_marshal = {
 	name = "The Chad"
-	picture = "Portrait_LUX_The_Chad.dds"
+	picture = "Portrait_LUX_Commander_The_Chad.dds"
 	traits = { brilliant_strategist inflexible_strategist war_hero media_personality skilled_staffer expert_delegator aggressive_assaulter infantry_officer cavalry_officer armor_officer desert_fox swamp_fox trait_mountaineer hill_fighter jungle_rat ranger urban_assault_specialist adaptable winter_specialist winter_expert}
 	skill = 1
 	attack_skill = 4
@@ -197,7 +251,7 @@ create_field_marshal = {
 #GENERALS
 create_corps_commander = { #Jacob
 	name = "Jacrox"
-	picture = "Portrait_LUX_Jacrox.dds"
+	picture = "Portrait_LUX_Commander_Jacrox.dds"
 	skill = 1
 	attack_skill = 3
 	defense_skill = 3 # was 2
@@ -207,7 +261,7 @@ create_corps_commander = { #Jacob
 }
 create_corps_commander = { #Joel
 	name = "TheAngryPopo"
-	picture = "Portrait_LUX_TheAngryPopo.dds"
+	picture = "Portrait_LUX_Commander_TheAngryPopo.dds"
 	skill = 1
 	attack_skill = 3
 	defense_skill = 7 # was 4
@@ -217,7 +271,7 @@ create_corps_commander = { #Joel
 }
 create_corps_commander = { #Eric
 	name = "Stoßtruppen910"
-	picture = "Portrait_LUX_Stoßtruppen910.dds"
+	picture = "Portrait_LUX_Commander_Stoßtruppen910.dds"
 	skill = 1
 	attack_skill = 6 # was 3
 	defense_skill = 2
@@ -227,7 +281,7 @@ create_corps_commander = { #Eric
 }
 create_corps_commander = { #Gareth
 	name = "BageL"
-	picture = "Portrait_LUX_BageL.dds"
+	picture = "Portrait_LUX_Commander_BageL.dds"
 	skill = 1
 	attack_skill = 5 # was 4
 	defense_skill = 4
@@ -237,7 +291,7 @@ create_corps_commander = { #Gareth
 }
 create_corps_commander = { #Josh mario
 	name = "The Junior Mint"
-	picture = "Portrait_LUX_The_Junior_Mint.dds"
+	picture = "Portrait_LUX_Commander_The_Junior_Mint.dds"
 	skill = 1
 	attack_skill = 3 # was 2
 	defense_skill = 3 # was 2
