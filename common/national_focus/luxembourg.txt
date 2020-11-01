@@ -61,11 +61,27 @@ focus_tree = {
 	############
 	# MILITARY #
 	############
+	focus = {
+		id = LUX_army_innovations_1
+		icon = GFX_focus_chi_army_reform
+		x = 0
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 7
+		}
+		search_filters = {}
+		completion_reward = {
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+		}
+	}
 
 	#ARMY 
 	focus = {
 		id = LUX_army_training
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_axis_build_infantry
 		x = 25
 		y = 0
 		cost = 1
@@ -79,7 +95,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_new_gun_developments
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = LUX_army_training }
 		x = -1
 		y = 1
@@ -97,7 +113,7 @@ focus_tree = {
 	#AIR
 	focus = {
 		id = LUX_pilot_training
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_build_airforce
 		x = 27
 		y = 0
 		cost = 1
