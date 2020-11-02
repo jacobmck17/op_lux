@@ -35,10 +35,8 @@ ideas = {
 
 			picture = generic_research_bonus
 			
-			modifier = {
-				research_bonus = {
-					land_doctrine = -0.25
-				}
+			research_bonus = {
+				land_doctrine = -0.25
 			}
 		}
 		LUX_army_innovations_1 = {
@@ -51,10 +49,8 @@ ideas = {
 
 			removal_cost = -1
 			
-			modifier = {
-				research_bonus = {
-					land_doctrine = 0
-				}
+			research_bonus = {
+				land_doctrine = 0
 			}
 		}
 		LUX_army_innovations_2 = {
@@ -67,10 +63,8 @@ ideas = {
 
 			removal_cost = -1
 			
-			modifier = {
-				research_bonus = {
-					land_doctrine = 0.25
-				}
+			research_bonus = {
+				land_doctrine = 0.25
 			}
 		}
 		LUX_army_innovations_3 = {
@@ -83,10 +77,8 @@ ideas = {
 
 			removal_cost = -1
 			
-			modifier = {
-				research_bonus = {
-					land_doctrine = 0.5
-				}
+			research_bonus = {
+				land_doctrine = 0.5
 			}
 		}
 		
