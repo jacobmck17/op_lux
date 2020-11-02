@@ -220,7 +220,7 @@ focus_tree = {
 		relative_position_id = LUX_improve_scientists
 		prerequisite = { focus = LUX_improve_scientists }
 		
-		mutually_exclusive = { focus = LUX_treaty_with_sov }
+		mutually_exclusive = { focus = LUX_treaty_with_usa }
 		mutually_exclusive = { focus = LUX_treaty_with_ger }
 		mutually_exclusive = { focus = LUX_treaty_with_none }
 		
