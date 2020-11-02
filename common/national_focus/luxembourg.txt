@@ -148,7 +148,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_improve_scientists
-		icon = GFX_focus_research2
+		icon = GFX_goal_tfv_generic_tech_sharing
 		x = 0
 		y = 1
 		
@@ -158,7 +158,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_idea = big_brain3
+			add_ideas = big_brain3
 		}
 		ai_will_do = {
 			factor = 12
@@ -174,9 +174,14 @@ focus_tree = {
 		relative_position_id = LUX_improve_scientists
 		prerequisite = { focus = LUX_improve_scientists }
 		
+		mutually_exclusive = { focus = LUX_treaty_with_ger }
+		mutually_exclusive = { focus = LUX_treaty_with_sov }
+		mutually_exclusive = { focus = LUX_treaty_with_none }
+		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_ideas = big_brain4_usa_aid
+			USA = { add_ideas = received_research_aid }
 		}
 		ai_will_do = {
 			factor = 12
@@ -192,9 +197,14 @@ focus_tree = {
 		relative_position_id = LUX_improve_scientists
 		prerequisite = { focus = LUX_improve_scientists }
 		
+		mutually_exclusive = { focus = LUX_treaty_with_usa }
+		mutually_exclusive = { focus = LUX_treaty_with_sov }
+		mutually_exclusive = { focus = LUX_treaty_with_none }
+		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_ideas = big_brain4_usa_aid
+			add_ideas = big_brain4_ger_aid
+			GER = { add_ideas = received_research_aid }
 		}
 		ai_will_do = {
 			factor = 12
@@ -210,9 +220,14 @@ focus_tree = {
 		relative_position_id = LUX_improve_scientists
 		prerequisite = { focus = LUX_improve_scientists }
 		
+		mutually_exclusive = { focus = LUX_treaty_with_sov }
+		mutually_exclusive = { focus = LUX_treaty_with_ger }
+		mutually_exclusive = { focus = LUX_treaty_with_none }
+		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_ideas = big_brain4_sov_aid
+			SOV = { add_ideas = received_research_aid }
 		}
 		ai_will_do = {
 			factor = 12
@@ -228,9 +243,31 @@ focus_tree = {
 		relative_position_id = LUX_improve_scientists
 		prerequisite = { focus = LUX_improve_scientists }
 		
+		mutually_exclusive = { focus = LUX_treaty_with_usa }
+		mutually_exclusive = { focus = LUX_treaty_with_ger }
+		mutually_exclusive = { focus = LUX_treaty_with_sov }
+		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			swap_ideas = {remove_idea = big_brain3 add_idea = big_brain4_no_aid}
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	focus = {
+		id = LUX_build_new_labs
+		icon = GFX_focus_research2
+		x = 0
+		y = 2
+		
+		cost = 10
+		relative_position_id = LUX_improve_scientists
+		prerequisite = { focus = LUX_treaty_with_usa focus = LUX_treaty_with_ger focus = LUX_treaty_with_sov focus = LUX_treaty_with_none}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 2
 		}
 		ai_will_do = {
 			factor = 12
