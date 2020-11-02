@@ -11,4 +11,28 @@ spriteTypes = {
 		name = "GFX_idea_big_brain4_sov_aid"
 		texturefile = "gfx/interface/ideas/request_soviet_aid_icon.dds"
 	}
+	SpriteType = {
+		name = "GFX_idea_big_brain1"
+		texturefile = "gfx/interface/ideas/research_debuff_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_big_brain2"
+		texturefile = "gfx/interface/ideas/research_debuff_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_big_brain3"
+		texturefile = "gfx/interface/ideas/brilliant_scientists_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_big_brain4_no_aid"
+		texturefile = "gfx/interface/ideas/big_brain_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_upgraded_oil_processing"
+		texturefile = "gfx/interface/ideas/upgraded_oil_processing_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_proud_workers"
+		texturefile = "gfx/interface/ideas/proud_workers_icon.dds"
+	}
 }

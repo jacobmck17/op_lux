@@ -214,5 +214,39 @@ ideas = {
 				research_speed_factor = +0.20
 			}
 		}
+		upgraded_oil_processing = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				fuel_gain_factor_from_states = 2
+			}
+		}
+		proud_workers = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				conscription = 0.0420
+				industrial_capacity_factory	= 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
 	}
 }

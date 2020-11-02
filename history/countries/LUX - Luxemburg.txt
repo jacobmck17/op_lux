@@ -53,9 +53,6 @@ set_technology = {
 	basic_machine_tools = 1
 	improved_machine_tools = 1
 	construction1 = 1
-	construction2 = 1
-	concentrated_industry = 1
-	concentrated_industry2 = 1
 	
 	#land doctorine
 	mobile_warfare = 1
@@ -86,8 +83,8 @@ if = {
 #politial and economy
 add_ideas = {
 	#economy
-	partial_economic_mobilisation
-	limited_exports
+	civilan_economy
+	export_focus
 	limited_conscription
 	
 	#ideas
