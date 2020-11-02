@@ -26,7 +26,7 @@ focus_tree = {
 	
 	focus = {
 		id = LUX_prepare_industry
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 6
 		y = 0
 		cost = 5
@@ -38,6 +38,11 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 12
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = LUX_pierre_krier
@@ -460,6 +465,152 @@ focus_tree = {
 				add_ideas = tot_economic_mobilisation
 				add_ideas = proud_workers
 			}
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	
+	#RESOURCES
+	
+	focus = {
+		id = LUX_expand_steel
+		icon = GFX_focus_generic_steel
+		x = -4
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_prepare_industry
+		prerequisite = { focus = LUX_prepare_industry }
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+				type = steel
+				amount = 100
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	focus = {
+		id = LUX_expand_tungsten
+		icon = GFX_focus_generic_tank_production
+		x = -1
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_expand_steel
+		prerequisite = { focus = LUX_expand_steel }
+		
+		mutually_exclusive = { focus = LUX_expand_chromium }
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+				type = tungsten
+				amount = 180
+				}
+				add_resource = {
+				type = chromium
+				amount = 40
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	focus = {
+		id = LUX_expand_chromium
+		icon = GFX_focus_generic_navy_battleship2
+		x = 1
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_expand_steel
+		prerequisite = { focus = LUX_expand_steel }
+		
+		mutually_exclusive = { focus = LUX_expand_tungsten }
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+				type = chromium
+				amount = 180
+				}
+				add_resource = {
+				type = tungsten
+				amount = 40
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	focus = {
+		id = LUX_expand_aluminum
+		icon = GFX_focus_generic_aluminum
+		x = 1
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_expand_tungsten
+		prerequisite = { focus = LUX_expand_tungsten focus = LUX_expand_chromium }
+		
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+				type = aluminium
+				amount = 75
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	focus = {
+		id = LUX_resources_for_all
+		icon = GFX_goal_generic_positive_trade_relations
+		x = -1
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_expand_aluminum
+		prerequisite = { focus = LUX_expand_aluminum }
+		
+		mutually_exclusive = { focus = LUX_resources_for_us }
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	focus = {
+		id = LUX_resources_for_us
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 1
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_expand_aluminum
+		prerequisite = { focus = LUX_expand_aluminum }
+		
+		mutually_exclusive = { focus = LUX_resources_for_all }
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
 		}
 		ai_will_do = {
 			factor = 12

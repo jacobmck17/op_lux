@@ -83,8 +83,6 @@ if = {
 #politial and economy
 add_ideas = {
 	#economy
-	civilan_economy
-	export_focus
 	limited_conscription
 	
 	#ideas
@@ -99,16 +97,7 @@ set_stability = 0.59
 	add_political_power = 1198
 	
 	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = construction_effort_2
-	complete_national_focus = production_effort_2
-	complete_national_focus = infrastructure_effort
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
+	#complete_national_focus = army_effort
 	
 	oob = "LUX_1939"
 	set_technology = {

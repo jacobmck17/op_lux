@@ -1,4 +1,9 @@
 ideas = {
+	
+	###########
+	# COUNTRY #
+	###########
+	
 	country = {
 		LUX_new_gun_developments = {
 			
@@ -248,5 +253,11 @@ ideas = {
 				industrial_capacity_dockyard = 0.1
 			}
 		}
+	}
+	###########
+	# ECONOMY #
+	###########
+	
+	economy = {
 	}
 }
