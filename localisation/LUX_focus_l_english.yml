@@ -1,4 +1,5 @@
 ﻿l_english:
+ #INDUSTRY
  LUX_prepare_industry:0 "Prepare for Industrial Expansion"
  LUX_prepare_industry_desc:0 "Luxembourg seeks to become a large industrial power and they must initiate their industrial expansion to do so."
  LUX_prepare_scientists:0 "Prepare Our Scientists"
@@ -35,6 +36,9 @@
  LUX_double_decker_factory_desc:0 ""
  LUX_absolute_industrialization:0 ""
  LUX_absolute_industrialization_desc:0 ""
+ #POLITICAL
+
+ #MILITARY
  LUX_army_training:0 "Reforming the Army of Luxembourg"
  LUX_army_training_desc:0 "For too long our great nation of Luxembourg has had a less than ideal fighting force, and this is only the beginning of many improvements to come."
  LUX_pilot_training:0 "Pilot Training Exercises"
@@ -57,3 +61,7 @@
  LUX_air_doctrine_desc:0 "Luxembourg has secret knowledge regarding strategies of war, and we shall use these against our enemies."
  LUX_fighters:0 "Air Superiority"
  LUX_fighters_desc:0 "Luxembourg will improve air power beyond the technologies of all others. We shall lay claim to the skies."
+ LUX_medium_tanks:0 "Focus On Medium Armor"
+ LUX_medium_tanks_desc:0 "Medium tanks are the perfect balance of speed, and strength. Why pick between light and heavy designs when you can have both?"
+ LUX_heavy_tanks:0 "Focus On Heavy Armor"
+ LUX_heavy_tanks_desc:0 "With advanced heavy tanks at our disposal, we can trample our enemies like they are France."

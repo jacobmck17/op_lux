@@ -630,6 +630,7 @@ focus_tree = {
 		id = LUX_army_innovations_1
 		icon = GFX_focus_chi_army_reform
 		prerequisite = { focus = LUX_army_training }
+		prerequisite = { focus = LUX_pilot_training }
 		x = 0
 		y = 1
 		relative_position_id = LUX_army_training
@@ -762,6 +763,50 @@ focus_tree = {
 				bonus = 1.5
 				uses = 2
 				category = cat_light_armor
+			}
+		}
+	}
+	focus = {
+		id = LUX_medium_tanks
+		icon = GFX_goal_generic_small_arms
+		prerequisite = {focus = LUX_light_tanks}
+		mutually_exclusive = {focus = LUX_heavy_tanks}
+		x = -0.5
+		y = 1
+		relative_position_id = LUX_light_tanks
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = {}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 2
+				ahead_reduction = 2
+				category = cat_medium_armor
+			}
+		}
+	}
+	focus = {
+		id = LUX_heavy_tanks
+		icon = GFX_goal_generic_small_arms
+		prerequisite = {focus = LUX_light_tanks}
+		mutually_exclusive = {focus = LUX_medium_tanks}
+		x = 0.5
+		y = 1
+		relative_position_id = LUX_light_tanks
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = {}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 2
+				ahead_reduction = 2
+				category = cat_heavy_armor
 			}
 		}
 	}
