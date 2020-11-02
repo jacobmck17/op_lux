@@ -33,25 +33,210 @@ focus_tree = {
 		ai_will_do = {
 			factor = 12
 		}
-		search_filters = {  }
+		#prerequisite = { focus = LUX_expand_civ_industry1 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			#add_tech_bonus = {
-			#	name = LUX_prepare_industry
-			#	bonus = 1.0
-			#	uses = 2
-			#	category = industry
-			#}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 12
-				#add_building_construction = {
-				#	type = industrial_complex
-				#	level = 2
-				#	instant_build = yes
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = LUX_pierre_krier
 		}
 	}
+	
+	focus = {
+		id = LUX_prepare_scientists
+		icon = GFX_focus_research
+		x = 4
+		y = 0
+		
+		cost = 5
+		relative_position_id = LUX_prepare_industry
+		#prerequisite = { focus = LUX_expand_civ_industry1 }
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			swap_ideas = {remove_idea = big_brain1 add_idea = big_brain2}
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	focus = {
+		id = LUX_expand_civ_industry1
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 1
+		y = 1
+		
+		cost = 10
+		relative_position_id = LUX_prepare_industry
+		prerequisite = { focus = LUX_prepare_industry }
+		prerequisite = { focus = LUX_prepare_scientists }
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 8
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 4
+				instant_build = yes
+			}
+			add_tech_bonus = {
+				name = LUX_prepare_industry
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	
+	focus = {
+		id = LUX_expand_civ_industry2
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		
+		cost = 10
+		relative_position_id = LUX_expand_civ_industry1
+		prerequisite = { focus = LUX_expand_civ_industry1 }
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 8
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 4
+				instant_build = yes
+			}
+			add_tech_bonus = {
+				name = LUX_prepare_industry
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	
+	focus = {
+		id = LUX_equip_scientists
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 2
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_prepare_scientists
+		prerequisite = { focus = LUX_prepare_scientists }
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			remove_ideas = big_brain2
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	focus = {
+		id = LUX_improve_scientists
+		icon = GFX_focus_research2
+		x = 0
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_equip_scientists
+		prerequisite = { focus = LUX_equip_scientists }
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_idea = big_brain3
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	focus = {
+		id = LUX_treaty_with_usa
+		icon = GFX_focus_chi_mission_to_the_us
+		x = -3
+		y = 1
+		
+		cost = 10
+		relative_position_id = LUX_improve_scientists
+		prerequisite = { focus = LUX_improve_scientists }
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = big_brain4_usa_aid
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	focus = {
+		id = LUX_treaty_with_ger
+		icon = GFX_focus_chi_mission_to_germany
+		x = -1
+		y = 1
+		
+		cost = 10
+		relative_position_id = LUX_improve_scientists
+		prerequisite = { focus = LUX_improve_scientists }
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = big_brain4_usa_aid
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	focus = {
+		id = LUX_treaty_with_sov
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 1
+		y = 1
+		
+		cost = 10
+		relative_position_id = LUX_improve_scientists
+		prerequisite = { focus = LUX_improve_scientists }
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = big_brain4_sov_aid
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	focus = {
+		id = LUX_treaty_with_none
+		icon = GFX_focus_generic_treaty
+		x = 3
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_improve_scientists
+		prerequisite = { focus = LUX_improve_scientists }
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			swap_ideas = {remove_idea = big_brain3 add_idea = big_brain4_no_aid}
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+
 
 	#############
 	# POLITICAL #

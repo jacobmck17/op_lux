@@ -95,7 +95,7 @@ add_ideas = {
 }
 set_research_slots = 3
 set_war_support = 0.69
-set_stability = 0.66
+set_stability = 0.59
 1939.1.1 = {
 
 	add_political_power = 1198
@@ -151,10 +151,10 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 25
-	fascism = 25
-	communism = 25
-	neutrality = 25
+	democratic = 70
+	fascism = 10
+	communism = 10
+	neutrality = 10
 }
 
 1939.1.1 = {
