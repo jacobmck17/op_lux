@@ -441,7 +441,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_absolute_industrialization
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_demand_sudetenland
 		x = 2
 		y = 1
 		
