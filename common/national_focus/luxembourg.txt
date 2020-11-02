@@ -296,7 +296,7 @@ focus_tree = {
 		}
 		search_filters = {}
 		completion_reward = {
-			swap_ideas = {remove_idea = LUX_army_innovations_0 add_idea = LUX_army_innovations_1}
+			swap_ideas = { remove_idea = LUX_army_innovations_0 add_idea = LUX_army_innovations_1 }
 		}
 	}
 	focus = {
