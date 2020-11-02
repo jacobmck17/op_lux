@@ -249,6 +249,7 @@ focus_tree = {
 	focus = {
 		id = LUX_army_innovations_1
 		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = LUX_army_training }
 		x = 0
 		y = 1
 		relative_position_id = LUX_army_training
@@ -264,6 +265,7 @@ focus_tree = {
 	focus = {
 		id = LUX_army_innovations_2
 		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = LUX_army_innovations_1 }
 		x = 0
 		y = 1
 		relative_position_id = LUX_army_innovations_1
@@ -279,6 +281,7 @@ focus_tree = {
 	focus = {
 		id = LUX_army_innovations_3
 		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = LUX_army_innovations_2 }
 		x = 0
 		y = 1
 		relative_position_id = LUX_army_innovations_2
@@ -289,6 +292,24 @@ focus_tree = {
 		search_filters = {}
 		completion_reward = {
 			swap_ideas = {remove_idea = LUX_army_innovations_2 add_idea = LUX_army_innovations_3}
+		}
+	}
+	focus = {
+		id = LUX_extra_recruitment
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = LUX_army_innovations_3 }
+		x = 0
+		y = 1
+		relative_position_id = LUX_army_innovations_3
+		cost = 5
+		ai_will_do = {
+			factor = 7
+		}
+		search_filters = {}
+		completion_reward = {
+			if = {
+				limit = {}
+			}
 		}
 	}
 
@@ -311,7 +332,7 @@ focus_tree = {
 		id = LUX_new_gun_developments
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = LUX_army_training }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = LUX_army_training
 		cost = 10
@@ -323,12 +344,53 @@ focus_tree = {
 			add_ideas = {LUX_new_gun_developments}
 		}
 	}
+	focus = {
+		id = LUX_land_doctrine_focus
+		icon = GFX_goal_generic_small_arms
+		prerequisite = {focus = LUX_new_gun_developments}
+		prerequisite = {focus = LUX_army_innovations_1}
+		x = 0
+		y = 1
+		relative_position_id = LUX_new_gun_developments
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = {}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 2.0
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = LUX_light_tanks
+		icon = GFX_goal_generic_small_arms
+		prerequisite = {focus = LUX_land_doctrine_focus}
+		x = 0
+		y = 1
+		relative_position_id = LUX_land_doctrine_focus
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = {}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 2
+				category = cat_light_armor
+			}
+		}
+	}
 
 	#AIR
 	focus = {
 		id = LUX_pilot_training
 		icon = GFX_goal_generic_build_airforce
-		x = 27
+		x = 28
 		y = 0
 		cost = 1
 		ai_will_do = {
@@ -337,6 +399,47 @@ focus_tree = {
 		search_filters = {}
 		completion_reward = {
 			air_experience = 50
+		}
+	}
+	focus = {
+		id = LUX_air_doctrine
+		icon = GFX_goal_generic_small_arms
+		prerequisite = {focus = LUX_pilot_training}
+		prerequisite = {focus = LUX_army_innovations_1}
+		x = 0
+		y = 2
+		relative_position_id = LUX_pilot_training
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = {}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = LUX_fighters
+		icon = GFX_goal_generic_small_arms
+		prerequisite = {focus = LUX_pilot_training}
+		x = 2
+		y = 1
+		relative_position_id = LUX_pilot_training
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = {}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 2
+				category = light_fighter
+			}
 		}
 	}
 

@@ -21,6 +21,66 @@ ideas = {
 				}
 			}
 		}
+		LUX_army_innovations_0 = {
+			
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_research_bonus
+			
+			research_bonus = {
+				land_doctrine = -0.25
+			}
+		}
+		LUX_army_innovations_1 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+			
+			research_bonus = {
+				land_doctrine = 0
+			}
+		}
+		LUX_army_innovations_2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+			
+			research_bonus = {
+				land_doctrine = 0.25
+			}
+		}
+		LUX_army_innovations_3 = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+			
+			research_bonus = {
+				land_doctrine = 0.5
+			}
+		}
 		
 		big_brain1 = {
 		
