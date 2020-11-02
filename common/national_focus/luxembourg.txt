@@ -771,7 +771,7 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = {focus = LUX_light_tanks}
 		mutually_exclusive = {focus = LUX_heavy_tanks}
-		x = -0.5
+		x = -0.75
 		y = 1
 		relative_position_id = LUX_light_tanks
 		cost = 10
@@ -793,7 +793,7 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = {focus = LUX_light_tanks}
 		mutually_exclusive = {focus = LUX_medium_tanks}
-		x = 0.5
+		x = 0.75
 		y = 1
 		relative_position_id = LUX_light_tanks
 		cost = 10
@@ -808,6 +808,38 @@ focus_tree = {
 				ahead_reduction = 2
 				category = cat_heavy_armor
 			}
+		}
+	}
+	focus = {
+		id = LUX_medium_tank_production
+		icon = GFX_goal_generic_small_arms
+		prerequisite = {focus = LUX_medium_tanks}
+		x = 0
+		y = 1
+		relative_position_id = LUX_medium_tanks
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = {}
+		completion_reward = {
+			add_ideas = {LUX_medium_tank_breakthrough}
+		}
+	}
+	focus = {
+		id = LUX_heavy_tank_production
+		icon = GFX_goal_generic_small_arms
+		prerequisite = {focus = LUX_heavy_tanks}
+		x = 0
+		y = 1
+		relative_position_id = LUX_heavy_tanks
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = {}
+		completion_reward = {
+			add_ideas = {LUX_heavy_tank_breakthrough}
 		}
 	}
 

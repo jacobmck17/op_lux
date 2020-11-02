@@ -65,3 +65,7 @@
  LUX_medium_tanks_desc:0 "Medium tanks are the perfect balance of speed, and strength. Why pick between light and heavy designs when you can have both?"
  LUX_heavy_tanks:0 "Focus On Heavy Armor"
  LUX_heavy_tanks_desc:0 "With advanced heavy tanks at our disposal, we can trample our enemies like they are France."
+ LUX_medium_tank_production:0 "Medium Tank Mass Production"
+ LUX_medium_tank_production_desc:0 "Now that we have the newest model medium tanks in the world, our scientists should study how to mass produce them at reduced costs."
+ LUX_heavy_tank_production:0 "Heavy Tank Mass Production"
+ LUX_heavy_tank_production_desc:0 "Now that we have the newest model medium tanks in the world, our scientists should study how to mass produce them at reduced costs."
