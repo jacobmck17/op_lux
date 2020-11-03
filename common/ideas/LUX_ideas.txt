@@ -80,10 +80,11 @@ ideas = {
 				always = yes
 			}
 
-			picture = generic_research_bonus
+			picture = chi_army_corruption
 			
 			research_bonus = {
 				land_doctrine = -0.25
+				air_doctrine = -0.25
 			}
 		}
 		LUX_army_innovations_1 = {
@@ -92,12 +93,13 @@ ideas = {
 				always = no
 			}
 			
-			picture = generic_democratic_drift_bonus
+			picture = chi_army_corruption2
 
 			removal_cost = -1
 			
 			research_bonus = {
-				land_doctrine = 0
+				land_doctrine = 0.25
+				air_doctrine = 0.25
 			}
 		}
 		LUX_army_innovations_2 = {
@@ -106,26 +108,13 @@ ideas = {
 				always = no
 			}
 			
-			picture = generic_democratic_drift_bonus
-
-			removal_cost = -1
-			
-			research_bonus = {
-				land_doctrine = 0.25
-			}
-		}
-		LUX_army_innovations_3 = {
-			
-			allowed = {
-				always = yes
-			}
-			
-			picture = generic_democratic_drift_bonus
+			picture = chi_army_corruption3
 
 			removal_cost = -1
 			
 			research_bonus = {
 				land_doctrine = 0.5
+				air_doctrine = 0.5
 			}
 		}
 		
