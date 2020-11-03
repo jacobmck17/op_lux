@@ -35,4 +35,12 @@ spriteTypes = {
 		name = "GFX_idea_proud_workers"
 		texturefile = "gfx/interface/ideas/proud_workers_icon.dds"
 	}
+	SpriteType = {
+		name = "GFX_idea_open_economy"
+		texturefile = "gfx/interface/ideas/open_economy_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_economy_isolation"
+		texturefile = "gfx/interface/ideas/economy_isolation_icon.dds"
+	}
 }

@@ -592,6 +592,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			add_ideas = open_economy
 		}
 		ai_will_do = {
 			factor = 12
@@ -611,6 +612,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			add_ideas = economy_isolation
 		}
 		ai_will_do = {
 			factor = 12
