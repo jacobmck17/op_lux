@@ -702,7 +702,7 @@ focus_tree = {
 		icon = GFX_goal_generic_axis_build_infantry
 		x = 25
 		y = 0
-		cost = 1
+		cost = 2
 		ai_will_do = {
 			factor = 5
 		}
@@ -852,7 +852,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = LUX_army_training
-		cost = 1
+		cost = 2
 		ai_will_do = {
 			factor = 5
 		}
