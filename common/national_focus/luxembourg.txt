@@ -934,6 +934,68 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = LUX_cas
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = {focus = LUX_air_bases}
+		prerequisite = {focus = LUX_air_doctrine}
+		x = -2
+		y = 1
+		relative_position_id = LUX_air_bases
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = {}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 2
+				category = cas_bomber
+			}
+		}
+	}
+	focus = {
+		id = LUX_bomber
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = {focus = LUX_air_bases}
+		prerequisite = {focus = LUX_air_doctrine}
+		mutually_exclusive = {focus = LUX_cas}
+		x = 0
+		y = 1
+		relative_position_id = LUX_air_bases
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = {}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 2
+				category = tactical_bomber
+			}
+		}
+	}
+	focus = {
+		id = LUX_plane_production
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = {
+			focus = LUX_cas
+			focus = LUX_bomber
+		}
+		x = 1
+		y = 1
+		relative_position_id = LUX_cas
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = {}
+		completion_reward = {
+			add_ideas = {LUX_plane_production}
+		}
+	}
 
 	#NAVY
 }
