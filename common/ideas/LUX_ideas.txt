@@ -258,6 +258,72 @@ ideas = {
 	# ECONOMY #
 	###########
 	
-	economy = {
+	trade_laws = {
+		law = yes
+		use_list_view = yes
+		
+		open_economy = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				if = {
+					limit = {
+						original_tag = LUX
+						has_completed_focus = LUX_resources_for_all
+					}
+				}
+			}
+			removal_cost = -1
+		
+			modifier = {
+				consumer_goods_factor = -0.05
+				min_export = 1.0
+				industrial_capacity_factory = 0.25
+				industrial_capacity_dockyard = 0.25
+				production_speed_buildings_factor = 0.25
+				research_speed_factor = 0.2
+				civilian_intel_to_others = 80.0
+				navy_intel_to_others = 40.0
+			}
+			
+			allowed_to_remove = {
+				always = yes
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		economy_isolation = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				if = {
+					limit = {
+						original_tag = LUX
+						has_completed_focus = LUX_resources_for_us
+					}
+				}
+			}
+			removal_cost = -1
+		
+			modifier = {
+				min_export = 0
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				civilian_intel_to_others = -10.0
+				navy_intel_to_others = -5.0
+			}
+			
+			allowed_to_remove = {
+				always = yes
+			}
+			
+			cancel_if_invalid = no
+		}
 	}
 }
