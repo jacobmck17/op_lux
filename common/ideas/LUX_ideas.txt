@@ -26,7 +26,7 @@ ideas = {
 				}
 			}
 		}
-		LUX_medium_tank_breakthrough = {
+		LUX_medium_tank_production = {
 			
 			allowed = {
 				always = no
@@ -47,7 +47,7 @@ ideas = {
 				}
 			}
 		}
-		LUX_heavy_tank_breakthrough = {
+		LUX_heavy_tank_production = {
 			
 			allowed = {
 				always = no
