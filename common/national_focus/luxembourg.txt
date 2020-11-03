@@ -732,7 +732,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = {focus = LUX_new_gun_developments}
 		prerequisite = {focus = LUX_army_innovations_1}
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = LUX_new_gun_developments
 		cost = 10
