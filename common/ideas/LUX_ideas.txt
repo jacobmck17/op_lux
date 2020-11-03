@@ -338,6 +338,69 @@ ideas = {
 				industrial_capacity_dockyard = 0.1
 			}
 		}
+		revenge_on_usa = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				conscription = 0.02
+			}
+			targeted_modifier = {
+				tag = USA
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		revenge_on_ger = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				conscription = 0.02
+			}
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		revenge_on_sov = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				conscription = 0.02
+			}
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
 	}
 	###########
 	# ECONOMY #

@@ -3,3 +3,111 @@
 ###########################
 
 add_namespace = luxemburg
+
+# LUX Research Treaty
+country_event = {
+	id = luxemburg.1
+	title = luxemburg.1.t
+	desc = luxemburg.1.d
+	picture = GFX_report_event_physics_lab_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luxemburg.1.a	#sounds good
+		ai_chance = { factor = 100 }
+		LUX = {
+			country_event = { days = 1 id = luxemburg.2 } #successful treaty
+		}
+		# REVISIT Balance research bonus
+		add_ideas = {
+				received_research_aid
+		}
+	}
+	
+	option = {
+		name = luxemburg.1.b	#no way 
+		#add_timed_idea = { idea = SOV_scientist_defect days = 90 }
+		ai_chance = { factor = 0 }
+		add_political_power = -50
+		LUX = {
+			country_event = { days = 1 id = luxemburg.3 } #lux will have their revenge
+		}
+	}
+}
+
+# Accept  LUX Treaty
+country_event = {
+	id = luxemburg.2
+	title = luxemburg.2.t
+	desc = luxemburg.2.d
+	picture = GFX_report_event_physics_lab_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = luxemburg.2.a	#yay
+		if = {
+			limit = {
+				has_completed_focus = LUX_treaty_with_usa
+			}
+			add_ideas = {
+				big_brain4_usa_aid
+			}
+		}
+		if = {
+			limit = {
+				has_completed_focus = LUX_treaty_with_ger
+			}
+			add_ideas = {
+				big_brain4_ger_aid
+			}
+		}
+		if = {
+			limit = {
+				has_completed_focus = LUX_treaty_with_sov
+			}
+			add_ideas = {
+				big_brain4_sov_aid
+			}
+		}
+	}
+}
+
+# Reject  LUX Treaty
+country_event = {
+	id = luxemburg.3
+	title = luxemburg.3.t
+	desc = luxemburg.3.d
+	picture = GFX_report_event_physics_lab_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = luxemburg.3.a	#noo
+		if = {
+			limit = {
+				has_completed_focus = LUX_treaty_with_usa
+			}
+			add_ideas = {
+				revenge_on_usa
+			}
+		}
+		if = {
+			limit = {
+				has_completed_focus = LUX_treaty_with_ger
+			}
+			add_ideas = {
+				revenge_on_ger
+			}
+		}
+		if = {
+			limit = {
+				has_completed_focus = LUX_treaty_with_sov
+			}
+			add_ideas = {
+				revenge_on_sov
+			}
+		}
+	}
+}

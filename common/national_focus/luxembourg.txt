@@ -185,8 +185,12 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_ideas = big_brain4_usa_aid
-			USA = { add_ideas = received_research_aid }
+			#add_ideas = big_brain4_usa_aid
+			#USA = { add_ideas = received_research_aid }
+			USA = {
+				country_event = { id = luxemburg.1 days = 1 }
+				custom_effect_tooltip = needs_approval
+			}
 		}
 		ai_will_do = {
 			factor = 12
@@ -208,8 +212,12 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_ideas = big_brain4_ger_aid
-			GER = { add_ideas = received_research_aid }
+			#add_ideas = big_brain4_ger_aid
+			#GER = { add_ideas = received_research_aid }
+			GER = {
+				country_event = { id = luxemburg.1 days = 1 }
+				custom_effect_tooltip = needs_approval
+			}
 		}
 		ai_will_do = {
 			factor = 12
@@ -231,8 +239,12 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_ideas = big_brain4_sov_aid
-			SOV = { add_ideas = received_research_aid }
+			#add_ideas = big_brain4_sov_aid
+			#SOV = { add_ideas = received_research_aid }
+			SOV = {
+				country_event = { id = luxemburg.1 days = 1 }
+				custom_effect_tooltip = needs_approval
+			}
 		}
 		ai_will_do = {
 			factor = 12

@@ -1,0 +1,13 @@
+﻿l_english:
+ #MINIMIZE_EVENT:0 "§GClick§! to Minimize. Event will be placed in the Event Queue under §HEvents and Decisions§!."
+ luxemburg.1.t:0 "treaty?"
+ luxemburg.1.d:0 ""
+ luxemburg.1.a:0 "yes"
+ luxemburg.1.b:0 "no"
+ luxemburg.2.t:0 "success"
+ luxemburg.2.d:0 ""
+ luxemburg.2.a:0 "good future"
+ luxemburg.3.t:0 "failure"
+ luxemburg.3.d:0 ""
+ luxemburg.3.a:0 "they will die"
+ 
