@@ -85,3 +85,4 @@
  LUX_air_bases_desc:0 "With our growing capacity to produce more and more planes, we will need somewhere to store them as well. We plan on building as many airbases as possible"
  LUX_cas:0 "Close Air Support"
  LUX_bomber:0 "Study Bombers"
+ LUX_plane_production:0 "Mass Plane Production"
