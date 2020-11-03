@@ -640,7 +640,7 @@ focus_tree = {
 		}
 		search_filters = {}
 		completion_reward = {
-			remove_idea = LUX_army_innovations_0
+			remove_idea = LUX_army_innovation_0
 		}
 	}
 	focus = {
@@ -656,7 +656,7 @@ focus_tree = {
 		}
 		search_filters = {}
 		completion_reward = {
-			add_idea = LUX_army_innovations_1
+			add_idea = LUX_army_innovation_1
 		}
 	}
 	focus = {
@@ -665,14 +665,14 @@ focus_tree = {
 		prerequisite = { focus = LUX_army_innovations_2 }
 		x = 0
 		y = 1
-		relative_position_id = LUX_army_innovations_2
+		relative_position_id = LUX_army_innovation_2
 		cost = 5
 		ai_will_do = {
 			factor = 7
 		}
 		search_filters = {}
 		completion_reward = {
-			swap_ideas = { remove_idea = LUX_army_innovations_1 add_idea = LUX_army_innovations_2 }
+			swap_ideas = { remove_idea = LUX_army_innovation_1 add_idea = LUX_army_innovation_2 }
 		}
 	}
 	focus = {

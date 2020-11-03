@@ -68,7 +68,7 @@ ideas = {
 				}
 			}
 		}
-		LUX_army_innovations_0 = {
+		LUX_army_innovation_0 = {
 			
 			removal_cost = -1
 			
@@ -87,7 +87,7 @@ ideas = {
 				air_doctrine = -0.25
 			}
 		}
-		LUX_army_innovations_1 = {
+		LUX_army_innovation_1 = {
 			
 			allowed = {
 				always = no
@@ -102,7 +102,7 @@ ideas = {
 				air_doctrine = 0.25
 			}
 		}
-		LUX_army_innovations_2 = {
+		LUX_army_innovation_2 = {
 			
 			allowed = {
 				always = no
