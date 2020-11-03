@@ -632,6 +632,7 @@ focus_tree = {
 		id = LUX_army_innovations_1
 		icon = GFX_focus_chi_army_reform
 		prerequisite = { focus = LUX_army_training }
+		prerequisite = { focus = LUX_pilot_training }
 		x = 0
 		y = 1
 		relative_position_id = LUX_army_training
@@ -641,7 +642,7 @@ focus_tree = {
 		}
 		search_filters = {}
 		completion_reward = {
-			swap_ideas = { remove_idea = LUX_army_innovations_0 add_idea = LUX_army_innovations_1 }
+			remove_idea = LUX_army_innovations_0
 		}
 	}
 	focus = {
@@ -657,7 +658,7 @@ focus_tree = {
 		}
 		search_filters = {}
 		completion_reward = {
-			swap_ideas = { remove_idea = LUX_army_innovations_1 add_idea = LUX_army_innovations_2 }
+			add_idea = LUX_army_innovations_1
 		}
 	}
 	focus = {
@@ -673,12 +674,12 @@ focus_tree = {
 		}
 		search_filters = {}
 		completion_reward = {
-			swap_ideas = { remove_idea = LUX_army_innovations_2 add_idea = LUX_army_innovations_3 }
+			swap_ideas = { remove_idea = LUX_army_innovations_1 add_idea = LUX_army_innovations_2 }
 		}
 	}
 	focus = {
 		id = LUX_extra_recruitment
-		icon = GFX_focus_chi_army_reform
+		icon = GFX_focus_generic_miltary_mission
 		prerequisite = { focus = LUX_army_innovations_3 }
 		x = 0
 		y = 1
@@ -728,7 +729,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_land_doctrine_focus
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_generic_army_artillery
 		prerequisite = {focus = LUX_new_gun_developments}
 		prerequisite = {focus = LUX_army_innovations_1}
 		x = 0
@@ -749,7 +750,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_light_tanks
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_focus_generic_army_tanks
 		prerequisite = {focus = LUX_land_doctrine_focus}
 		x = 0
 		y = 1
@@ -767,13 +768,90 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = LUX_medium_tanks
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = {focus = LUX_light_tanks}
+		mutually_exclusive = {focus = LUX_heavy_tanks}
+		x = -1
+		y = 1
+		relative_position_id = LUX_light_tanks
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = {}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 2
+				ahead_reduction = 2
+				category = cat_medium_armor
+			}
+		}
+	}
+	focus = {
+		id = LUX_heavy_tanks
+		icon = GFX_focus_generic_army_tanks2
+		prerequisite = {focus = LUX_light_tanks}
+		mutually_exclusive = {focus = LUX_medium_tanks}
+		x = 1
+		y = 1
+		relative_position_id = LUX_light_tanks
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = {}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 2
+				ahead_reduction = 2
+				category = cat_heavy_armor
+			}
+		}
+	}
+	focus = {
+		id = LUX_medium_tank_production
+		icon = GFX_focus_generic_tank_production
+		prerequisite = {focus = LUX_medium_tanks}
+		x = 0
+		y = 1
+		relative_position_id = LUX_medium_tanks
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = {}
+		completion_reward = {
+			add_ideas = {LUX_medium_tank_production}
+		}
+	}
+	focus = {
+		id = LUX_heavy_tank_production
+		icon = GFX_focus_generic_license_production
+		prerequisite = {focus = LUX_heavy_tanks}
+		x = 0
+		y = 1
+		relative_position_id = LUX_heavy_tanks
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = {}
+		completion_reward = {
+			add_ideas = {LUX_heavy_tank_production}
+		}
+	}
 
 	#AIR
 	focus = {
 		id = LUX_pilot_training
 		icon = GFX_goal_generic_build_airforce
-		x = 28
+		x = 2
 		y = 0
+		relative_position_id = LUX_army_training
 		cost = 1
 		ai_will_do = {
 			factor = 5
@@ -785,7 +863,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_air_doctrine
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_focus_eng_special_air_service
 		prerequisite = {focus = LUX_pilot_training}
 		prerequisite = {focus = LUX_army_innovations_1}
 		x = 0
@@ -806,7 +884,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_fighters
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_generic_air_fighter
 		prerequisite = {focus = LUX_pilot_training}
 		x = 2
 		y = 1
@@ -821,6 +899,38 @@ focus_tree = {
 				bonus = 1.5
 				uses = 2
 				category = light_fighter
+			}
+		}
+	}
+	focus = {
+		id = LUX_air_bases
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = {focus = LUX_fighters}
+		x = 0
+		y = 1
+		relative_position_id = LUX_fighters
+		cost = 5
+		ai_will_do = {
+			factor = 3
+		}
+		search_filters = {}
+		completion_reward = {
+			6 = {
+				limit = {controller = {LUX} }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 10
+					instant_build = yes
+				}
+			}
+			8 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 10
+					instant_build = yes
+				}
 			}
 		}
 	}
