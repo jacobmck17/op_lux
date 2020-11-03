@@ -5,6 +5,11 @@ ideas = {
 	###########
 	
 	country = {
+		
+		##################
+		# MILITARY IDEAS #
+		##################
+		
 		LUX_plane_production = {
 			
 			allowed = {
@@ -147,6 +152,10 @@ ideas = {
 			}
 		}
 		
+		##################
+		# INDUSTRY IDEAS #
+		##################
+		
 		big_brain1 = {
 		
 			removal_cost = -1
@@ -202,6 +211,10 @@ ideas = {
 			allowed = {
 				tag = LUX
 			}
+			
+			cancel = {
+				has_war_with = SOV
+			}
 
 			allowed_civil_war = {
 				always = yes
@@ -218,6 +231,10 @@ ideas = {
 			allowed = {
 				tag = LUX
 			}
+			
+			cancel = {
+				has_war_with = GER
+			}
 
 			allowed_civil_war = {
 				always = yes
@@ -233,6 +250,10 @@ ideas = {
 			
 			allowed = {
 				tag = LUX
+			}
+			
+			cancel = {
+				has_war_with = USA
 			}
 
 			allowed_civil_war = {
@@ -267,6 +288,10 @@ ideas = {
 				tag = USA
 				tag = GER
 				tag = SOV
+			}
+			
+			cancel = {
+				has_war_with = LUX
 			}
 
 			allowed_civil_war = {

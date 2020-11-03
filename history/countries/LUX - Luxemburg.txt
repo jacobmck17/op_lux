@@ -87,7 +87,7 @@ add_ideas = {
 	
 	#ideas
 	big_brain1
-	LUX_army_innovations_0
+	LUX_army_innovation_0
 }
 set_research_slots = 3
 set_war_support = 0.69

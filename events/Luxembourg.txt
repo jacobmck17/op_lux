@@ -1,0 +1,5 @@
+﻿###########################
+# Luxembourg events
+###########################
+
+add_namespace = luxemburg
