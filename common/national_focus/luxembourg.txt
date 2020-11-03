@@ -642,7 +642,7 @@ focus_tree = {
 		}
 		search_filters = {}
 		completion_reward = {
-			remove_idea = LUX_army_innovation_0
+			remove_ideas = LUX_army_innovation_0
 		}
 	}
 	focus = {
@@ -658,7 +658,7 @@ focus_tree = {
 		}
 		search_filters = {}
 		completion_reward = {
-			add_idea = LUX_army_innovation_1
+			add_ideas = LUX_army_innovation_1
 		}
 	}
 	focus = {
