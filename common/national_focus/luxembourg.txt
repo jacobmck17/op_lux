@@ -636,78 +636,10 @@ focus_tree = {
 	# POLITICAL #
 	#############
 
-
-	############
+	#############
 	# MILITARY #
-	############
-	focus = {
-		id = LUX_army_innovations_1
-		icon = GFX_focus_chi_army_reform
-		prerequisite = { focus = LUX_army_training }
-		prerequisite = { focus = LUX_pilot_training }
-		x = 0
-		y = 1
-		relative_position_id = LUX_army_training
-		cost = 5
-		ai_will_do = {
-			factor = 7
-		}
-		search_filters = {}
-		completion_reward = {
-			remove_ideas = LUX_army_innovation_0
-		}
-	}
-	focus = {
-		id = LUX_army_innovations_2
-		icon = GFX_focus_chi_army_reform
-		prerequisite = { focus = LUX_army_innovations_1 }
-		x = 0
-		y = 1
-		relative_position_id = LUX_army_innovations_1
-		cost = 5
-		ai_will_do = {
-			factor = 7
-		}
-		search_filters = {}
-		completion_reward = {
-			add_ideas = LUX_army_innovation_1
-		}
-	}
-	focus = {
-		id = LUX_army_innovations_3
-		icon = GFX_focus_chi_army_reform
-		prerequisite = { focus = LUX_army_innovations_2 }
-		x = 0
-		y = 1
-		relative_position_id = LUX_army_innovations_2
-		cost = 5
-		ai_will_do = {
-			factor = 7
-		}
-		search_filters = {}
-		completion_reward = {
-			swap_ideas = { remove_idea = LUX_army_innovation_1 add_idea = LUX_army_innovation_2 }
-		}
-	}
-	focus = {
-		id = LUX_extra_recruitment
-		icon = GFX_focus_generic_miltary_mission
-		prerequisite = { focus = LUX_army_innovations_3 }
-		x = 0
-		y = 1
-		relative_position_id = LUX_army_innovations_3
-		cost = 5
-		ai_will_do = {
-			factor = 7
-		}
-		search_filters = {}
-		completion_reward = {
-			if = {
-				limit = {}
-			}
-		}
-	}
-
+	#############
+	
 	#ARMY 
 	focus = {
 		id = LUX_army_training
@@ -857,6 +789,75 @@ focus_tree = {
 		}
 	}
 
+	#INFANTRY
+	focus = {
+		id = LUX_army_innovations_1
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = LUX_army_training }
+		prerequisite = { focus = LUX_pilot_training }
+		x = 0
+		y = 1
+		relative_position_id = LUX_army_training
+		cost = 5
+		ai_will_do = {
+			factor = 7
+		}
+		search_filters = {}
+		completion_reward = {
+			remove_ideas = LUX_army_innovation_0
+		}
+	}
+	focus = {
+		id = LUX_army_innovations_2
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = LUX_army_innovations_1 }
+		x = 0
+		y = 1
+		relative_position_id = LUX_army_innovations_1
+		cost = 5
+		ai_will_do = {
+			factor = 7
+		}
+		search_filters = {}
+		completion_reward = {
+			add_ideas = LUX_army_innovation_1
+		}
+	}
+	focus = {
+		id = LUX_army_innovations_3
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = LUX_army_innovations_2 }
+		x = 0
+		y = 1
+		relative_position_id = LUX_army_innovations_2
+		cost = 5
+		ai_will_do = {
+			factor = 7
+		}
+		search_filters = {}
+		completion_reward = {
+			swap_ideas = { remove_idea = LUX_army_innovation_1 add_idea = LUX_army_innovation_2 }
+		}
+	}
+	focus = {
+		id = LUX_extra_recruitment
+		icon = GFX_focus_generic_miltary_mission
+		prerequisite = { focus = LUX_army_innovations_3 }
+		x = 0
+		y = 1
+		relative_position_id = LUX_army_innovations_3
+		cost = 5
+		ai_will_do = {
+			factor = 7
+		}
+		search_filters = {}
+		completion_reward = {
+			if = {
+				limit = {}
+			}
+		}
+	}
+
 	#AIR
 	focus = {
 		id = LUX_pilot_training
@@ -927,13 +928,19 @@ focus_tree = {
 		}
 		search_filters = {}
 		completion_reward = {
-			6 = {
-				limit = {controller = {LUX} }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = air_base
-					level = 10
-					instant_build = yes
+			if = {
+				limit = {
+					6 = {
+						is_controlled_by = LUX
+					}
+				}
+				6 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = air_base
+						level = 10
+						instant_build = yes
+					}
 				}
 			}
 			8 = {
@@ -951,6 +958,7 @@ focus_tree = {
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = {focus = LUX_air_bases}
 		prerequisite = {focus = LUX_air_doctrine}
+		mutually_exclusive = {focus = LUX_bomber}
 		x = -2
 		y = 1
 		relative_position_id = LUX_air_bases
