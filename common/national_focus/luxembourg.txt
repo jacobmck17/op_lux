@@ -1067,8 +1067,6 @@ focus_tree = {
 					type = dockyard
 					level = 4
 					instant_build = yes
-					include_locked = yes
-					limit_to_coastal = yes
 				}
 			}
 		}
@@ -1101,8 +1099,6 @@ focus_tree = {
 					type = dockyard
 					level = 4
 					instant_build = yes
-					include_locked = yes
-					limit_to_coastal = yes
 				}
 			}
 		}
