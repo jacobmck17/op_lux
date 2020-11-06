@@ -87,8 +87,11 @@
  LUX_bomber:0 "Study Bombers"
  LUX_plane_production:0 "Mass Plane Production"
  LUX_form_a_navy:0 "Form a Navy"
+ LUX_begin_ship_developments:0 "Begin Ship Developments"
  LUX_dockyard_expansion:0 "Dockyard Expansion"
  LUX_dockyard_expansion_desc:0 "It will be difficult to gain power over this new obstacle called 'water' it seems almost every nation has floating things called 'ships' we should get those too."
  LUX_dockyard_expansion2:0 "Dockyard Superiority"
  LUX_ship_production:0 "New Ship Developments"
- 
+ LUX_raiding_fleet:0 "Raiding Fleet"
+ LUX_heavy_fleet:0 "Heavy Fleet"
+ LUX_naval_invasions "Pre-planned Naval Invasions"

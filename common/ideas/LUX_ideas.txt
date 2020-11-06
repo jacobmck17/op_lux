@@ -73,9 +73,16 @@ ideas = {
 			picture = generic_democratic_drift_bonus
 
 			removal_cost = -1
-
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.50
+			}
+			
 			equipment_bonus = {
-				naval_equipment = { instant = yes build_cost_ic = -0.50 }
+				naval_equipment = {
+					build_cost_ic = -0.50
+					instant = yes
+				}
 			}
 		}
 		LUX_medium_tank_production = {
