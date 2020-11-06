@@ -14,7 +14,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = luxemburg.1.a	#sounds good
+		name = luxemburg.1.a	#yes
 		ai_chance = { factor = 100 }
 		LUX = {
 			country_event = { days = 1 id = luxemburg.2 } #successful treaty
@@ -26,8 +26,7 @@ country_event = {
 	}
 	
 	option = {
-		name = luxemburg.1.b	#no way 
-		#add_timed_idea = { idea = SOV_scientist_defect days = 90 }
+		name = luxemburg.1.b	#no
 		ai_chance = { factor = 0 }
 		add_political_power = -50
 		LUX = {
