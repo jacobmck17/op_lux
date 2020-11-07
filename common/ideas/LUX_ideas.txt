@@ -20,7 +20,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = generic_democratic_drift_bonus
+			picture = generic_fighter_production_diverted
 
 			removal_cost = -1
 
@@ -49,7 +49,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = generic_democratic_drift_bonus
+			picture = Idea_hun_secret_rearmament
 
 			removal_cost = -1
 
@@ -70,7 +70,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = generic_democratic_drift_bonus
+			picture = Idea_generic_sea_focused_navy
 
 			removal_cost = -1
 			
@@ -95,7 +95,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = generic_democratic_drift_bonus
+			picture = generic_license_production
 
 			removal_cost = -1
 
@@ -116,7 +116,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = generic_democratic_drift_bonus
+			picture = generic_license_production
 
 			removal_cost = -1
 

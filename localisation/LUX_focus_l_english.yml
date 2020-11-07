@@ -95,3 +95,5 @@
  LUX_raiding_fleet:0 "Raiding Fleet"
  LUX_heavy_fleet:0 "Heavy Fleet"
  LUX_naval_invasions "Pre-planned Naval Invasions"
+ #WAR PLANS
+ LUX_planning_branch:0 "Establish the War Plan Branch"
