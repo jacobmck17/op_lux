@@ -794,7 +794,7 @@ focus_tree = {
 		id = LUX_army_innovations_1
 		icon = GFX_focus_chi_army_reform
 		prerequisite = { focus = LUX_army_training }
-		#prerequisite = { focus = LUX_pilot_training }
+		prerequisite = { focus = LUX_pilot_training }
 		x = 0
 		y = 1
 		relative_position_id = LUX_army_training
@@ -955,7 +955,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_cas
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_goal_generic_CAS
 		prerequisite = {focus = LUX_air_bases}
 		prerequisite = {focus = LUX_air_doctrine}
 		mutually_exclusive = {focus = LUX_bomber}
@@ -977,7 +977,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_bomber
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_goal_generic_air_bomber
 		prerequisite = {focus = LUX_air_bases}
 		prerequisite = {focus = LUX_air_doctrine}
 		mutually_exclusive = {focus = LUX_cas}
@@ -999,7 +999,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_plane_production
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_focus_chi_flying_tigers
 		prerequisite = {
 			focus = LUX_cas
 			focus = LUX_bomber
