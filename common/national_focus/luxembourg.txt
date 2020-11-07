@@ -694,7 +694,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_light_tanks
-		icon = GFX_focus_generic_army_tanks
+		icon = GFX_goal_generic_army_tanks
 		prerequisite = {focus = LUX_land_doctrine_focus}
 		x = 0
 		y = 1
@@ -841,7 +841,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_extra_recruitment
-		icon = GFX_focus_generic_miltary_mission
+		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = LUX_army_innovations_3 }
 		x = 0
 		y = 1

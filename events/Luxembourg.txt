@@ -61,6 +61,7 @@ country_event = {
 			add_ideas = {
 				big_brain4_ger_aid
 			}
+			
 		}
 		if = {
 			limit = {
@@ -88,24 +89,48 @@ country_event = {
 			limit = {
 				has_completed_focus = LUX_treaty_with_usa
 			}
-			add_ideas = {
-				revenge_on_usa
+			add_timed_idea = { idea = revenge_on_usa days = 365 }
+			if = {
+				limit = {
+					country_exists = USA					
+				} 
+				create_wargoal = {
+					type = annex_everything
+					target = USA
+					expire = 365
+				}
 			}
 		}
 		if = {
 			limit = {
 				has_completed_focus = LUX_treaty_with_ger
 			}
-			add_ideas = {
-				revenge_on_ger
+			add_timed_idea = { idea = revenge_on_ger days = 365 }
+			if = {
+				limit = {
+					country_exists = GER					
+				} 
+				create_wargoal = {
+					type = annex_everything
+					target = GER
+					expire = 365
+				}
 			}
 		}
 		if = {
 			limit = {
 				has_completed_focus = LUX_treaty_with_sov
 			}
-			add_ideas = {
-				revenge_on_sov
+			add_timed_idea = { idea = revenge_on_sov days = 365 }
+			if = {
+				limit = {
+					country_exists = SOV					
+				} 
+				create_wargoal = {
+					type = annex_everything
+					target = SOV
+					expire = 365
+				}
 			}
 		}
 	}
