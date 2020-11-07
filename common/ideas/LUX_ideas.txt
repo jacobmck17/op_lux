@@ -375,9 +375,6 @@ ideas = {
 				always = yes
 			}
 			
-			modifier = {
-				conscription = 0.02
-			}
 			targeted_modifier = {
 				tag = USA
 				attack_bonus_against = 0.15
@@ -396,9 +393,6 @@ ideas = {
 				always = yes
 			}
 			
-			modifier = {
-				conscription = 0.02
-			}
 			targeted_modifier = {
 				tag = GER
 				attack_bonus_against = 0.15
@@ -417,9 +411,6 @@ ideas = {
 				always = yes
 			}
 			
-			modifier = {
-				conscription = 0.02
-			}
 			targeted_modifier = {
 				tag = SOV
 				attack_bonus_against = 0.15
