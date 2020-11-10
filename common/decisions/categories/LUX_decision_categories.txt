@@ -1,0 +1,11 @@
+################
+##### LUX ######
+################
+LUX_war_plans = {
+	allowed = {
+		original_tag = LUX
+	}
+	visible = {
+		has_completed_focus = LUX_planning_branch
+	}
+}
