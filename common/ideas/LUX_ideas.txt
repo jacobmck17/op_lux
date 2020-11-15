@@ -417,6 +417,29 @@ ideas = {
 				defense_bonus_against = 0.15
 			}
 		}
+		
+		##################
+		# INDUSTRY IDEAS #
+		##################
+		
+		industrial_nation = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
 	}
 	###########
 	# ECONOMY #
