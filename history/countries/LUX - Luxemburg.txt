@@ -88,10 +88,11 @@ add_ideas = {
 	#ideas
 	big_brain1
 	LUX_army_innovation_0
+	unstable_council
 }
 set_research_slots = 3
 set_war_support = 0.69
-set_stability = 0.59
+set_stability = 0.49
 1939.1.1 = {
 
 	add_political_power = 1198

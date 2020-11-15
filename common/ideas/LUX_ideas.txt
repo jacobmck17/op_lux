@@ -440,6 +440,71 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.15
 			}
 		}
+		military_readiness_act = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				conscription = 0.015
+				training_time_factor = -0.1
+			}
+		}
+		betray_the_council = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				democratic_drift = -0.05
+			}
+		}
+		unstable_council = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+		fear_in_the_council = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.25
+			}
+		}
 	}
 	###########
 	# ECONOMY #

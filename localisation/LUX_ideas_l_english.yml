@@ -30,6 +30,14 @@
  #POLITICAL
  industrial_nation:0 ""
  industrial_nation_desc:0 ""
+ military_readiness_act:0 ""
+ military_readiness_act_desc:0 ""
+ betray_the_council:0 ""
+ betray_the_council_desc:0 ""
+ unstable_council:0 "Unstable Council"
+ unstable_council_desc:0 "The Council cannot agree on anything and it is causing instability in our country."
+ fear_in_the_council:0 "Fear in the Council"
+ fear_in_the_council_desc:0 "The council has heard rumors of a new governemt trying to take over. They have begun to lose trust in eachother and tensions between them are at an all time high. Something bad is about to happen..."
  
  #MILITARY
  LUX_army_innovation_0:0 "Unprepared Army"

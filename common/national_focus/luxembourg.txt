@@ -657,7 +657,7 @@ focus_tree = {
 	focus = {
 		id = LUX_change_gov
 		icon = GFX_focus_generic_support_the_left_right
-		x = -1
+		x = -2
 		y = 1
 		
 		cost = 10
@@ -665,7 +665,7 @@ focus_tree = {
 		prerequisite = { focus = LUX_political_effort }
 		mutually_exclusive = { focus = LUX_keep_gov }
 		
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_political_power = 150
 			add_stability = -0.1
@@ -678,7 +678,7 @@ focus_tree = {
 	focus = {
 		id = LUX_keep_gov
 		icon = GFX_goal_generic_neutrality_focus
-		x = 1
+		x = 2
 		y = 1
 		
 		cost = 10
@@ -686,7 +686,7 @@ focus_tree = {
 		prerequisite = { focus = LUX_political_effort }
 		mutually_exclusive = { focus = LUX_change_gov }
 		
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_political_power = 75
 			add_stability = 0.05
@@ -699,7 +699,7 @@ focus_tree = {
 	focus = {
 		id = LUX_super_construction
 		icon = GFX_goal_generic_construction
-		x = 0
+		x = 1
 		y = 1
 		
 		cost = 10
@@ -710,6 +710,48 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = { industrial_nation }
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	focus = {
+		id = LUX_division_training
+		icon = GFX_focus_generic_military_mission
+		x = -1
+		y = 1
+		
+		cost = 10
+		relative_position_id = LUX_change_gov
+		prerequisite = { focus = LUX_change_gov }
+		#mutually_exclusive = { focus = LUX_change_gov }
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = { military_readiness_act }
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	focus = {
+		id = LUX_betray_the_council
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = -1
+		y = 1
+		
+		cost = 10
+		relative_position_id = LUX_super_construction
+		prerequisite = { focus = LUX_super_construction focus = LUX_division_training }
+		#mutually_exclusive = { focus = LUX_change_gov }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_timed_idea = {
+				idea = betray_the_council
+				days = 720
+			}
+			swap_ideas = {remove_idea = unstable_council add_idea = fear_in_the_council}
 		}
 		ai_will_do = {
 			factor = 12
