@@ -1376,7 +1376,7 @@ focus_tree = {
 		}
 	}
 	focus = { #WAR PLAN AGAINST NETHERLANDS
-		id = LUX_war_plan_yellow 
+		id = LUX_war_plan_benelux
 		icon = GFX_focus_usa_build_the_pentagon
 		x = 0
 		y = 1
