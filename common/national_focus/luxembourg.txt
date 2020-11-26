@@ -1317,7 +1317,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_naval_invasions
-		icon = GFX_goal_generic_amphibious_assult
+		icon = GFX_goal_generic_amphibious_assault
 		x = 1
 		y = 1
 		relative_position_id = LUX_raiding_fleet
@@ -1344,23 +1344,24 @@ focus_tree = {
 	focus = {
 		id = LUX_planning_branch
 		icon = GFX_focus_usa_build_the_pentagon
-		x = 20
+		x = 18
 		y = 0
 		relative_position_id = LUX_army_training
 		prerequisite = {}
-		cost = 10
+		cost = 2
 		ai_will_do = {
 			factor = 6
 		}
 		search_filters = {}
 		
 		completion_reward = {
-			planning_speed = 0.15
+			planning_speed = 0.25
+			unlock_decision_category_tooltip = LUX_war_plans
 		}
 	}
 	focus = {
 		id = LUX_mountain_fighting
-		icon = GFX_focus_usa_build_the_pentagon
+		icon = GFX_goal_generic_position_armies
 		x = -2
 		y = 1
 		relative_position_id = LUX_planning_branch
@@ -1372,12 +1373,16 @@ focus_tree = {
 		search_filters = {}
 		
 		completion_reward = {
-			
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = mountaineers_tech
+			}
 		}
 	}
-	focus = { #WAR PLAN AGAINST NETHERLANDS
+	focus = { #WAR PLAN AGAINST NETHERLANDS AND BELGUIM
 		id = LUX_war_plan_benelux
-		icon = GFX_focus_usa_build_the_pentagon
+		icon = GFX_focus_usa_focus_on_europe
 		x = 0
 		y = 1
 		relative_position_id = LUX_planning_branch
@@ -1387,9 +1392,378 @@ focus_tree = {
 			factor = 6
 		}
 		search_filters = {}
+
+		bypass = {
+			OR = {
+				BEL = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				HOL = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+			}
+		}
 		
 		completion_reward = {
-			unlock_decision_tooltip = { decision = LUX_execute_war_plan_yellow show_effect_tooltip = yes show_modifiers = yes }
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_HOL show_effect_tooltip = yes show_modifiers = yes }
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_BEL show_effect_tooltip = yes show_modifiers = yes }
+		}
+	}
+	focus = { #WAR PLAN AGAINST FRANCE
+		id = LUX_war_plan_france
+		icon = GFX_focus_attack_france
+		x = 1
+		y = 1
+		relative_position_id = LUX_mountain_fighting
+		prerequisite = {
+			focus = LUX_mountain_fighting
+			focus = LUX_war_plan_benelux
+ 		}
+		cost = 5
+		ai_will_do = {
+			factor = 6
+		}
+		search_filters = {}
+
+		bypass = {
+			FRA = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+		
+		completion_reward = {
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_FRA show_effect_tooltip = yes show_modifiers = yes }
+		}
+	}
+	focus = { #WAR PLAN AGAINST SWITZERLAND AND ITALY
+		id = LUX_war_plan_alps
+		icon = GFX_focus_attack_switzerland
+		x = -1
+		y = 1
+		relative_position_id = LUX_war_plan_france
+		prerequisite = {focus = LUX_war_plan_france}
+		prerequisite = {focus = LUX_mountain_fighting}
+		cost = 5
+		ai_will_do = {
+			factor = 6
+		}
+		search_filters = {}
+
+		bypass = {
+			OR = {
+				SWI = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				ITA = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_SWI show_effect_tooltip = yes show_modifiers = yes }
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_ITA show_effect_tooltip = yes show_modifiers = yes }
+		}
+	}
+	focus = { #WAR PLAN AGAINST SPAIN AND PORTUGAL
+		id = LUX_war_plan_iberia
+		icon = GFX_focus_por_iberian_summit
+		x = 0
+		y = 1
+		relative_position_id = LUX_war_plan_alps
+		prerequisite = {focus = LUX_war_plan_alps}
+		cost = 5
+		ai_will_do = {
+			factor = 6
+		}
+		search_filters = {}
+
+		bypass = {
+			OR = {
+				SPA = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				POR = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_SPA show_effect_tooltip = yes show_modifiers = yes }
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_POR show_effect_tooltip = yes show_modifiers = yes }
+		}
+	}
+	focus = { #WAR PLAN AGAINST GERMANY
+		id = LUX_war_plan_germany
+		icon = GFX_focus_attack_germany
+		x = 2
+		y = 1
+		relative_position_id = LUX_war_plan_france
+		prerequisite = {focus = LUX_war_plan_france}
+		prerequisite = {focus = LUX_war_plan_benelux}
+		cost = 5
+		ai_will_do = {
+			factor = 6
+		}
+		search_filters = {}
+
+		bypass = {
+			GER = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+		
+		completion_reward = {
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_GER show_effect_tooltip = yes show_modifiers = yes }
+		}
+	}
+	focus = { #WAR PLAN AGAINST UK
+		id = LUX_war_plan_uk
+		icon = GFX_focus_attack_britain
+		x = -1
+		y = 1
+		relative_position_id = LUX_war_plan_germany
+		prerequisite = {focus = LUX_war_plan_germany}
+		cost = 5
+		ai_will_do = {
+			factor = 6
+		}
+		search_filters = {}
+
+		bypass = {
+			ENG = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+		
+		completion_reward = {
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_ENG show_effect_tooltip = yes show_modifiers = yes }
+		}
+	}
+	focus = { #WAR PLAN AGAINST POLAND
+		id = LUX_war_plan_poland
+		icon = GFX_goal_generic_territory_or_war
+		x = 3
+		y = 1
+		relative_position_id = LUX_planning_branch
+		prerequisite = {focus = LUX_planning_branch}
+		cost = 5
+		ai_will_do = {
+			factor = 6
+		}
+		search_filters = {}
+
+		bypass = {
+			POL = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+		
+		completion_reward = {
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_POL show_effect_tooltip = yes show_modifiers = yes }
+		}
+	}
+	focus = { #WAR PLAN AGAINST DENMARK
+		id = LUX_war_plan_denmark
+		icon = GFX_focus_hol_prepare_the_inundation_lines
+		x = 1
+		y = 1
+		relative_position_id = LUX_war_plan_germany
+		prerequisite = {focus = LUX_war_plan_germany}
+		cost = 5
+		ai_will_do = {
+			factor = 6
+		}
+		search_filters = {}
+
+		bypass = {
+			DEN = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+		
+		completion_reward = {
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_DEN show_effect_tooltip = yes show_modifiers = yes }
+		}
+	}
+	focus = { #WAR PLAN AGAINST SOVIETS
+		id = LUX_war_plan_soviet
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		x = 0
+		y = 1
+		relative_position_id = LUX_war_plan_poland
+		prerequisite = {focus = LUX_war_plan_poland}
+		cost = 5
+		ai_will_do = {
+			factor = 6
+		}
+		search_filters = {}
+
+		bypass = {
+			SOV = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+		
+		completion_reward = {
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_SOV show_effect_tooltip = yes show_modifiers = yes }
+		}
+	}
+	focus = { #WAR PLAN AGAINST SWEDEN, NORWAY AND FINLAND
+		id = LUX_war_plan_scandinavia
+		icon = GFX_goal_tfv_can_forced_quebec_conscription
+		x = 0
+		y = 1
+		relative_position_id = LUX_war_plan_soviet
+		prerequisite = {focus = LUX_war_plan_soviet}
+		cost = 5
+		ai_will_do = {
+			factor = 6
+		}
+		search_filters = {}
+
+		bypass = {
+			OR = {
+				SWE = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				NOR = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				FIN = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_SWE show_effect_tooltip = yes show_modifiers = yes }
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_NOR show_effect_tooltip = yes show_modifiers = yes }
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_FIN show_effect_tooltip = yes show_modifiers = yes }
+		}
+	}
+	focus = { #WAR PLAN AGAINST MEXICO
+		id = LUX_war_plan_mexico
+		icon = GFX_focus_usa_build_the_pentagon
+		x = -4
+		y = 1
+		relative_position_id = LUX_planning_branch
+		prerequisite = {focus = LUX_planning_branch}
+		cost = 5
+		ai_will_do = {
+			factor = 6
+		}
+		search_filters = {}
+
+		bypass = {
+			MEX = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+		
+		completion_reward = {
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_MEX show_effect_tooltip = yes show_modifiers = yes }
+		}
+	}
+	focus = { #WAR PLAN AGAINST MEXICO
+		id = LUX_war_plan_mexico
+		icon = GFX_focus_mex_jefe_maximo
+		x = -4
+		y = 1
+		relative_position_id = LUX_planning_branch
+		prerequisite = {focus = LUX_planning_branch}
+		cost = 5
+		ai_will_do = {
+			factor = 6
+		}
+		search_filters = {}
+
+		bypass = {
+			MEX = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+		
+		completion_reward = {
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_MEX show_effect_tooltip = yes show_modifiers = yes }
+		}
+	}
+	focus = { #WAR PLAN AGAINST USA
+		id = LUX_war_plan_usa
+		icon = GFX_focus_hol_war_on_pacifism
+		x = 0
+		y = 1
+		relative_position_id = LUX_war_plan_mexico
+		prerequisite = {focus = LUX_war_plan_mexico}
+		cost = 5
+		ai_will_do = {
+			factor = 6
+		}
+		search_filters = {}
+
+		bypass = {
+			USA = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+		
+		completion_reward = {
+			unlock_decision_tooltip = { decision = LUX_execute_war_plan_USA show_effect_tooltip = yes show_modifiers = yes }
 		}
 	}
 }

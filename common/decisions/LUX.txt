@@ -1,14 +1,11 @@
 LUX_war_plans = {
-	LUX_execute_war_plan_yellow = {
+	LUX_execute_war_plan_HOL = {
 		icon = generic_operation
 		available = {
-			OR = {
-				has_war_with = HOL
-				has_war_with = BEL
-			}
+			has_war_with = HOL
 		}
 		visible = {
-			has_completed_focus = LUX_war_plan_yellow
+			has_completed_focus = LUX_war_plan_benelux
 		}
 		ai_will_do = {
 			factor = 1
@@ -19,7 +16,324 @@ LUX_war_plans = {
 			tag = HOL
 			attack_bonus_against = 0.15
 			defense_bonus_against = 0.15
+		}
+	}
+
+	LUX_execute_war_plan_BEL = {
+		icon = generic_operation
+		available = {
+			has_war_with = BEL
+		}
+		visible = {
+			has_completed_focus = LUX_war_plan_benelux
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 365
+		targeted_modifier = {
 			tag = BEL
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+	}
+
+	LUX_execute_war_plan_FRA = {
+		icon = generic_operation
+		available = {
+			has_war_with = FRA
+		}
+		visible = {
+			has_completed_focus = LUX_war_plan_france
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 365
+		targeted_modifier = {
+			tag = FRA
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+	}
+
+	LUX_execute_war_plan_ENG = {
+		icon = generic_operation
+		available = {
+			has_war_with = ENG
+		}
+		visible = {
+			has_completed_focus = LUX_war_plan_uk
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 365
+		targeted_modifier = {
+			tag = ENG
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+	}
+
+	LUX_execute_war_plan_SWI = {
+		icon = generic_operation
+		available = {
+			has_war_with = SWI
+		}
+		visible = {
+			has_completed_focus = LUX_war_plan_alps
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 365
+		targeted_modifier = {
+			tag = SWI
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+	}
+
+	LUX_execute_war_plan_ITA = {
+		icon = generic_operation
+		available = {
+			has_war_with = ITA
+		}
+		visible = {
+			has_completed_focus = LUX_war_plan_alps
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 365
+		targeted_modifier = {
+			tag = ITA
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+	}
+
+	LUX_execute_war_plan_SPA = {
+		icon = generic_operation
+		available = {
+			has_war_with = {original_tag = SPA }
+		}
+		visible = {
+			has_completed_focus = LUX_war_plan_iberia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 365
+		targeted_modifier = {
+			original_tag = SPA
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+	}
+
+	LUX_execute_war_plan_POR = {
+		icon = generic_operation
+		available = {
+			has_war_with = POR
+		}
+		visible = {
+			has_completed_focus = LUX_war_plan_iberia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 365
+		targeted_modifier = {
+			tag = POR
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+	}
+
+	LUX_execute_war_plan_GER = {
+		icon = generic_operation
+		available = {
+			has_war_with = GER
+		}
+		visible = {
+			has_completed_focus = LUX_war_plan_germany
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 365
+		targeted_modifier = {
+			tag = GER
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+	}
+
+	LUX_execute_war_plan_POL = {
+		icon = generic_operation
+		available = {
+			has_war_with = POL
+		}
+		visible = {
+			has_completed_focus = LUX_war_plan_poland
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 365
+		targeted_modifier = {
+			tag = POL
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+	}
+
+	LUX_execute_war_plan_DEN = {
+		icon = generic_operation
+		available = {
+			has_war_with = DEN
+		}
+		visible = {
+			has_completed_focus = LUX_war_plan_denmark
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 365
+		targeted_modifier = {
+			tag = DEN
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+	}
+
+	LUX_execute_war_plan_SOV = {
+		icon = generic_operation
+		available = {
+			has_war_with = SOV
+		}
+		visible = {
+			has_completed_focus = LUX_war_plan_soviet
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 365
+		targeted_modifier = {
+			tag = SOV
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+	}
+
+	LUX_execute_war_plan_SWE = {
+		icon = generic_operation
+		available = {
+			has_war_with = SWE
+		}
+		visible = {
+			has_completed_focus = LUX_war_plan_scandinavia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 365
+		targeted_modifier = {
+			tag = SWE
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+	}
+
+	LUX_execute_war_plan_NOR = {
+		icon = generic_operation
+		available = {
+			has_war_with = NOR
+		}
+		visible = {
+			has_completed_focus = LUX_war_plan_scandinavia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 365
+		targeted_modifier = {
+			tag = NOR
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+	}
+
+	LUX_execute_war_plan_FIN = {
+		icon = generic_operation
+		available = {
+			has_war_with = FIN
+		}
+		visible = {
+			has_completed_focus = LUX_war_plan_scandinavia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 365
+		targeted_modifier = {
+			tag = FIN
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+	}
+
+	LUX_execute_war_plan_MEX = {
+		icon = generic_operation
+		available = {
+			has_war_with = MEX
+		}
+		visible = {
+			has_completed_focus = LUX_war_plan_mexico
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 365
+		targeted_modifier = {
+			tag = MEX
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+	}
+
+	LUX_execute_war_plan_USA = {
+		icon = generic_operation
+		available = {
+			has_war_with = USA
+		}
+		visible = {
+			has_completed_focus = LUX_war_plan_usa
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 365
+		targeted_modifier = {
+			tag = USA
 			attack_bonus_against = 0.15
 			defense_bonus_against = 0.15
 		}
