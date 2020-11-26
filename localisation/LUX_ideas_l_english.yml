@@ -38,6 +38,9 @@
  unstable_council_desc:0 "The Council cannot agree on anything and it is causing instability in our country."
  fear_in_the_council:0 "Fear in the Council"
  fear_in_the_council_desc:0 "The council has heard rumors of a new governemt trying to take over. They have begun to lose trust in eachother and tensions between them are at an all time high. Something bad is about to happen..."
+
+ LUX_reduced_consumer_demands:0 "Reduced Consumer Demands"
+ LUX_supreme_defence:0 "Supreme Defence Strategy"
  
  #MILITARY
  LUX_army_innovation_0:0 "Unprepared Army"

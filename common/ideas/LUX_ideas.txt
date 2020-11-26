@@ -6,6 +6,66 @@ ideas = {
 	
 	country = {
 		
+		#############
+		# POLITICAL #
+		#############
+
+		LUX_reduced_consumer_demands = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = Goal_generic_consumer_goods
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		LUX_supreme_defence = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = Goal_generic_consumer_goods
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = 0.25
+				conscription = 0.05
+			}
+		}
+
+		LUX_democratic_industry = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = Goal_generic_consumer_goods
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.40
+				production_speed_arms_factory_factor = -0.05
+			}
+		}
+
 		##################
 		# MILITARY IDEAS #
 		##################
