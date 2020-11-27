@@ -478,9 +478,9 @@ ideas = {
 			}
 		}
 		
-		##################
-		# INDUSTRY IDEAS #
-		##################
+		###################
+		# POLITICAL IDEAS #
+		###################
 		
 		industrial_nation = {
 		
@@ -562,7 +562,7 @@ ideas = {
 			}
 			
 			modifier = {
-				stability_factor = -0.25
+				stability_factor = -0.15
 			}
 		}
 	}

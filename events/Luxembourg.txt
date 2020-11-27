@@ -135,3 +135,104 @@ country_event = {
 		}
 	}
 }
+
+# Interrogated Council
+country_event = {
+	id = luxemburg.4
+	title = luxemburg.4.t
+	desc = luxemburg.4.d
+	#picture = GFX_report_event_physics_lab_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luxemburg.4.a	#yes
+		ai_chance = { factor = 100 }
+		set_country_flag = interrogated_council
+		war_support_factor = 0.5
+	}
+}
+# Send out the spies to germany
+country_event = {
+	id = luxemburg.5
+	title = luxemburg.5.t
+	desc = luxemburg.5.d
+	#picture = GFX_report_event_physics_lab_01
+	fire_only_once = yes
+	
+	option = {
+		name = luxemburg.5.a	#yes
+		ai_chance = { factor = 100 }
+		add_popularity = { ideology = democratic popularity = -0.025 }
+	}
+}
+# Send out the spies to france
+country_event = {
+	id = luxemburg.6
+	title = luxemburg.6.t
+	desc = luxemburg.6.d
+	#picture = GFX_report_event_physics_lab_01
+	fire_only_once = yes
+	
+	trigger = {
+		tag = LUX
+		NOT = { has_completed_focus = LUX_send_out_the_spies }
+		focus_progress = {
+			focus = LUX_send_out_the_spies
+			progress > 0.3
+		}
+	}
+	
+	option = {
+		name = luxemburg.6.a	#yes
+		ai_chance = { factor = 100 }
+		add_popularity = { ideology = democratic popularity = -0.025 }
+	}
+}
+# Send out the spies to belgium
+country_event = {
+	id = luxemburg.7
+	title = luxemburg.7.t
+	desc = luxemburg.7.d
+	#picture = GFX_report_event_physics_lab_01
+	fire_only_once = yes
+	
+	trigger = {
+		tag = LUX
+		NOT = { has_completed_focus = LUX_send_out_the_spies }
+		focus_progress = {
+			focus = LUX_send_out_the_spies
+			progress > 0.6
+		}
+	}
+	
+	option = {
+		name = luxemburg.7.a	#yes
+		ai_chance = { factor = 100 }
+		add_popularity = { ideology = democratic popularity = -0.025 }
+	}
+}
+# found the group in belgium
+country_event = {
+	id = luxemburg.8
+	title = luxemburg.8.t
+	desc = luxemburg.8.d
+	#picture = GFX_report_event_physics_lab_01
+	fire_only_once = yes
+	
+	trigger = {
+		tag = LUX
+		NOT = { has_completed_focus = LUX_send_out_the_spies }
+		focus_progress = {
+			focus = LUX_send_out_the_spies
+			progress > 0.9
+		}
+	}
+	
+	option = {
+		name = luxemburg.8.a	#yes
+		ai_chance = { factor = 100 }
+		add_popularity = { ideology = democratic popularity = -0.025 }
+		war_support_factor = 0.1
+	}
+}

@@ -670,18 +670,27 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_political_power = 150
-			add_stability = -0.1
+			#add_stability = -0.1
 			add_popularity = { ideology = democratic popularity = -0.05 }
+			swap_ideas = {remove_idea = unstable_council add_idea = fear_in_the_council}
+			country_event = { id = luxemburg.4 days = 0 }
 		}
 		ai_will_do = {
 			factor = 12
 		}
 	}
 	focus = {
-		id = LUX_super_construction
-		icon = GFX_goal_generic_construction
-		x = 1
+		id = LUX_send_out_the_spies
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
 		y = 1
+		available = {
+			has_country_flag = interrogated_council
+		}
+		cancelable = no
+		select_effect = {
+			country_event = { id = luxemburg.5 days = 0 }
+		}
 		
 		cost = 10
 		relative_position_id = LUX_change_gov
@@ -690,7 +699,8 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_ideas = { industrial_nation }
+			#add_popularity = { ideology = democratic popularity = -0.025 }
+			add_political_power = 50
 		}
 		ai_will_do = {
 			factor = 12
@@ -699,10 +709,10 @@ focus_tree = {
 	focus = {
 		id = LUX_division_training
 		icon = GFX_focus_generic_military_mission
-		x = -1
+		x = -2
 		y = 1
 		
-		cost = 10
+		cost = 5
 		relative_position_id = LUX_change_gov
 		prerequisite = { focus = LUX_change_gov }
 		#mutually_exclusive = { focus = LUX_change_gov }
@@ -718,12 +728,12 @@ focus_tree = {
 	focus = {
 		id = LUX_betray_the_council
 		icon = GFX_focus_generic_strike_at_democracy1
-		x = -1
+		x = 0
 		y = 1
 		
 		cost = 10
-		relative_position_id = LUX_super_construction
-		prerequisite = { focus = LUX_super_construction focus = LUX_division_training }
+		relative_position_id = LUX_send_out_the_spies
+		prerequisite = { focus = LUX_send_out_the_spies  }
 		#mutually_exclusive = { focus = LUX_change_gov }
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -732,7 +742,6 @@ focus_tree = {
 				idea = betray_the_council
 				days = 720
 			}
-			swap_ideas = {remove_idea = unstable_council add_idea = fear_in_the_council}
 		}
 		ai_will_do = {
 			factor = 12
