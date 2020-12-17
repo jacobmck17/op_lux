@@ -945,7 +945,7 @@ focus_tree = {
 			}
 		}
 		
-		cost = 5
+		cost = 10
 		relative_position_id = LUX_tiny_entente
 		prerequisite = { focus = LUX_tiny_entente }
 		
@@ -982,7 +982,7 @@ focus_tree = {
 			}
 		}
 		
-		cost = 5
+		cost = 10
 		relative_position_id = LUX_democratic_invite_belgium
 		prerequisite = { focus = LUX_democratic_invite_belgium }
 		
@@ -1019,7 +1019,7 @@ focus_tree = {
 			}
 		}
 		
-		cost = 5
+		cost = 10
 		relative_position_id = LUX_democratic_invite_netherlands
 		prerequisite = { focus = LUX_democratic_invite_netherlands }
 		
@@ -1056,7 +1056,7 @@ focus_tree = {
 			}
 		}
 		
-		cost = 5
+		cost = 10
 		relative_position_id = LUX_democratic_invite_czech
 		prerequisite = { focus = LUX_democratic_invite_czech }
 		
@@ -1092,7 +1092,7 @@ focus_tree = {
 			}
 		}
 		
-		cost = 5
+		cost = 10
 		relative_position_id = LUX_democratic_invite_yugoslavia
 		prerequisite = { focus = LUX_democratic_invite_yugoslavia }
 		
@@ -1131,7 +1131,7 @@ focus_tree = {
 			}
 		}
 		
-		cost = 5
+		cost = 10
 		relative_position_id = LUX_democratic_invite_denmark
 		prerequisite = { focus = LUX_democratic_invite_denmark }
 		
@@ -1180,7 +1180,7 @@ focus_tree = {
 			}
 		}
 		
-		cost = 5
+		cost = 10
 		relative_position_id = LUX_democratic_invite_czech
 		prerequisite = { focus = LUX_democratic_invite_czech }
 		
@@ -1216,7 +1216,7 @@ focus_tree = {
 			}
 		}
 		
-		cost = 5
+		cost = 10
 		relative_position_id = LUX_democratic_invite_poland
 		prerequisite = { focus = LUX_democratic_invite_poland }
 		
@@ -1253,7 +1253,7 @@ focus_tree = {
 			}
 		}
 		
-		cost = 5
+		cost = 10
 		relative_position_id = LUX_democratic_invite_romania
 		prerequisite = { focus = LUX_democratic_invite_romania }
 		
@@ -1347,7 +1347,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 10
+		cost = 20
 		relative_position_id = LUX_democratic_replace_allies
 		prerequisite = { focus = LUX_democratic_replace_allies }
 		
