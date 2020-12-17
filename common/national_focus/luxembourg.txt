@@ -780,7 +780,7 @@ focus_tree = {
 		relative_position_id = LUX_keep_gov
 		prerequisite = { focus = LUX_keep_gov }
 
-		availible = {
+		available = {
 			threat > 0.1
 		}
 		
@@ -803,7 +803,7 @@ focus_tree = {
 		relative_position_id = LUX_consumer_demands
 		prerequisite = { focus = LUX_consumer_demands }
 
-		availible = {
+		available = {
 			threat > 0.25
 		}
 		
@@ -826,14 +826,14 @@ focus_tree = {
 		relative_position_id = LUX_keep_gov
 		prerequisite = { focus = LUX_keep_gov }
 
-		availible = {
+		available = {
 			threat > 0.25
 		}
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_stability = 0.05
-			add_timed_ideas = {idea = LUX_democratic_industry days = 365}
+			add_timed_idea = {idea = LUX_democratic_industry days = 365}
 		}
 		ai_will_do = {
 			factor = 15
@@ -850,8 +850,8 @@ focus_tree = {
 		relative_position_id = LUX_build_our_industry
 		prerequisite = { focus = LUX_build_our_industry }
 
-		availible = {
-			has_government = democracy
+		available = {
+			has_government = democratic
 		}
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -860,11 +860,9 @@ focus_tree = {
 			add_popularity = { ideology = democratic popularity = 1 }
 
 			add_opinion_modifier = {
-				target = {
-					every_other_country = {
-						limit = {
-							has_government = democratic
-						}
+				every_country = {
+					limit = {
+						has_government = democratic
 					}
 				}
 				modifier = democracy_friends
@@ -889,11 +887,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			ENG = { #add luxembourg to allies
-				add_to_faction = { LUX }
+				add_to_faction = LUX
 			}
 		}
 		ai_will_do = {
-			factor = 20
+			factor = 15
 		}
 	}
 
@@ -954,7 +952,7 @@ focus_tree = {
 				limit = {
 					AND = {
 						LUX = {NOT = {has_war_with = BEL}}
-						BEL = {has_government = democracy}
+						BEL = {has_government = democratic}
 						country_exists = BEL
 					}
 				}
@@ -984,7 +982,7 @@ focus_tree = {
 				limit = {
 					AND = {
 						LUX = {NOT = {has_war_with = HOL}}
-						HOL = {has_government = democracy}
+						HOL = { has_government = democratic }
 						country_exists = HOL
 					}
 				}
@@ -1014,7 +1012,7 @@ focus_tree = {
 				limit = {
 					AND = {
 						LUX = {NOT = {has_war_with = CZE}}
-						CZE = {has_government = democracy}
+						CZE = {has_government = democratic}
 						country_exists = CZE
 					}
 				}
@@ -1044,7 +1042,7 @@ focus_tree = {
 				limit = {
 					AND = {
 						LUX = {NOT = {has_war_with = YUG}}
-						YUG = {has_government = democracy}
+						YUG = {has_government = democratic}
 						country_exists = YUG
 					}
 				}
@@ -1074,7 +1072,7 @@ focus_tree = {
 				limit = {
 					AND = {
 						LUX = {NOT = {has_war_with = DEN}}
-						DEN = {has_government = democracy}
+						DEN = {has_government = democratic}
 						country_exists = DEN
 					}
 				}
@@ -1104,7 +1102,7 @@ focus_tree = {
 				limit = {
 					AND = {
 						LUX = {NOT = {has_war_with = NOR}}
-						NOR = {has_government = democracy}
+						NOR = {has_government = democratic}
 						country_exists = NOR
 					}
 				}
@@ -1116,7 +1114,7 @@ focus_tree = {
 				limit = {
 					AND = {
 						LUX = {NOT = {has_war_with = SWE}}
-						SWE = {has_government = democracy}
+						SWE = {has_government = democratic}
 						country_exists = SWE
 					}
 				}
@@ -1146,7 +1144,7 @@ focus_tree = {
 				limit = {
 					AND = {
 						LUX = {NOT = {has_war_with = FRA}}
-						FRA = {has_government = democracy}
+						FRA = {has_government = democratic}
 						country_exists = FRA
 					}
 				}
@@ -1172,7 +1170,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			every_other_country = {
+			every_country = {
 				limit = {
 					OR = {
 						is_in_faction_with = ENG
