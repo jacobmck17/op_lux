@@ -41,6 +41,8 @@
 
  LUX_reduced_consumer_demands:0 "Reduced Consumer Demands"
  LUX_supreme_defence:0 "Supreme Defence Strategy"
+
+ LUX_using_british_industry:0 "Using British Industry"
  
  #MILITARY
  LUX_army_innovation_0:0 "Unprepared Army"

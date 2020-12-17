@@ -840,6 +840,286 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = LUX_democracy_works
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		
+		cost = 10
+		relative_position_id = LUX_build_our_industry
+		prerequisite = { focus = LUX_build_our_industry }
+
+		availible = {
+			has_government = democracy
+		}
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = { ideology = democratic popularity = 1 }
+
+			add_opinion_modifier = {
+				target = {
+					every_other_country = {
+						limit = {
+							has_government = democratic
+						}
+					}
+				}
+				modifier = democracy_friends
+			}
+		}
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	focus = {
+		id = LUX_join_allies
+		icon = GFX_goal_generic_consumer_goods
+		x = 2
+		y = 1
+		
+		cost = 10
+		relative_position_id = LUX_democracy_works
+		prerequisite = { focus = LUX_democracy_works }
+		mutually_exclusive = { focus = LUX_tiny_entente }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			ENG = { #add luxembourg to allies
+				add_to_faction = { LUX }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = LUX_voluntary_subject
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		
+		cost = 10
+		relative_position_id = LUX_join_allies
+		prerequisite = { focus = LUX_join_allies }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			ENG = { country_event = luxemburg.9 }
+			add_ideas = { idea = LUX_using_british_industry }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LUX_tiny_entente
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_democracy_works
+		prerequisite = { focus = LUX_democracy_works }
+		mutually_exclusive = { focus = LUX_join_allies }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = "Tiny Entente"
+		}
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	focus = {
+		id = LUX_democratic_invite_belgium
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_tiny_entente
+		prerequisite = { focus = LUX_tiny_entente }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			LUX = {
+				add_to_faction = BEL
+			}
+		}
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	focus = {
+		id = LUX_democratic_invite_netherlands
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_democratic_invite_belgium
+		prerequisite = { focus = LUX_democratic_invite_belgium }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			LUX = {
+				add_to_faction = HOL
+			}
+		}
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	focus = {
+		id = LUX_democratic_invite_czech
+		icon = GFX_goal_generic_consumer_goods
+		x = 2
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_democratic_invite_netherlands
+		prerequisite = { focus = LUX_democratic_invite_netherlands }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			LUX = {
+				add_to_faction = CZE
+			}
+		}
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	focus = {
+		id = LUX_democratic_invite_yugoslavia
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_democratic_invite_czech
+		prerequisite = { focus = LUX_democratic_invite_czech }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			LUX = {
+				add_to_faction = YUG
+			}
+		}
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	focus = {
+		id = LUX_democratic_invite_denmark
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_democratic_invite_yugoslavia
+		prerequisite = { focus = LUX_democratic_invite_yugoslavia }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			LUX = {
+				add_to_faction = DEN
+			}
+		}
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	focus = {
+		id = LUX_democratic_invite_norway_sweden
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_democratic_invite_denmark
+		prerequisite = { focus = LUX_democratic_invite_denmark }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			LUX = {
+				add_to_faction = NOR
+				add_to_faction = SWE
+			}
+		}
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	focus = {
+		id = LUX_democratic_invite_france
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		
+		cost = 5
+		relative_position_id = LUX_democratic_invite_netherlands
+		prerequisite = { focus = LUX_democratic_invite_netherlands }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			LUX = {
+				add_to_faction = FRA
+			}
+		}
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	focus = {
+		id = LUX_democratic_replace_allies
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		
+		available = {
+			if = {
+				date > 1941.12.7 #The actual date that usa joined ww2 historically
+			}
+		}
+
+		cost = 5
+		relative_position_id = LUX_democratic_invite_france
+		prerequisite = { focus = LUX_democratic_invite_france }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			LUX = {
+				add_to_faction = ENG
+				add_to_faction = CAN
+				add_to_faction = SAF
+				add_to_faction = RAJ
+				add_to_faction = AST
+				add_to_faction = NZL
+				add_to_faction = MAL
+				add_to_faction = INS
+				add_to_faction = USA
+			}
+		}
+		ai_will_do = {
+			factor = 15
+		}
+	}
 
 
 

@@ -236,3 +236,25 @@ country_event = {
 		war_support_factor = 0.1
 	}
 }
+
+#UK agrees to become overlord
+country_event = {
+	id = luxemburg.9
+	title = luxemburg.9.t
+	desc = luxemburg.9.d
+	#picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = luxemburg.9.a
+		effect_tooltip = {
+			ENG = {
+				puppet = LUX
+			}
+		}
+		hidden_effect = {
+			
+		}
+	}
+}

@@ -66,6 +66,28 @@ ideas = {
 			}
 		}
 
+		LUX_using_british_industry = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = Idea_brittish_stoicism
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_arms_factory_factor = 1
+				production_speed_dockyard_factor = 1
+				production_speed_industrial_complex_factor = 1
+				research_speed_factor = 0.25
+				autonomy_gain = 1 #I think this is 1 per day not 100 per day but I cant test it
+			}
+		}
+
 		##################
 		# MILITARY IDEAS #
 		##################

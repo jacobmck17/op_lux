@@ -1,0 +1,5 @@
+opinion_modifiers = {
+    democracy_friends = {
+		value = 50
+	}
+}
