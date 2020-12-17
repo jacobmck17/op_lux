@@ -57,6 +57,7 @@
  LUX_change_gov_desc:0 "Mysterious deaths, and crimes have been happening all around the city, some people have been speculating it was the council but know one knows for sure."
  LUX_keep_gov:0 "Democracy Works"
  LUX_keep_gov_desc:0 ""
+ LUX_consumer_demands:0 "Consumer Demands"
  LUX_supremecy_of_defence:0 "Supremecy of Defence"
  LUX_build_our_industry:0 "Building Our Industry"
  LUX_democracy_works:0 "Magic of Democracy"
@@ -69,8 +70,12 @@
  LUX_democratic_invite_yugoslavia:0 "Invite Yugoslavia"
  LUX_democratic_invite_denmark:0 "Invite Denmark"
  LUX_democratic_invite_norway_sweden:0 "Invite Norway and Sweden"
+ LUX_democratic_invite_poland:0 "Invite Poland"
+ LUX_democratic_invite_romania:0 "Invite Romania"
+ LUX_democratic_invite_hungary:0 "Invite Hungary"
  LUX_democratic_invite_france:0 "Invite France"
  LUX_democratic_replace_allies:0 "Replace the Allies"
+ LUX_the_senate_will_decide_your_fate:0 "The Senate Will Decide Your Fate"
  
  #below is non-democratic
  LUX_send_out_the_spies:0 "Send out the spies"

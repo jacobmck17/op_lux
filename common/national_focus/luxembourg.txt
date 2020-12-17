@@ -825,10 +825,6 @@ focus_tree = {
 		cost = 10
 		relative_position_id = LUX_keep_gov
 		prerequisite = { focus = LUX_keep_gov }
-
-		available = {
-			threat > 0.25
-		}
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -941,6 +937,13 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 1
+
+		bypass = {
+			OR = {
+				LUX = { has_war_with = BEL }
+				NOT = { country_exists = BEL }
+			}
+		}
 		
 		cost = 5
 		relative_position_id = LUX_tiny_entente
@@ -971,6 +974,13 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 1
+
+		bypass = {
+			OR = {
+				LUX = { has_war_with = HOL }
+				NOT = { country_exists = HOL }
+			}
+		}
 		
 		cost = 5
 		relative_position_id = LUX_democratic_invite_belgium
@@ -1001,6 +1011,13 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		x = 2
 		y = 1
+
+		bypass = {
+			OR = {
+				LUX = { has_war_with = CZE }
+				NOT = { country_exists = CZE }
+			}
+		}
 		
 		cost = 5
 		relative_position_id = LUX_democratic_invite_netherlands
@@ -1031,6 +1048,13 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 1
+
+		bypass = {
+			OR = {
+				LUX = { has_war_with = YUG }
+				NOT = { country_exists = YUG }
+			}
+		}
 		
 		cost = 5
 		relative_position_id = LUX_democratic_invite_czech
@@ -1042,7 +1066,6 @@ focus_tree = {
 				limit = {
 					AND = {
 						LUX = {NOT = {has_war_with = YUG}}
-						YUG = {has_government = democratic}
 						country_exists = YUG
 					}
 				}
@@ -1061,6 +1084,13 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 1
+
+		bypass = {
+			OR = {
+				LUX = { has_war_with = DEN }
+				NOT = { country_exists = DEN }
+			}
+		}
 		
 		cost = 5
 		relative_position_id = LUX_democratic_invite_yugoslavia
@@ -1091,6 +1121,15 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 1
+
+		bypass = {
+			OR = {
+				LUX = { has_war_with = NOR }
+				NOT = { country_exists = NOR }
+				LUX = { has_war_with = SWE }
+				NOT = { country_exists = SWE }
+			}
+		}
 		
 		cost = 5
 		relative_position_id = LUX_democratic_invite_denmark
@@ -1129,12 +1168,129 @@ focus_tree = {
 	}
 
 	focus = {
+		id = LUX_democratic_invite_poland
+		icon = GFX_goal_generic_consumer_goods
+		x = 2
+		y = 1
+
+		bypass = {
+			OR = {
+				LUX = { has_war_with = POL }
+				NOT = { country_exists = POL }
+			}
+		}
+		
+		cost = 5
+		relative_position_id = LUX_democratic_invite_czech
+		prerequisite = { focus = LUX_democratic_invite_czech }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					AND = {
+						LUX = {NOT = {has_war_with = POL}}
+						country_exists = POL
+					}
+				}
+				LUX = {
+					add_to_faction = POL
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	focus = {
+		id = LUX_democratic_invite_romania
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+
+		bypass = {
+			OR = {
+				LUX = { has_war_with = ROM }
+				NOT = { country_exists = ROM }
+			}
+		}
+		
+		cost = 5
+		relative_position_id = LUX_democratic_invite_poland
+		prerequisite = { focus = LUX_democratic_invite_poland }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					AND = {
+						LUX = {NOT = {has_war_with = ROM}}
+						ROM = {NOT = {is_in_faction_with = GER}}
+						country_exists = ROM
+					}
+				}
+				LUX = {
+					add_to_faction = ROM
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	focus = {
+		id = LUX_democratic_invite_hungary
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+
+		bypass = {
+			OR = {
+				LUX = { has_war_with = HUN }
+				NOT = { country_exists = HUN }
+			}
+		}
+		
+		cost = 5
+		relative_position_id = LUX_democratic_invite_romania
+		prerequisite = { focus = LUX_democratic_invite_romania }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					AND = {
+						LUX = {NOT = {has_war_with = HUN}}
+						HUN = {NOT = {is_in_faction_with = GER}}
+						country_exists = HUN
+					}
+				}
+				LUX = {
+					add_to_faction = HUN
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	focus = {
 		id = LUX_democratic_invite_france
 		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 1
+
+		bypass = {
+			OR = {
+				LUX = { has_war_with = FRA }
+				NOT = { country_exists = FRA }
+			}
+		}
 		
-		cost = 5
+		cost = 10
 		relative_position_id = LUX_democratic_invite_netherlands
 		prerequisite = { focus = LUX_democratic_invite_netherlands }
 		
@@ -1164,7 +1320,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost = 10
 		relative_position_id = LUX_democratic_invite_france
 		prerequisite = { focus = LUX_democratic_invite_france }
 		
@@ -1177,7 +1333,33 @@ focus_tree = {
 						original_tag = ENG
 					}
 				}
-				LUX = { add_to_faction = ROOT }
+				LUX = { add_to_faction = PREV }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	focus = {
+		id = LUX_the_senate_will_decide_your_fate
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+
+		cost = 10
+		relative_position_id = LUX_democratic_replace_allies
+		prerequisite = { focus = LUX_democratic_replace_allies }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = LUX
+					}
+				}
+				LUX = { puppet = PREV }
 			}
 		}
 		ai_will_do = {
@@ -1580,7 +1762,7 @@ focus_tree = {
 			factor = 5
 		}
 		search_filters = {}
-		availible = {
+		available = {
 			any_owned_state = {
 				is_controlled_by = ROOT
 				is_coastal = yes
@@ -1624,7 +1806,7 @@ focus_tree = {
 			factor = 5
 		}
 		search_filters = {}
-		availible = {
+		available = {
 			any_owned_state = {
 				is_controlled_by = ROOT
 				is_coastal = yes
@@ -1656,7 +1838,7 @@ focus_tree = {
 			factor = 7
 		}
 		search_filters = {}
-		availible = {
+		available = {
 			any_owned_state = {
 				is_controlled_by = ROOT
 				is_coastal = yes
