@@ -50,6 +50,7 @@
  LUX_resources_for_us_desc:0 "We need every last resource in this country. Giving it away is pointless!"
  
  #POLITICAL
+ #below is democratic
  LUX_political_effort:0 ""
  LUX_political_effort_desc:0 ""
  LUX_change_gov:0 "Interrogate the Council"
@@ -58,6 +59,20 @@
  LUX_keep_gov_desc:0 ""
  LUX_supremecy_of_defence:0 "Supremecy of Defence"
  LUX_build_our_industry:0 "Building Our Industry"
+ LUX_democracy_works:0 "Magic of Democracy"
+ LUX_join_allies:0 "Join the Allies"
+ LUX_voluntary_subject:0 "Voluntary Subjegation"
+ LUX_tiny_entente:0 "Form The Tiny Entente"
+ LUX_democratic_invite_belgium:0 "Invite Belgium"
+ LUX_democratic_invite_netherlands:0 "Invite Netherlands"
+ LUX_democratic_invite_czech:0 "Invite Czechslovakia"
+ LUX_democratic_invite_yugoslavia:0 "Invite Yugoslavia"
+ LUX_democratic_invite_denmark:0 "Invite Denmark"
+ LUX_democratic_invite_norway_sweden:0 "Invite Norway and Sweden"
+ LUX_democratic_invite_france:0 "Invite France"
+ LUX_democratic_replace_allies:0 "Replace the Allies"
+ 
+ #below is non-democratic
  LUX_send_out_the_spies:0 "Send out the spies"
  LUX_send_out_the_spies_desc:0 "Based on the information recevied from the council. We suspect that the mysterious deaths are coming from a secret group stationed in one of the bordering countries. We will do a series of events to check each of the countries for the secret group in hopes that we can catch them."
  LUX_division_training:0 "Prepare the Army"

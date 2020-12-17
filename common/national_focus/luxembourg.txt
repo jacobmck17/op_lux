@@ -950,8 +950,17 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			LUX = {
-				add_to_faction = BEL
+			if = {
+				limit = {
+					AND = {
+						LUX = {NOT = {has_war_with = BEL}}
+						BEL = {has_government = democracy}
+						country_exists = BEL
+					}
+				}
+				LUX = {
+					add_to_faction = BEL
+				}
 			}
 		}
 		ai_will_do = {
@@ -971,8 +980,17 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			LUX = {
-				add_to_faction = HOL
+			if = {
+				limit = {
+					AND = {
+						LUX = {NOT = {has_war_with = HOL}}
+						HOL = {has_government = democracy}
+						country_exists = HOL
+					}
+				}
+				LUX = {
+					add_to_faction = HOL
+				}
 			}
 		}
 		ai_will_do = {
@@ -992,8 +1010,17 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			LUX = {
-				add_to_faction = CZE
+			if = {
+				limit = {
+					AND = {
+						LUX = {NOT = {has_war_with = CZE}}
+						CZE = {has_government = democracy}
+						country_exists = CZE
+					}
+				}
+				LUX = {
+					add_to_faction = CZE
+				}
 			}
 		}
 		ai_will_do = {
@@ -1013,8 +1040,17 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			LUX = {
-				add_to_faction = YUG
+			if = {
+				limit = {
+					AND = {
+						LUX = {NOT = {has_war_with = YUG}}
+						YUG = {has_government = democracy}
+						country_exists = YUG
+					}
+				}
+				LUX = {
+					add_to_faction = YUG
+				}
 			}
 		}
 		ai_will_do = {
@@ -1034,8 +1070,17 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			LUX = {
-				add_to_faction = DEN
+			if = {
+				limit = {
+					AND = {
+						LUX = {NOT = {has_war_with = DEN}}
+						DEN = {has_government = democracy}
+						country_exists = DEN
+					}
+				}
+				LUX = {
+					add_to_faction = DEN
+				}
 			}
 		}
 		ai_will_do = {
@@ -1055,9 +1100,29 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			LUX = {
-				add_to_faction = NOR
-				add_to_faction = SWE
+			if = {
+				limit = {
+					AND = {
+						LUX = {NOT = {has_war_with = NOR}}
+						NOR = {has_government = democracy}
+						country_exists = NOR
+					}
+				}
+				LUX = {
+					add_to_faction = NOR
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						LUX = {NOT = {has_war_with = SWE}}
+						SWE = {has_government = democracy}
+						country_exists = SWE
+					}
+				}
+				LUX = {
+					add_to_faction = SWE
+				}
 			}
 		}
 		ai_will_do = {
@@ -1077,8 +1142,17 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			LUX = {
-				add_to_faction = FRA
+			if = {
+				limit = {
+					AND = {
+						LUX = {NOT = {has_war_with = FRA}}
+						FRA = {has_government = democracy}
+						country_exists = FRA
+					}
+				}
+				LUX = {
+					add_to_faction = FRA
+				}
 			}
 		}
 		ai_will_do = {
@@ -1091,12 +1165,6 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 1
-		
-		available = {
-			if = {
-				date > 1941.12.7 #The actual date that usa joined ww2 historically
-			}
-		}
 
 		cost = 5
 		relative_position_id = LUX_democratic_invite_france
@@ -1104,16 +1172,14 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			LUX = {
-				add_to_faction = ENG
-				add_to_faction = CAN
-				add_to_faction = SAF
-				add_to_faction = RAJ
-				add_to_faction = AST
-				add_to_faction = NZL
-				add_to_faction = MAL
-				add_to_faction = INS
-				add_to_faction = USA
+			every_other_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = ENG
+						original_tag = ENG
+					}
+				}
+				LUX = { add_to_faction = ROOT }
 			}
 		}
 		ai_will_do = {
