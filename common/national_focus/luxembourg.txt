@@ -689,7 +689,6 @@ focus_tree = {
 		available = {
 			has_country_flag = interrogated_council
 		}
-		cancelable = no
 		select_effect = {
 			country_event = { id = luxemburg.5 days = 0 }
 		}

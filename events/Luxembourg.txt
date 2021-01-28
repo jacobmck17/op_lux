@@ -175,12 +175,6 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = LUX
-		NOT = { has_completed_focus = LUX_send_out_the_spies }
-		focus_progress = {
-			focus = LUX_send_out_the_spies
-			progress > 0.3
-		}
 	}
 	
 	option = {
@@ -198,12 +192,6 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = LUX
-		NOT = { has_completed_focus = LUX_send_out_the_spies }
-		focus_progress = {
-			focus = LUX_send_out_the_spies
-			progress > 0.6
-		}
 	}
 	
 	option = {
@@ -221,12 +209,6 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = LUX
-		NOT = { has_completed_focus = LUX_send_out_the_spies }
-		focus_progress = {
-			focus = LUX_send_out_the_spies
-			progress > 0.9
-		}
 	}
 	
 	option = {

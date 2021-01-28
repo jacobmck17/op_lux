@@ -539,6 +539,9 @@ ideas = {
 				training_time_factor = -0.1
 			}
 		}
+
+		#council ideas
+		
 		betray_the_council = {
 		
 			removal_cost = -1
