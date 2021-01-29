@@ -9,3 +9,11 @@ LUX_war_plans = {
 		has_completed_focus = LUX_planning_branch
 	}
 }
+LUX_send_spies = {
+	allowed = {
+		original_tag = LUX
+	}
+	visible = {
+		has_completed_focus = LUX_send_out_the_spies
+	}
+}

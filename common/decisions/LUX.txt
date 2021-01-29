@@ -339,3 +339,55 @@ LUX_war_plans = {
 		}
 	}
 }
+LUX_send_spies = {
+	LUX_send_spies_to_belgium = {
+		icon = GFX_decision_icon_default
+		available = {
+		}
+		visible = {
+			has_completed_focus = LUX_send_out_the_spies
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 14
+		remove_effect  = {
+			set_country_flag = found_enemies
+			country_event = { id = luxemburg.5 days = 0 }
+		}
+	}
+	LUX_send_spies_to_france = {
+		icon = GFX_decision_icon_default
+		available = {
+		}
+		visible = {
+			has_completed_focus = LUX_send_out_the_spies
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 14
+		remove_effect  = {
+			country_event = { id = luxemburg.6 days = 0 }
+		}
+	}
+	LUX_send_spies_to_germany = {
+		icon = GFX_decision_icon_default
+		available = {
+		}
+		visible = {
+			has_completed_focus = LUX_send_out_the_spies
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 14
+		remove_effect  = {
+			country_event = { id = luxemburg.7 days = 0 }
+		}
+	}
+	
+)

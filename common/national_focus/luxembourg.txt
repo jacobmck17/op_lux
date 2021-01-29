@@ -687,11 +687,11 @@ focus_tree = {
 		x = 0
 		y = 1
 		available = {
-			has_country_flag = interrogated_council
+			#has_country_flag = interrogated_council
 		}
-		select_effect = {
-			country_event = { id = luxemburg.5 days = 0 }
-		}
+		#select_effect = {
+		#	#country_event = { id = luxemburg.5 days = 0 }
+		#}
 		
 		cost = 10
 		relative_position_id = LUX_change_gov
@@ -731,6 +731,9 @@ focus_tree = {
 		icon = GFX_focus_generic_strike_at_democracy1
 		x = 0
 		y = 1
+		available = {
+			has_country_flag = found_enemies
+		}
 		
 		cost = 10
 		relative_position_id = LUX_send_out_the_spies

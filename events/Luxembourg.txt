@@ -148,11 +148,11 @@ country_event = {
 	option = {
 		name = luxemburg.4.a	#yes
 		ai_chance = { factor = 100 }
-		set_country_flag = interrogated_council
+		#set_country_flag = interrogated_council
 		war_support_factor = 0.5
 	}
 }
-# Send out the spies to germany
+# Send out the spies to belgium
 country_event = {
 	id = luxemburg.5
 	title = luxemburg.5.t
@@ -183,7 +183,7 @@ country_event = {
 		add_popularity = { ideology = democratic popularity = -0.025 }
 	}
 }
-# Send out the spies to belgium
+# Send out the spies to germany
 country_event = {
 	id = luxemburg.7
 	title = luxemburg.7.t
@@ -198,24 +198,6 @@ country_event = {
 		name = luxemburg.7.a	#yes
 		ai_chance = { factor = 100 }
 		add_popularity = { ideology = democratic popularity = -0.025 }
-	}
-}
-# found the group in belgium
-country_event = {
-	id = luxemburg.8
-	title = luxemburg.8.t
-	desc = luxemburg.8.d
-	#picture = GFX_report_event_physics_lab_01
-	fire_only_once = yes
-	
-	trigger = {
-	}
-	
-	option = {
-		name = luxemburg.8.a	#yes
-		ai_chance = { factor = 100 }
-		add_popularity = { ideology = democratic popularity = -0.025 }
-		war_support_factor = 0.1
 	}
 }
 
