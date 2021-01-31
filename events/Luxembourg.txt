@@ -160,6 +160,8 @@ country_event = {
 	#picture = GFX_report_event_physics_lab_01
 	fire_only_once = yes
 	
+	is_triggered_only = yes
+	
 	option = {
 		name = luxemburg.5.a	#yes
 		ai_chance = { factor = 100 }
@@ -174,8 +176,7 @@ country_event = {
 	#picture = GFX_report_event_physics_lab_01
 	fire_only_once = yes
 	
-	trigger = {
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = luxemburg.6.a	#yes
@@ -191,8 +192,7 @@ country_event = {
 	#picture = GFX_report_event_physics_lab_01
 	fire_only_once = yes
 	
-	trigger = {
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = luxemburg.7.a	#yes
