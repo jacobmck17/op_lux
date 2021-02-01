@@ -87,6 +87,24 @@ ideas = {
 				autonomy_gain = 1 #I think this is 1 per day not 100 per day but I cant test it
 			}
 		}
+		LUX_established_spies = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			#picture = Idea_brittish_stoicism
+
+			removal_cost = -1
+
+			modifier = {
+				agency_upgrade_time = -0.5
+				operative_slot = +1
+			}
+		}
 
 		##################
 		# MILITARY IDEAS #

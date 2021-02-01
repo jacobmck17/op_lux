@@ -158,7 +158,6 @@ country_event = {
 	title = luxemburg.5.t
 	desc = luxemburg.5.d
 	#picture = GFX_report_event_physics_lab_01
-	fire_only_once = yes
 	
 	is_triggered_only = yes
 	
@@ -166,6 +165,7 @@ country_event = {
 		name = luxemburg.5.a	#yes
 		ai_chance = { factor = 100 }
 		add_popularity = { ideology = democratic popularity = -0.025 }
+		set_country_flag = found_enemies
 	}
 }
 # Send out the spies to france
@@ -174,7 +174,6 @@ country_event = {
 	title = luxemburg.6.t
 	desc = luxemburg.6.d
 	#picture = GFX_report_event_physics_lab_01
-	fire_only_once = yes
 	
 	is_triggered_only = yes
 	
@@ -190,7 +189,6 @@ country_event = {
 	title = luxemburg.7.t
 	desc = luxemburg.7.d
 	#picture = GFX_report_event_physics_lab_01
-	fire_only_once = yes
 	
 	is_triggered_only = yes
 	

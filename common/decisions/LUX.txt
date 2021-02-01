@@ -353,7 +353,6 @@ LUX_send_spies = {
 		fire_only_once = yes
 		days_remove = 14
 		remove_effect  = {
-			set_country_flag = found_enemies
 			country_event = { id = luxemburg.5 days = 0 }
 		}
 	}
