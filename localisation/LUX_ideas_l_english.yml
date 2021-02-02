@@ -40,7 +40,9 @@
  fear_in_the_council_desc:0 "There is too much going on in the country and the council can't organize and handle all of it. The people are contemplating if they even want to have the council in charge anymore."
  LUX_established_spies:0 "Established Spies"
  LUX_established_spies_desc:0 "Luxembourg has esablished their spies and sent some out to surrounding countires. This gave them more experience with spies and this gives them an edge against the other nations of the world."
-
+ terrorists_attacked:0 "Terrorists Attacked"
+ terrorists_attacked_desc:0 "Terrorists attacked a residential part of Luxembourg, and the people will be forever worried if they will be attacked again."
+ 
  LUX_reduced_consumer_demands:0 "Reduced Consumer Demands"
  LUX_supreme_defence:0 "Supreme Defence Strategy"
 

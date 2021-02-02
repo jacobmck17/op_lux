@@ -377,7 +377,7 @@ LUX_send_spies = {
 		available = {
 		}
 		visible = {
-			has_completed_focus = LUX_send_out_the_spies
+			original_tag = LUX
 		}
 		ai_will_do = {
 			factor = 1
@@ -388,5 +388,28 @@ LUX_send_spies = {
 			country_event = { id = luxemburg.7 days = 0 }
 		}
 	}
-	
-)
+}
+LUX_terrorist_attack = {
+	impending_terrorist_attack = {
+		icon = GFX_decision_icon_default
+		available = {
+			has_completed_focus = LUX_stop_terrorists
+		}
+		visible = {
+			original_tag = LUX
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+		is_good = no
+		days_mission_timeout = 111
+		timeout_effect = {
+			set_country_flag = commenced_attack
+			add_ideas = terrorists_attacked
+			add_manpower = -10000
+			add_stability = -0.1
+			#add_war_support = +0.05
+		}
+	}
+}

@@ -430,6 +430,7 @@ ideas = {
 			}
 		}
 		upgraded_oil_processing = {
+			#picture = generic_research_bonus
 		
 			removal_cost = -1
 			
@@ -446,6 +447,7 @@ ideas = {
 			}
 		}
 		proud_workers = {
+			#picture = generic_research_bonus
 		
 			removal_cost = -1
 			
@@ -464,6 +466,7 @@ ideas = {
 			}
 		}
 		revenge_on_usa = {
+			#picture = generic_research_bonus
 		
 			removal_cost = -1
 			
@@ -482,6 +485,7 @@ ideas = {
 			}
 		}
 		revenge_on_ger = {
+			#picture = generic_research_bonus
 		
 			removal_cost = -1
 			
@@ -500,6 +504,7 @@ ideas = {
 			}
 		}
 		revenge_on_sov = {
+			#picture = generic_research_bonus
 		
 			removal_cost = -1
 			
@@ -523,6 +528,7 @@ ideas = {
 		###################
 		
 		industrial_nation = {
+			#picture = generic_research_bonus
 		
 			removal_cost = -1
 			
@@ -541,6 +547,7 @@ ideas = {
 			}
 		}
 		military_readiness_act = {
+			#picture = generic_research_bonus
 		
 			removal_cost = -1
 			
@@ -553,8 +560,27 @@ ideas = {
 			}
 			
 			modifier = {
-				conscription = 0.015
-				training_time_factor = -0.1
+				conscription = 0.02
+				training_time_factor = -0.25
+			}
+		}
+		terrorists_attacked = {
+			#picture = generic_research_bonus
+		
+			removal_cost = -1
+			
+			allowed = {
+				tag = LUX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				#stability_factor = -0.15
+				stability_weekly = -0.005
+				#war_support_factor = +0.05
 			}
 		}
 

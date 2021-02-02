@@ -17,3 +17,13 @@ LUX_send_spies = {
 		has_completed_focus = LUX_send_out_the_spies
 	}
 }
+LUX_terrorist_attack = {
+	priority = 10
+	picture = GFX_category_picture_terrorist_attack
+	icon = GFX_category_icon
+	allowed = {
+		original_tag = LUX
+	}
+	visible = {
+	}
+}

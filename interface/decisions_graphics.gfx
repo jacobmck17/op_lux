@@ -1,0 +1,6 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_category_picture_terrorist_attack"
+		texturefile = "gfx/interface/decisions/category_picture_terrorist_attack.dds"
+	}
+}

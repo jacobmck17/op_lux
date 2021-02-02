@@ -664,6 +664,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		
+		available = {
+			has_country_flag = commenced_attack
+		}
+		
 		cost = 10
 		relative_position_id = LUX_political_effort
 		prerequisite = { focus = LUX_political_effort }
@@ -766,6 +770,41 @@ focus_tree = {
 			add_political_power = 75
 			add_stability = 0.05
 			add_popularity = { ideology = democratic popularity = 0.1 }
+			add_days_mission_timeout = {
+				mission = impending_terrorist_attack
+				days = +140
+			}
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+	focus = {
+		id = LUX_stop_terrorists
+		icon = GFX_goal_generic_consumer_goods
+		x = -2
+		y = 1
+		
+		cost = 10
+		relative_position_id = LUX_keep_gov
+		prerequisite = { focus = LUX_keep_gov }
+		#mutually_exclusive = { focus = LUX_change_gov }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			if = {
+				limit = {
+					has_active_mission = impending_terrorist_attack
+				}
+				add_stability = +0.05
+				custom_effect_tooltip = LUX_tooltip_2
+			}
+			if = {
+				limit = {
+					has_idea = terrorists_attacked
+				}
+				remove_idea = terrorists_attacked
+			}
 		}
 		ai_will_do = {
 			factor = 12
@@ -905,7 +944,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			ENG = { country_event = luxemburg.9 }
-			add_ideas = { idea = LUX_using_british_industry }
+			add_idea = LUX_using_british_industry
 		}
 		ai_will_do = {
 			factor = 10
