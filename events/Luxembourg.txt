@@ -2,22 +2,22 @@
 # Luxembourg events
 ###########################
 
-add_namespace = luxemburg
+add_namespace = luxembourg
 
 # LUX Research Treaty
 country_event = {
-	id = luxemburg.1
-	title = luxemburg.1.t
-	desc = luxemburg.1.d
+	id = luxembourg.1
+	title = luxembourg.1.t
+	desc = luxembourg.1.d
 	picture = GFX_report_event_physics_lab_01
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = luxemburg.1.a	#yes
+		name = luxembourg.1.a	#yes
 		ai_chance = { factor = 100 }
 		LUX = {
-			country_event = { days = 1 id = luxemburg.2 } #successful treaty
+			country_event = { days = 1 id = luxembourg.2 } #successful treaty
 		}
 		# REVISIT Balance research bonus
 		add_ideas = {
@@ -26,26 +26,26 @@ country_event = {
 	}
 	
 	option = {
-		name = luxemburg.1.b	#no
+		name = luxembourg.1.b	#no
 		ai_chance = { factor = 0 }
 		add_political_power = -50
 		LUX = {
-			country_event = { days = 1 id = luxemburg.3 } #lux will have their revenge
+			country_event = { days = 1 id = luxembourg.3 } #lux will have their revenge
 		}
 	}
 }
 
 # Accept  LUX Treaty
 country_event = {
-	id = luxemburg.2
-	title = luxemburg.2.t
-	desc = luxemburg.2.d
+	id = luxembourg.2
+	title = luxembourg.2.t
+	desc = luxembourg.2.d
 	picture = GFX_report_event_physics_lab_02
 
 	is_triggered_only = yes
 	
 	option = {
-		name = luxemburg.2.a	#yay
+		name = luxembourg.2.a	#yay
 		if = {
 			limit = {
 				has_completed_focus = LUX_treaty_with_usa
@@ -76,15 +76,15 @@ country_event = {
 
 # Reject  LUX Treaty
 country_event = {
-	id = luxemburg.3
-	title = luxemburg.3.t
-	desc = luxemburg.3.d
+	id = luxembourg.3
+	title = luxembourg.3.t
+	desc = luxembourg.3.d
 	picture = GFX_report_event_physics_lab_02
 
 	is_triggered_only = yes
 	
 	option = {
-		name = luxemburg.3.a	#noo
+		name = luxembourg.3.a	#noo
 		if = {
 			limit = {
 				has_completed_focus = LUX_treaty_with_usa
@@ -138,15 +138,15 @@ country_event = {
 
 # Interrogated Council
 country_event = {
-	id = luxemburg.4
-	title = luxemburg.4.t
-	desc = luxemburg.4.d
+	id = luxembourg.4
+	title = luxembourg.4.t
+	desc = luxembourg.4.d
 	#picture = GFX_report_event_physics_lab_01
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = luxemburg.4.a	#yes
+		name = luxembourg.4.a	#yes
 		ai_chance = { factor = 100 }
 		#set_country_flag = interrogated_council
 		war_support_factor = 0.5
@@ -154,15 +154,15 @@ country_event = {
 }
 # Send out the spies to belgium
 country_event = {
-	id = luxemburg.5
-	title = luxemburg.5.t
-	desc = luxemburg.5.d
+	id = luxembourg.5
+	title = luxembourg.5.t
+	desc = luxembourg.5.d
 	#picture = GFX_report_event_physics_lab_01
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = luxemburg.5.a	#yes
+		name = luxembourg.5.a	#yes
 		ai_chance = { factor = 100 }
 		add_popularity = { ideology = democratic popularity = -0.025 }
 		set_country_flag = found_enemies
@@ -170,30 +170,30 @@ country_event = {
 }
 # Send out the spies to france
 country_event = {
-	id = luxemburg.6
-	title = luxemburg.6.t
-	desc = luxemburg.6.d
+	id = luxembourg.6
+	title = luxembourg.6.t
+	desc = luxembourg.6.d
 	#picture = GFX_report_event_physics_lab_01
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = luxemburg.6.a	#yes
+		name = luxembourg.6.a	#yes
 		ai_chance = { factor = 100 }
 		add_popularity = { ideology = democratic popularity = -0.025 }
 	}
 }
 # Send out the spies to germany
 country_event = {
-	id = luxemburg.7
-	title = luxemburg.7.t
-	desc = luxemburg.7.d
+	id = luxembourg.7
+	title = luxembourg.7.t
+	desc = luxembourg.7.d
 	#picture = GFX_report_event_physics_lab_01
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = luxemburg.7.a	#yes
+		name = luxembourg.7.a	#yes
 		ai_chance = { factor = 100 }
 		add_popularity = { ideology = democratic popularity = -0.025 }
 	}
@@ -201,15 +201,15 @@ country_event = {
 
 #UK agrees to become overlord
 country_event = {
-	id = luxemburg.9
-	title = luxemburg.9.t
-	desc = luxemburg.9.d
+	id = luxembourg.8
+	title = luxembourg.8.t
+	desc = luxembourg.8.d
 	#picture = GFX_report_event_hitler_handshake
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = luxemburg.9.a
+		name = luxembourg.8.a
 		effect_tooltip = {
 			ENG = {
 				puppet = LUX
@@ -218,5 +218,87 @@ country_event = {
 		hidden_effect = {
 			
 		}
+	}
+}
+
+#Greater Purge: Begins
+country_event = {
+	id = luxembourg.9
+	title = luxembourg.9.t
+	desc = luxembourg.9.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	fire_only_once = yes
+	
+	option = {
+		name = luxembourg.9.a
+	}
+}
+
+#The Great Purge: Step 1
+country_event = {
+	id = luxembourg.10
+	title = luxembourg.10.t
+	desc = luxembourg.10.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = LUX
+		has_completed_focus = LUX_the_greater_purge
+	}
+	
+	option = {
+		name = luxembourg.10.a
+		remove_unit_leader = 1 #Remove Jacob
+		remove_ideas = "Jacrox"
+	}
+	option = {
+		name = luxembourg.10.b
+		remove_unit_leader = 2 #Remove Joel
+		remove_ideas = "TheAngryPopo"
+	}
+}
+
+#The Great Purge: Step 2
+country_event = {
+	id = luxembourg.11
+	title = luxembourg.11.t
+	desc = luxembourg.11.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = LUX
+		has_completed_focus = LUX_the_greater_purge
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = luxembourg.11.a
+	}
+}
+
+#The Great Purge: Step 3
+country_event = {
+	id = luxembourg.12
+	title = luxembourg.12.t
+	desc = luxembourg.12.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	trigger = {
+		tag = LUX
+		has_completed_focus = LUX_the_greater_purge
+	}
+
+	fire_only_once = yes
+	
+	option = {
+		name = luxembourg.12.a
 	}
 }

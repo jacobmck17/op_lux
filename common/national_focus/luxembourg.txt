@@ -752,6 +752,48 @@ focus_tree = {
 			factor = 12
 		}
 	}
+	focus = {
+		id = LUX_interal_political_adjustments
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 1
+		y = 1
+		
+		cost = 10
+		relative_position_id = LUX_betray_the_council
+		prerequisite = { focus = LUX_betray_the_council  }
+		#mutually_exclusive = { focus = LUX_change_gov }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			#not sure which debuff this is supposed to remove
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+
+	#COMMUNIST
+	focus = {
+		id = LUX_the_greater_purge
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = -1
+		y = 1
+		
+		cost = 1
+		relative_position_id = LUX_interal_political_adjustments
+		prerequisite = { focus = LUX_interal_political_adjustments  }
+		#mutually_exclusive = { focus = LUX_change_gov }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			#not sure which debuff this is supposed to remove
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+
+
 
 	#DEMOCRATIC
 	focus = {
@@ -772,7 +814,7 @@ focus_tree = {
 			add_popularity = { ideology = democratic popularity = 0.1 }
 			add_days_mission_timeout = {
 				mission = impending_terrorist_attack
-				days = +140
+				days = 140
 			}
 		}
 		ai_will_do = {
@@ -796,7 +838,7 @@ focus_tree = {
 				limit = {
 					has_active_mission = impending_terrorist_attack
 				}
-				add_stability = +0.05
+				add_stability = 0.05
 				custom_effect_tooltip = LUX_tooltip_2
 			}
 			if = {
@@ -2337,32 +2379,6 @@ focus_tree = {
 			unlock_decision_tooltip = { decision = LUX_execute_war_plan_SWE show_effect_tooltip = yes show_modifiers = yes }
 			unlock_decision_tooltip = { decision = LUX_execute_war_plan_NOR show_effect_tooltip = yes show_modifiers = yes }
 			unlock_decision_tooltip = { decision = LUX_execute_war_plan_FIN show_effect_tooltip = yes show_modifiers = yes }
-		}
-	}
-	focus = { #WAR PLAN AGAINST MEXICO
-		id = LUX_war_plan_mexico
-		icon = GFX_focus_usa_build_the_pentagon
-		x = -4
-		y = 1
-		relative_position_id = LUX_planning_branch
-		prerequisite = {focus = LUX_planning_branch}
-		cost = 5
-		ai_will_do = {
-			factor = 6
-		}
-		search_filters = {}
-
-		bypass = {
-			MEX = {
-				OR = {
-					exists = no
-					is_subject = yes
-				}
-			}
-		}
-		
-		completion_reward = {
-			unlock_decision_tooltip = { decision = LUX_execute_war_plan_MEX show_effect_tooltip = yes show_modifiers = yes }
 		}
 	}
 	focus = { #WAR PLAN AGAINST MEXICO

@@ -86,6 +86,12 @@
  LUX_division_training_desc:0 "The future is very uncertain so we much prepare for the worst... war."
  LUX_betray_the_council:0 "Confront the Enemy"
  LUX_betray_the_council_desc:0 "We have found out exactly who has been behind the mysterious actions and we must confront them about the wrong's they have been doing. Depending their response, this could go many different ways."
+ LUX_internal_political_adjustments:0 "Internal Political Adjustments"
+ LUX_internal_political_adjustments_desc:0 "Our current political system is flawed, we must find a suitable alternative"
+
+ #below is communist
+ LUX_the_greater_purge:0 "The Greater Purge"
+ LUX_the_greater_purge_desc:0 "Some say that Joseph Stalin Killin' a few of his buddies was a 'great purge.' Luxembourg must be known for being the best at everything, and that includes purges."
 
  #MILITARY
  LUX_army_training:0 "Reforming the Army of Luxembourg"

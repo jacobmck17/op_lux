@@ -239,6 +239,7 @@ create_field_marshal = { #THE CHAD
 #GENERALS
 create_corps_commander = { #Jacob
 	name = "Jacrox"
+	id = 1
 	picture = "Portrait_LUX_Commander_Jacrox.dds"
 	skill = 1
 	attack_skill = 3
@@ -249,6 +250,7 @@ create_corps_commander = { #Jacob
 }
 create_corps_commander = { #Joel
 	name = "TheAngryPopo"
+	id = 2
 	picture = "Portrait_LUX_Commander_TheAngryPopo.dds"
 	skill = 1
 	attack_skill = 3
@@ -259,6 +261,7 @@ create_corps_commander = { #Joel
 }
 create_corps_commander = { #Eric
 	name = "Stoßtruppen910"
+	id = 3
 	picture = "Portrait_LUX_Commander_Stoßtruppen910.dds"
 	skill = 1
 	attack_skill = 6 # was 3
@@ -269,6 +272,7 @@ create_corps_commander = { #Eric
 }
 create_corps_commander = { #Gareth
 	name = "BageL"
+	id = 4
 	picture = "Portrait_LUX_Commander_BageL.dds"
 	skill = 1
 	attack_skill = 5 # was 4
@@ -279,6 +283,7 @@ create_corps_commander = { #Gareth
 }
 create_corps_commander = { #Josh mario
 	name = "The Junior Mint"
+	id = 5
 	picture = "Portrait_LUX_Commander_The_Junior_Mint.dds"
 	skill = 1
 	attack_skill = 3 # was 2
