@@ -654,6 +654,28 @@ ideas = {
 			}
 		}
 
+
+		
+		###############
+		# NON ALIGNED #
+		###############
+
+		LUX_search_for_royal_council = {
+			removal_cost = -1
+
+			allowed = {always = no}
+			allowed_civil_war = {always = yes}
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = -0.1
+				neutrality_drift = 0.15
+				political_advisor_cost_factor = 0.1
+			}
+		}
+
+
+
 		##################
 		# COUNCIL PURGED #
 		##################
@@ -681,7 +703,8 @@ ideas = {
 				industrial_capacity_factory = -0.2
 				training_time_factor = 0.5
 				stability_factor = -0.1
-				political_power_gain = -0.25
+				political_power_gain = -0.2
+				communism_drift = 0.15
 			}
 		}
 

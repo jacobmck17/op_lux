@@ -48,6 +48,9 @@
 
  LUX_using_british_industry:0 "Using British Industry"
  
+ #NON ALIGNED
+ LUX_search_for_royal_council:0 "Search for a Royal Council"
+
  #THE GREATEST PURGE
  LUX_council_purged_1:0 "Council Purged"
  LUX_council_purged_2:0 "Council in Chaos"

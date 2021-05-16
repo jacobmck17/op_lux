@@ -673,7 +673,7 @@ focus_tree = {
 	focus = {
 		id = LUX_change_gov
 		icon = GFX_focus_generic_support_the_left_right
-		x = -2
+		x = -3
 		y = 1
 		
 		available = {
@@ -778,6 +778,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			#not sure which debuff this is supposed to remove
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
 		}
 		ai_will_do = {
 			factor = 12
@@ -802,6 +810,10 @@ focus_tree = {
 				idea = LUX_council_purged_1
 				days = 365
 			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
 		}
 		ai_will_do = {
 			factor = 12
@@ -817,11 +829,19 @@ focus_tree = {
 		cost = 10
 		relative_position_id = LUX_the_greater_purge
 		prerequisite = { focus = LUX_the_greater_purge  }
+
+		available = {
+			has_government = communism
+		}
 		
 		search_filters = { }
 		completion_reward = {
 			create_wargoal = { type = annex_everything target = BEL }
 			custom_effect_tooltip = LUX_tooltip_3
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 		}
 		ai_will_do = {
 			factor = 12
@@ -829,12 +849,84 @@ focus_tree = {
 	}
 
 
+	#NON-ALIGNED
+	focus = {
+		id = LUX_replace_the_council
+		icon = GFX_focus_generic_soviet_politics
+		x = 2
+		y = 1
+		
+		cost = 10
+		relative_position_id = LUX_internal_political_adjustments
+		prerequisite = { focus = LUX_internal_political_adjustments  }
+		#mutually_exclusive = { focus = LUX_change_gov }
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.2
+			}
+			add_timed_ideas = {
+				idea = LUX_search_for_royal_council
+				days = 365
+			}
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+
+	focus = {
+		id = LUX_the_one_true_king
+		icon = GFX_focus_generic_soviet_politics
+		x = 1
+		y = 1
+
+		available = {
+			has_government = neutrality
+		}
+		
+		cost = 10
+		relative_position_id = LUX_replace_the_council
+		prerequisite = { focus = LUX_replace_the_council  }
+		mutually_exclusive = { focus = LUX_welcome_the_kaiser }
+		
+		search_filters = { }
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+
+	focus = {
+		id = LUX_welcome_the_kaiser
+		icon = GFX_focus_generic_soviet_politics
+		x = -1
+		y = 1
+		
+		cost = 10
+		relative_position_id = LUX_replace_the_council
+		prerequisite = { focus = LUX_replace_the_council  }
+		mutually_exclusive = { focus = LUX_the_one_true_king }
+		
+		search_filters = { }
+		completion_reward = {
+
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+
 
 	#DEMOCRATIC
 	focus = {
 		id = LUX_keep_gov
 		icon = GFX_goal_generic_neutrality_focus
-		x = 2
+		x = 3
 		y = 1
 		
 		cost = 10
@@ -1494,7 +1586,7 @@ focus_tree = {
 	focus = {
 		id = LUX_army_training
 		icon = GFX_goal_generic_axis_build_infantry
-		x = 35
+		x = 37
 		y = 0
 		cost = 2
 		ai_will_do = {

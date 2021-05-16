@@ -167,6 +167,15 @@ set_popularities = {
 			Great_War_Hero
 		}
 	}
+
+	create_country_leader = {
+		name = "Jesus Christ"
+		desc = "No government is the best government"
+		picture = "Portrait_LUX_Leader_The_Council.dds"
+		expire = "1965.1.1"
+		ideology = anarchism
+		traits = {}
+	}
 }
 
 	########################
