@@ -48,7 +48,15 @@
 
  LUX_using_british_industry:0 "Using British Industry"
  
+ #THE GREATEST PURGE
+ LUX_council_purged_1:0 "Council Purged"
+ LUX_council_purged_2:0 "Council in Chaos"
+ LUX_council_purged_3:0 "Council Devastated"
+ LUX_council_purged_4:0 "Council's Slow Recovery"
+ LUX_council_purged_5:0 "Council Regains Strength"
+
  #MILITARY
+ LUX_child_labour:0 "Child Labour"
  LUX_army_innovation_0:0 "Unprepared Army"
  LUX_army_innovation_0_desc:0 "Our armies arent quite ready for war quite yet..."
  LUX_army_innovation_1:0 "Competent Army"

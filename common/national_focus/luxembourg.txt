@@ -153,6 +153,7 @@ focus_tree = {
 			factor = 12
 		}
 	}
+
 	focus = {
 		id = LUX_improve_scientists
 		icon = GFX_goal_tfv_generic_tech_sharing
@@ -171,6 +172,7 @@ focus_tree = {
 			factor = 12
 		}
 	}
+
 	focus = {
 		id = LUX_treaty_with_usa
 		icon = GFX_focus_chi_mission_to_the_us
@@ -198,6 +200,7 @@ focus_tree = {
 			factor = 12
 		}
 	}
+
 	focus = {
 		id = LUX_treaty_with_ger
 		icon = GFX_focus_chi_mission_to_germany
@@ -225,6 +228,7 @@ focus_tree = {
 			factor = 12
 		}
 	}
+
 	focus = {
 		id = LUX_treaty_with_sov
 		icon = GFX_focus_chi_mission_to_the_soviet_union
@@ -252,6 +256,7 @@ focus_tree = {
 			factor = 12
 		}
 	}
+
 	focus = {
 		id = LUX_treaty_with_none
 		icon = GFX_focus_generic_the_giant_wakes
@@ -274,6 +279,7 @@ focus_tree = {
 			factor = 12
 		}
 	}
+
 	focus = {
 		id = LUX_build_new_labs
 		icon = GFX_focus_research2
@@ -318,6 +324,7 @@ focus_tree = {
 			factor = 12
 		}
 	}
+
 	focus = {
 		id = LUX_expand_mil_industry2
 		icon = GFX_goal_generic_construct_mil_factory
@@ -343,6 +350,7 @@ focus_tree = {
 			factor = 12
 		}
 	}
+
 	focus = {
 		id = LUX_expand_oil
 		icon = GFX_goal_generic_oil_refinery
@@ -375,6 +383,7 @@ focus_tree = {
 			factor = 12
 		}
 	}
+
 	focus = {
 		id = LUX_expand_rubber
 		icon = GFX_focus_generic_rubber
@@ -398,6 +407,7 @@ focus_tree = {
 			factor = 12
 		}
 	}
+
 	focus = {
 		id = LUX_expand_overall_industry
 		icon = GFX_focus_generic_industry_2
@@ -428,6 +438,7 @@ focus_tree = {
 			factor = 12
 		}
 	}
+
 	focus = {
 		id = LUX_double_decker_factory
 		icon = GFX_focus_generic_industry_3
@@ -458,6 +469,7 @@ focus_tree = {
 			factor = 12
 		}
 	}
+	
 	focus = {
 		id = LUX_absolute_industrialization
 		icon = GFX_goal_demand_sudetenland
@@ -753,8 +765,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = LUX_interal_political_adjustments
-		icon = GFX_focus_generic_strike_at_democracy1
+		id = LUX_internal_political_adjustments
+		icon = GFX_focus_spr_masters_of_our_own_fate
 		x = 1
 		y = 1
 		
@@ -775,18 +787,41 @@ focus_tree = {
 	#COMMUNIST
 	focus = {
 		id = LUX_the_greater_purge
-		icon = GFX_focus_generic_strike_at_democracy1
+		icon = GFX_focus_generic_soviet_politics
 		x = -1
 		y = 1
 		
-		cost = 1
-		relative_position_id = LUX_interal_political_adjustments
-		prerequisite = { focus = LUX_interal_political_adjustments  }
+		cost = 20
+		relative_position_id = LUX_internal_political_adjustments
+		prerequisite = { focus = LUX_internal_political_adjustments  }
 		#mutually_exclusive = { focus = LUX_change_gov }
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
-			#not sure which debuff this is supposed to remove
+			add_timed_idea = {
+				idea = LUX_council_purged_1
+				days = 365
+			}
+		}
+		ai_will_do = {
+			factor = 12
+		}
+	}
+
+	focus = {
+		id = LUX_eliminate_traitors
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		x = 0
+		y = 1
+		
+		cost = 10
+		relative_position_id = LUX_the_greater_purge
+		prerequisite = { focus = LUX_the_greater_purge  }
+		
+		search_filters = { }
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = BEL }
+			custom_effect_tooltip = LUX_tooltip_3
 		}
 		ai_will_do = {
 			factor = 12
@@ -823,7 +858,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_stop_terrorists
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		x = -2
 		y = 1
 		
@@ -877,7 +912,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_supremecy_of_defence
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 1
 		
@@ -900,7 +935,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUX_build_our_industry
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 1
 		
@@ -920,7 +955,7 @@ focus_tree = {
 
 	focus = {
 		id = LUX_democracy_works
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
 		y = 1
 		
@@ -953,7 +988,7 @@ focus_tree = {
 
 	focus = {
 		id = LUX_join_allies
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_chi_british_cooperation
 		x = 2
 		y = 1
 		
@@ -975,7 +1010,7 @@ focus_tree = {
 
 	focus = {
 		id = LUX_voluntary_subject
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_eng_the_sun_never_sets
 		x = 0
 		y = 1
 		
@@ -995,7 +1030,7 @@ focus_tree = {
 
 	focus = {
 		id = LUX_tiny_entente
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_generic_alliance
 		x = 0
 		y = 1
 		
@@ -1016,7 +1051,7 @@ focus_tree = {
 
 	focus = {
 		id = LUX_democratic_invite_belgium
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_generic_major_alliance
 		x = 0
 		y = 1
 
@@ -1053,7 +1088,7 @@ focus_tree = {
 
 	focus = {
 		id = LUX_democratic_invite_netherlands
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_hol_oranje_boven
 		x = 0
 		y = 1
 
@@ -1090,7 +1125,7 @@ focus_tree = {
 
 	focus = {
 		id = LUX_democratic_invite_czech
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_tripartite_pact
 		x = 2
 		y = 1
 
@@ -1127,7 +1162,7 @@ focus_tree = {
 
 	focus = {
 		id = LUX_democratic_invite_yugoslavia
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_invite_yugoslavia
 		x = 0
 		y = 1
 
@@ -1163,7 +1198,7 @@ focus_tree = {
 
 	focus = {
 		id = LUX_democratic_invite_denmark
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_continuous_increase_nu
 		x = 0
 		y = 1
 
@@ -1200,7 +1235,7 @@ focus_tree = {
 
 	focus = {
 		id = LUX_democratic_invite_norway_sweden
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		x = 0
 		y = 1
 
@@ -1251,7 +1286,7 @@ focus_tree = {
 
 	focus = {
 		id = LUX_democratic_invite_poland
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_generic_polish_deal
 		x = 2
 		y = 1
 
@@ -1287,7 +1322,7 @@ focus_tree = {
 
 	focus = {
 		id = LUX_democratic_invite_romania
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_invite_romania
 		x = 0
 		y = 1
 
@@ -1324,7 +1359,7 @@ focus_tree = {
 
 	focus = {
 		id = LUX_democratic_invite_hungary
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_generic_military_deal
 		x = 0
 		y = 1
 
@@ -1361,7 +1396,7 @@ focus_tree = {
 
 	focus = {
 		id = LUX_democratic_invite_france
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_chi_reach_out_to_france
 		x = 0
 		y = 1
 
@@ -1398,7 +1433,7 @@ focus_tree = {
 
 	focus = {
 		id = LUX_democratic_replace_allies
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_eng_bring_the_dominions_back_into_the_fold
 		x = 0
 		y = 1
 
@@ -1425,7 +1460,7 @@ focus_tree = {
 
 	focus = {
 		id = LUX_the_senate_will_decide_your_fate
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_the_senate_will_decide_your_fate
 		x = 0
 		y = 1
 
@@ -1667,9 +1702,7 @@ focus_tree = {
 		}
 		search_filters = {}
 		completion_reward = {
-			if = {
-				limit = {}
-			}
+			add_ideas = LUX_child_labour
 		}
 	}
 

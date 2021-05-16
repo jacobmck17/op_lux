@@ -5,7 +5,7 @@ ideas = {
 	###########
 	
 	country = {
-		
+
 		#############
 		# POLITICAL #
 		#############
@@ -109,6 +109,21 @@ ideas = {
 		##################
 		# MILITARY IDEAS #
 		##################
+
+		LUX_child_labour = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_fighter_production_diverted
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.03
+				consumer_goods_factor = -0.05
+			}
+		}
 		
 		LUX_plane_production = {
 			
@@ -546,6 +561,7 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.15
 			}
 		}
+
 		military_readiness_act = {
 			#picture = generic_research_bonus
 		
@@ -564,6 +580,7 @@ ideas = {
 				training_time_factor = -0.25
 			}
 		}
+
 		terrorists_attacked = {
 			#picture = generic_research_bonus
 		
@@ -602,6 +619,7 @@ ideas = {
 				democratic_drift = -0.05
 			}
 		}
+
 		unstable_council = {
 		
 			removal_cost = -1
@@ -618,6 +636,7 @@ ideas = {
 				stability_factor = -0.1
 			}
 		}
+
 		fear_in_the_council = {
 		
 			removal_cost = -1
@@ -634,7 +653,147 @@ ideas = {
 				stability_factor = -0.15
 			}
 		}
+
+		##################
+		# COUNCIL PURGED #
+		##################
+
+		LUX_council_purged_1 = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			research_bonus = {
+				land_doctrine = -0.10
+				naval_doctrine = -0.10
+				air_doctrine = -0.10
+			}
+
+			modifier = {
+				army_org_factor = -0.5
+				send_volunteer_factor = -0.8
+				industrial_capacity_factory = -0.2
+				training_time_factor = 0.5
+				stability_factor = -0.1
+				political_power_gain = -0.25
+			}
+		}
+
+		LUX_council_purged_2 = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			research_bonus = {
+				land_doctrine = -0.08
+				naval_doctrine = -0.08
+				air_doctrine = -0.08
+			}
+
+			modifier = {
+				army_org_factor = -0.4
+				send_volunteer_factor = -0.6
+				industrial_capacity_factory = -0.15
+				training_time_factor = 0.4
+				stability_factor = -0.08
+				political_power_gain = -0.20
+			}
+		}
+
+		LUX_council_purged_3 = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			research_bonus = {
+				land_doctrine = -0.06
+				naval_doctrine = -0.06
+				air_doctrine = -0.06
+			}
+
+			modifier = {
+				army_org_factor = -0.35
+				send_volunteer_factor = -0.5
+				industrial_capacity_factory = -0.1
+				training_time_factor = 0.3
+				stability_factor = -0.06
+				political_power_gain = -0.15
+			}
+		}
+
+		LUX_council_purged_4 = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			research_bonus = {
+				land_doctrine = -0.04
+				naval_doctrine = -0.04
+				air_doctrine = -0.04
+			}
+
+			modifier = {
+				army_org_factor = -0.3
+				send_volunteer_factor = -0.4
+				industrial_capacity_factory = -0.05
+				training_time_factor = 0.3
+				stability_factor = -0.04
+				political_power_gain = -0.1
+			}
+		}
+
+		LUX_council_purged_5 = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			research_bonus = {
+				land_doctrine = -0.02
+				naval_doctrine = -0.02
+				air_doctrine = -0.02
+			}
+
+			modifier = {
+				army_org_factor = -0.2
+				send_volunteer_factor = -0.2
+				industrial_capacity_factory = 0
+				training_time_factor = 0.2
+				stability_factor = -0.02
+				political_power_gain = -0.05
+			}
+		}
 	}
+
 	###########
 	# ECONOMY #
 	###########

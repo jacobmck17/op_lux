@@ -1,0 +1,22 @@
+leader_attack_skills = {
+
+	
+	### Corps Commander ###
+	11 = {
+		cost = 100
+		type = corps_commander
+		modifier = {
+			offence = -0.25
+		}
+	}
+	
+	
+	### Field Marshal ###
+	11 = {
+		cost = 100
+		type = field_marshal
+		modifier = {
+			offence = -0.25
+		}
+	}
+}

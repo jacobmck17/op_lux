@@ -30,4 +30,22 @@
  #Great Purge:
  luxembourg.9.t:0 "The Greater Purge"
  luxembourg.9.d:0 "The Great Purge of the Soviet Union's officers has given some political figures in Luxembourg an... uneasy feeling, to say the least. While the Council has served us well, It is unacceptable that many of them are opposed to what we want, and it is our job to correct this. Make the right choices, and all will be Great."
- luxembourg.9.a:0 "The Greater Purge has begun"
+ luxembourg.9.t:0 "The Greater Purge has Begun"
+ luxembourg.9.a:0 "It's treason, then."
+ 
+ luxembourg.10.t:0 "A Strategy must be Chosen"
+ luxembourg.10.d:0 "Some parties in our military have different ideas of what strategy is best in the position we find our country. Of course there can only be one right answer and those who disagree with you will be...  Dealt with."
+ luxembourg.10.a:0 "We must defend the little land we already have." #choose to be defensive
+ luxembourg.10.b:0 "Defending ourselves is pointless, we must be feared by all." #choose to be offensive
+ 
+ luxembourg.11.t:0 "Emergency Meeting"
+ luxembourg.11.d:0 "It appears as if three of our highest ranking generals are suspicious of each other. BageL reported a dead body in the Medbay, and has voted to kill Jacrox who claims he was in O2. The Junior Mint seems awfully quiet during all of this... Everyone has 1 vote its your choice who lives and who dies."
+ luxembourg.11.a:0 "BageL does a little trolling"
+ luxembourg.11.b:0 "I saw Jacrox vent"
+ luxembourg.11.c:0 "The Junior Mint? More like The Junior Min-poster."
+
+ luxembourg.12.t:0 "Protest of Chad"
+ luxembourg.12.d:0 "Some of our advisors have been quite outspoken against our Field Martial, Chad. They say he makes them feel inferior (because they are). They whine about it daily, but of course we would need a good reason to get rid of such a highly skilled field martial. However, recently Chad has let the fame go to his head and he taunts them at any time he gets a chance. A local nose bandit has been 'getting' peoples noses all over the place and we believe he has potential to become a great replacement for Chad."
+ luxembourg.12.a:0 "This 'Got your nose kid' seems promising"
+ luxembourg.12.b:0 "CHAD IS LOVE, CHAD IS LIFE"
+ 

@@ -152,6 +152,7 @@ country_event = {
 		war_support_factor = 0.5
 	}
 }
+
 # Send out the spies to belgium
 country_event = {
 	id = luxembourg.5
@@ -168,6 +169,7 @@ country_event = {
 		set_country_flag = found_enemies
 	}
 }
+
 # Send out the spies to france
 country_event = {
 	id = luxembourg.6
@@ -183,6 +185,7 @@ country_event = {
 		add_popularity = { ideology = democratic popularity = -0.025 }
 	}
 }
+
 # Send out the spies to germany
 country_event = {
 	id = luxembourg.7
@@ -228,40 +231,52 @@ country_event = {
 	desc = luxembourg.9.d
 	picture = GFX_report_event_soviet_purge_speech
 	
-	fire_only_once = yes
+	is_triggered_only = yes
 	
 	option = {
 		name = luxembourg.9.a
 	}
 }
 
-#The Great Purge: Step 1
+#The Great Purge (Officers): Step 1
 country_event = {
 	id = luxembourg.10
 	title = luxembourg.10.t
 	desc = luxembourg.10.d
-	picture = GFX_report_event_soviet_purge_speech
+	picture = GFX_report_event_soviet_purge_trial
 	
 	fire_only_once = yes
 
 	trigger = {
 		tag = LUX
-		has_completed_focus = LUX_the_greater_purge
+		NOT = { has_completed_focus = LUX_the_greater_purge }
+		focus_progress = {
+			focus = LUX_the_greater_purge
+			progress > 0.3 #30%
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
 	}
 	
 	option = {
 		name = luxembourg.10.a
-		remove_unit_leader = 1 #Remove Jacob
-		remove_ideas = "Jacrox"
+		remove_unit_leader = 9992 #Stoßtruppen910
+		custom_effect_tooltip = remove_political_advisor 
+		show_ideas_tooltip = LUX_alexander_von_falkenhausen
+		remove_ideas = LUX_alexander_von_falkenhausen #offence chief of army
 	}
 	option = {
 		name = luxembourg.10.b
-		remove_unit_leader = 2 #Remove Joel
-		remove_ideas = "TheAngryPopo"
+		remove_unit_leader = 9991 #TheAngryPopo
+		custom_effect_tooltip = remove_political_advisor
+		show_ideas_tooltip = LUX_emile_speller
+		remove_ideas = LUX_emile_speller #defence chief of army
 	}
 }
 
-#The Great Purge: Step 2
+#The Great Purge (Officers): Step 2
 country_event = {
 	id = luxembourg.11
 	title = luxembourg.11.t
@@ -272,33 +287,180 @@ country_event = {
 
 	trigger = {
 		tag = LUX
-		has_completed_focus = LUX_the_greater_purge
+		NOT = { has_completed_focus = LUX_the_greater_purge }
+		focus_progress = {
+			focus = LUX_the_greater_purge
+			progress > 0.6 #60%
+		}
 	}
 
 	mean_time_to_happen = {
-		days = 30
+		days = 1
 	}
 	
-	option = {
+	option = { #kill BageL
 		name = luxembourg.11.a
+		remove_unit_leader = 9993
+	}
+	option = { #kill Jacrox
+		name = luxembourg.11.b
+		remove_unit_leader = 9990
+	}
+	option = { #kill The Junior Mint
+		name = luxembourg.11.c
+		remove_unit_leader = 9994
 	}
 }
 
-#The Great Purge: Step 3
+#The Great Purge (Officers): Step 3
 country_event = {
 	id = luxembourg.12
 	title = luxembourg.12.t
 	desc = luxembourg.12.d
-	picture = GFX_report_event_soviet_purge_speech
+	picture = GFX_report_event_chad
 	
+	fire_only_once = yes
+
 	trigger = {
 		tag = LUX
-		has_completed_focus = LUX_the_greater_purge
+		NOT = { has_completed_focus = LUX_the_greater_purge }
+		focus_progress = {
+			focus = LUX_the_greater_purge
+			progress > 0.75 #75%
+		}
 	}
 
-	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 1
+	}
 	
-	option = {
+	option = { 
 		name = luxembourg.12.a
+		remove_unit_leader = 6969
+
+		create_field_marshal = { #That Kid
+			name = "Got Your Nose"
+			#id = 1
+			picture = "Portrait_LUX_got_your_nose.dds"
+			traits = { got_your_nose }
+			skill = 11
+			attack_skill = 11
+			defense_skill = 11
+			planning_skill = 11
+			logistics_skill = 11
+		}
+	}
+	option = {
+		name = luxembourg.12.b
 	}
 }
+
+# BELOW IS PURGE DEBUFF STUFF THAT GOT COMPLICATED SO I MOVED IT
+
+# #The Great Purge (Debuff): Step 1
+# country_event = {
+# 	id = luxembourg.13
+# 	title = luxembourg.13.t
+# 	desc = luxembourg.13.d
+# 	picture = GFX_report_event_soldiers_marching
+
+# 	is_triggered_only = yes
+
+# 	trigger = {	has_idea = LUX_council_purged_1 }
+
+# 	immediate = {
+# 		hidden_effect = {
+# 			remove_ideas = LUX_council_purged_1
+# 			add_timed_idea = {
+# 				idea = LUX_council_purged_2
+# 				days = 100
+# 			}
+# 			country_event = { id = luxembourg.14 days = 100 }
+# 		}
+# 	}
+# 	option = {
+# 		name = luxembourg.13.a
+# 		custom_effect_tooltip = luxembourg.13.a_tt
+# 	}
+# }
+
+# #The Great Purge (Debuff): Step 2
+# country_event = {
+# 	id = luxembourg.14
+# 	title = luxembourg.13.t
+# 	desc = luxembourg.13.d
+# 	picture = GFX_report_event_soldiers_marching
+
+# 	is_triggered_only = yes
+
+# 	trigger = {	has_idea = LUX_council_purged_2 }
+
+# 	immediate = {
+# 		hidden_effect = {
+# 			remove_ideas = LUX_council_purged_2
+# 			add_timed_idea = {
+# 				idea = LUX_council_purged_3
+# 				days = 100
+# 			}
+# 			country_event = { id = luxembourg.15 days = 100 }
+# 		}
+# 	}
+# 	option = {
+# 		name = luxembourg.13.a
+# 		custom_effect_tooltip = luxembourg.13.a_tt
+# 	}
+# }
+
+# #The Great Purge (Debuff): Step 3
+# country_event = {
+# 	id = luxembourg.15
+# 	title = luxembourg.15.t
+# 	desc = luxembourg.15.d
+# 	picture = GFX_report_event_soldiers_marching
+
+# 	is_triggered_only = yes
+
+# 	trigger = {	has_idea = LUX_council_purged_3 }
+
+# 	immediate = {
+# 		hidden_effect = {
+# 			remove_ideas = LUX_council_purged_3
+# 			add_timed_idea = {
+# 				idea = LUX_council_purged_4
+# 				days = 100
+# 			}
+# 			country_event = { id = luxembourg.16 days = 100 }
+# 		}
+# 	}
+# 	option = {
+# 		name = luxembourg.15.a
+# 		custom_effect_tooltip = luxembourg.15.a_tt
+# 	}
+# }
+
+# #The Great Purge (Debuff): Step 4
+# country_event = {
+# 	id = luxembourg.16
+# 	title = luxembourg.16.t
+# 	desc = luxembourg.16.d
+# 	picture = GFX_report_event_soldiers_marching
+
+# 	is_triggered_only = yes
+
+# 	trigger = {	has_idea = LUX_council_purged_4 }
+
+# 	immediate = {
+# 		hidden_effect = {
+# 			remove_ideas = LUX_council_purged_4
+# 			add_timed_idea = {
+# 				idea = LUX_council_purged_5
+# 				days = 100
+# 			}
+# 			country_event = { id = luxembourg.17 days = 100 }
+# 		}
+# 	}
+# 	option = {
+# 		name = luxembourg.16.a
+# 		custom_effect_tooltip = luxembourg.16.a_tt
+# 	}
+# }

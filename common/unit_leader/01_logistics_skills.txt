@@ -1,0 +1,20 @@
+leader_logistics_skills = {
+	
+	### Corps Commander ###
+	11 = {
+		cost = 100
+		type = corps_commander
+		modifier = {
+			supply_consumption_factor = 0.25
+		}
+	}
+	
+	### Field Marshal ###
+	11 = {
+		cost = 100
+		type = field_marshal
+		modifier = {
+			supply_consumption_factor = 0.25
+		}
+	}
+}

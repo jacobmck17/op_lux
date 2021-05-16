@@ -2,3 +2,4 @@
  #custom tooltips text
  LUX_tooltip_1:0 "Unlocks §Ydecisions§ §W to send spies to neighbouring countries to §Yfind the enemy§ §W.\n§"
  LUX_tooltip_2:0 "§GRemoves§! §YImpending Terrorist Attack§! §Gmission.§!\n"
+ LUX_tooltip_3:0 "Annexing Belgium will trigger a civil war!\n"

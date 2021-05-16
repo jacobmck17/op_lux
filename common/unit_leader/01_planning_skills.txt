@@ -1,0 +1,22 @@
+leader_planning_skills = {
+
+	### Corps Commander ###
+	11 = {
+		cost = 100
+		type = corps_commander
+		modifier = {
+			planning_speed = -0.25
+			max_planning = -0.05
+		}
+	}
+	
+	### Field Marshal ###
+	11 = {
+		cost = 100
+		type = field_marshal
+		modifier = {
+			planning_speed = -0.25
+			max_planning = -0.05
+		}
+	}
+}
