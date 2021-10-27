@@ -904,7 +904,7 @@ focus_tree = {
 				ideology = capitalism
 				popularity = 0.1
 			}
-            give_ideas = {LUX_the_one_true_ideology}
+            add_ideas = {LUX_the_one_true_ideology}
         }
 
         search_filters = {}
@@ -987,7 +987,7 @@ focus_tree = {
         cost = 10
 
 		available = {
-			ruling_party = capitalism
+			has_government = capitalism
 		}
 
         relative_position_id = LUX_capitalists_take_control
@@ -1091,7 +1091,7 @@ focus_tree = {
         prerequisite = {focus = LUX_raise_taxes}
 
 		available = {
-			has_political_power = 100
+			has_political_power > 100
 		}
         
         completion_reward = {
@@ -1117,7 +1117,7 @@ focus_tree = {
         prerequisite = {focus = LUX_invest_in_technology}
 
 		available = {
-			has_political_power = 200
+			has_political_power > 200
 		}
         
         completion_reward = {
@@ -1144,7 +1144,7 @@ focus_tree = {
 
 		available = {
 			date > 1940.06.1
-			has_political_power = 100
+			has_political_power > 100
 		}
         
         completion_reward = {
@@ -1170,7 +1170,7 @@ focus_tree = {
         prerequisite = {focus = LUX_invest_in_technology}
 
 		available = {
-			has_political_power = 150
+			has_political_power > 150
 		}
         
         completion_reward = {
@@ -1202,7 +1202,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_political_power = 250
+			has_political_power > 250
 		}
         
         completion_reward = {
@@ -1230,7 +1230,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_political_power = 50
+			has_political_power > 50
 		}
         
         completion_reward = {
