@@ -4,4 +4,4 @@ tags={
 	"National Focuses"
 }
 name="OP Luxembourg"
-supported_version="1.10.1"
+supported_version="1.10.5"
