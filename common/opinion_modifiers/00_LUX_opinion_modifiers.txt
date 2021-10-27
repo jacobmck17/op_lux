@@ -1,0 +1,11 @@
+opinion_modifiers = {
+    democracy_friends = {
+		value = 50
+	}
+	deal_negotiated = {
+		value = 50
+	}
+	bribed_friendship = {
+		value = 75
+	}
+}

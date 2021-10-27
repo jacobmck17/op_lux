@@ -653,7 +653,7 @@ focus_tree = {
 	focus = {
 		id = LUX_political_effort
 		icon = GFX_goal_molotov_ribbentrop_pact
-		x = 20
+		x = 22
 		y = 0
 		
 		cost = 10
@@ -673,7 +673,7 @@ focus_tree = {
 	focus = {
 		id = LUX_change_gov
 		icon = GFX_focus_generic_support_the_left_right
-		x = -3
+		x = -6
 		y = 1
 		
 		available = {
@@ -796,7 +796,7 @@ focus_tree = {
 	focus = {
 		id = LUX_the_greater_purge
 		icon = GFX_focus_generic_soviet_politics
-		x = -2
+		x = -3
 		y = 1
 		
 		cost = 20
@@ -853,7 +853,7 @@ focus_tree = {
 	focus = {
 		id = LUX_replace_the_council
 		icon = GFX_focus_generic_soviet_politics
-		x = 2
+		x = 3
 		y = 1
 		
 		cost = 10
@@ -867,6 +867,10 @@ focus_tree = {
 				ideology = neutrality
 				popularity = 0.2
 			}
+			add_popularity = {
+				ideology = capitalism
+				popularity = 0.05
+			}
 			add_timed_idea = {
 				idea = LUX_search_for_royal_council
 				days = 365
@@ -877,8 +881,104 @@ focus_tree = {
 		}
 	}
 
+
+
+
+	#Capitalist
+
 	focus = {
         id = LUX_make_investments
+        icon = GFX_
+        
+        x = 2
+        y = 1
+        
+        cost = 10
+
+        relative_position_id =  LUX_replace_the_council
+        prerequisite = {focus = LUX_replace_the_council}
+        
+        completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = capitalism
+				popularity = 0.1
+			}
+            give_ideas = {LUX_the_one_true_ideology}
+        }
+
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	focus = {
+        id = LUX_capitalists_take_control
+        icon = GFX_
+        
+        x = -1
+        y = 1
+        
+        cost = 10
+
+        relative_position_id = LUX_make_investments 
+        prerequisite = { focus = LUX_make_investments }
+
+		available = {
+			capitalism > 0.4
+		}
+        
+        completion_reward = {
+            add_popularity = {
+				ideology = capitalism
+				popularity = 0.10
+			}
+			set_politics = {
+				ruling_party = capitalism
+				elections_allowed = no
+       			last_election = "1448.09.17"
+        		election_frequency = 69
+			}
+        }
+
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	focus = {
+        id = LUX_capitalists_buy_government
+        icon = GFX_
+        
+        x = 1
+        y = 1
+        
+        cost = 35
+
+        relative_position_id = LUX_make_investments 
+        prerequisite = { focus = LUX_make_investments }
+        
+        completion_reward = {
+			add_political_power = -200
+            add_popularity = {
+				ideology = capitalism
+				popularity = 0.30
+			}
+			set_politics = {
+				ruling_party = capitalism
+				elections_allowed = no
+       			last_election = "1448.09.17"
+        		election_frequency = 69
+			}
+        }
+
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	focus = {
+        id = LUX_raise_taxes
         icon = GFX_
         
         x = 1
@@ -886,8 +986,85 @@ focus_tree = {
         
         cost = 10
 
-        relative_position_id =  LUX_replace_the_council
-        prerequisite = {focus = LUX_replace_the_council}
+		available = {
+			ruling_party = capitalism
+		}
+
+        relative_position_id = LUX_capitalists_take_control
+        prerequisite = {focus = LUX_capitalists_take_control}
+		prerequisite = {focus = LUX_capitalists_buy_government}
+        
+        completion_reward = {
+            #will eventually unlock decisions that can raise or lower taxes
+        }
+
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	#LOANS
+	focus = {
+        id = LUX_take_out_loan
+        icon = GFX_
+        
+        x = -3
+        y = 1
+        
+        cost = 10
+
+        relative_position_id = LUX_raise_taxes 
+        prerequisite = { focus = LUX_raise_taxes }
+        
+        completion_reward = {
+			add_political_power = 250
+            add_timed_idea = {
+				idea = LUX_interest_payments
+				days = 365
+			}
+        }
+
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	focus = {
+        id = LUX_larger_loan
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+
+        relative_position_id = LUX_take_out_loan 
+        prerequisite = { focus = LUX_take_out_loan }
+        
+        completion_reward = {
+			add_political_power = 500
+            add_timed_idea = {
+				idea = LUX_interest_payments
+				days = 730
+			}
+        }
+
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	focus = {
+        id = LUX_ultimate_loan
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+
+        relative_position_id = LUX_larger_loan 
+        prerequisite = { focus = LUX_larger_loan }
         
         completion_reward = {
             
@@ -898,11 +1075,195 @@ focus_tree = {
             factor = 10
         }
     }
+	#LOANS ^
+
+	#INVESTMENTS
+	focus = {
+        id = LUX_invest_in_technology
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+
+        relative_position_id = LUX_raise_taxes
+        prerequisite = {focus = LUX_raise_taxes}
+
+		available = {
+			has_political_power = 100
+		}
+        
+        completion_reward = {
+            add_political_power = -100
+			add_ideas = {LUX_technological_advancements}
+        }
+
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	focus = {
+        id = LUX_hire_mercenaries
+        icon = GFX_
+        
+        x = -1
+        y = 1
+        
+        cost = 10
+
+        relative_position_id = LUX_invest_in_technology
+        prerequisite = {focus = LUX_invest_in_technology}
+
+		available = {
+			has_political_power = 200
+		}
+        
+        completion_reward = {
+            add_political_power = -200
+			#will give you 24 veteran divisions
+        }
+
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	focus = {
+        id = LUX_buy_military_licenses
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+
+        relative_position_id = LUX_hire_mercenaries
+        prerequisite = {focus = LUX_hire_mercenaries}
+
+		available = {
+			date > 1940.06.1
+			has_political_power = 100
+		}
+        
+        completion_reward = {
+            add_political_power = -100
+			set_technology = { advanced_infantry_weapons = 1 }
+        }
+
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	focus = {
+        id = LUX_invest_in_gov
+        icon = GFX_
+        
+        x = 1
+        y = 1
+        
+        cost = 10
+
+        relative_position_id = LUX_invest_in_technology
+        prerequisite = {focus = LUX_invest_in_technology}
+
+		available = {
+			has_political_power = 150
+		}
+        
+        completion_reward = {
+            add_political_power = -150
+			#unlock political advisors
+        }
+
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	#INVESTMENTS ^
+
+	#LAND PURCHASES v
+	focus = {
+        id = LUX_purchase_belgium
+        icon = GFX_
+        
+        x = 3
+        y = 2
+        
+        cost = 10
+
+        relative_position_id = LUX_raise_taxes
+        prerequisite = {
+			focus = LUX_forget_the_past
+			focus = LUX_raise_taxes 
+		}
+
+		available = {
+			has_political_power = 250
+		}
+        
+        completion_reward = {
+            add_political_power = -250
+			BEL = { country_event = luxemburg.9 }
+        }
+
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	focus = {
+        id = LUX_forget_the_past
+        icon = GFX_
+        
+        x = 4
+        y = 1
+        
+        cost = 10
+
+        relative_position_id = LUX_raise_taxes
+        prerequisite = {
+			focus = LUX_raise_taxes 
+		}
+
+		available = {
+			has_political_power = 50
+		}
+        
+        completion_reward = {
+            add_political_power = -50
+			# make Belgium like us
+			add_opinion_modifier = {
+    			target = BEL
+    			modifier = bribed_friendship
+			}
+			# Belgium is states 6 and 34
+			add_state_claim = 6
+			add_state_claim = 34
+        }
+
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+
+
+
+
+
+	#Non-Aligned
 
 	focus = {
 		id = LUX_welcome_the_kaiser
 		icon = GFX_focus_generic_soviet_politics
-		x = -1
+		x = -3
 		y = 1
 		
 		cost = 10
@@ -1585,7 +1946,7 @@ focus_tree = {
 	focus = {
 		id = LUX_army_training
 		icon = GFX_goal_generic_axis_build_infantry
-		x = 16
+		x = 18
 		y = 0
 
 		relative_position_id = LUX_political_effort

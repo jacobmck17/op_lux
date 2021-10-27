@@ -355,6 +355,57 @@ country_event = {
 	}
 }
 
+country_event = { #Luxembourg buys Belgium
+	id = luxembourg.13
+	title = luxembourg.13.t
+	desc = luxembourg.12.d
+	picture = GFX_report_event_chad
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = luxembourg.13.a	#yes
+		ai_chance = { factor = 100 }
+		LUX = {
+			annex_country = {
+				target = BEL
+				transfer_troops = no
+			}
+		}
+	}
+	option = {
+		name = luxembourg.13.b	#no
+		ai_chance = { factor = 0 }
+		LUX = {
+			create_wargoal = {
+				type = annex_everything
+				target = BEL
+				expire = 730
+			}
+			add_political_power = 250
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # BELOW IS PURGE DEBUFF STUFF THAT GOT COMPLICATED SO I MOVED IT
 
 # #The Great Purge (Debuff): Step 1

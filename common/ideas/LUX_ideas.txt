@@ -45,6 +45,72 @@ ideas = {
 			}
 		}
 
+
+
+
+
+
+		#CAPITALISM IDEAS:
+		LUX_the_one_true_ideology = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = Goal_generic_consumer_goods
+
+			removal_cost = -1
+
+			modifier = {
+				capitalism_drift = 0.01
+			}
+		}
+		LUX_technological_advancements = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = Goal_generic_consumer_goods
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_gain = 0.1
+			}
+		}
+
+		LUX_interest_payments = { # used for loan focuses
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = Goal_generic_consumer_goods
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_cost = 0.15
+			}
+		}
+
+
+
+
+
+
+
 		LUX_reduced_consumer_demands = {
 			allowed = {
 				always = no
