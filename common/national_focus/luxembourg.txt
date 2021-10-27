@@ -653,7 +653,7 @@ focus_tree = {
 	focus = {
 		id = LUX_political_effort
 		icon = GFX_goal_molotov_ribbentrop_pact
-		x = 18
+		x = 20
 		y = 0
 		
 		cost = 10
@@ -796,7 +796,7 @@ focus_tree = {
 	focus = {
 		id = LUX_the_greater_purge
 		icon = GFX_focus_generic_soviet_politics
-		x = -1
+		x = -2
 		y = 1
 		
 		cost = 20
@@ -878,28 +878,26 @@ focus_tree = {
 	}
 
 	focus = {
-		id = LUX_the_one_true_king
-		icon = GFX_focus_generic_soviet_politics
-		x = 1
-		y = 1
+        id = LUX_make_investments
+        icon = GFX_
+        
+        x = 1
+        y = 1
+        
+        cost = 10
 
-		available = {
-			has_government = neutrality
-		}
-		
-		cost = 10
-		relative_position_id = LUX_replace_the_council
-		prerequisite = { focus = LUX_replace_the_council  }
-		mutually_exclusive = { focus = LUX_welcome_the_kaiser }
-		
-		search_filters = { }
-		completion_reward = {
-			
-		}
-		ai_will_do = {
-			factor = 12
-		}
-	}
+        relative_position_id =  LUX_replace_the_council
+        prerequisite = {focus = LUX_replace_the_council}
+        
+        completion_reward = {
+            
+        }
+
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
 
 	focus = {
 		id = LUX_welcome_the_kaiser
@@ -926,7 +924,7 @@ focus_tree = {
 	focus = {
 		id = LUX_keep_gov
 		icon = GFX_goal_generic_neutrality_focus
-		x = 3
+		x = 6
 		y = 1
 		
 		cost = 10
@@ -1587,8 +1585,11 @@ focus_tree = {
 	focus = {
 		id = LUX_army_training
 		icon = GFX_goal_generic_axis_build_infantry
-		x = 37
+		x = 16
 		y = 0
+
+		relative_position_id = LUX_political_effort
+
 		cost = 2
 		ai_will_do = {
 			factor = 5
@@ -2164,7 +2165,7 @@ focus_tree = {
 	focus = {
 		id = LUX_planning_branch
 		icon = GFX_focus_usa_build_the_pentagon
-		x = 18
+		x = 25
 		y = 0
 		relative_position_id = LUX_army_training
 		prerequisite = {}
