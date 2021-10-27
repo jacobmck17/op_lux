@@ -65,7 +65,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				capitalism_drift = 0.01
+				capitalism_drift = 0.1
 			}
 		}
 		LUX_technological_advancements = {

@@ -358,7 +358,7 @@ country_event = {
 country_event = { #Luxembourg buys Belgium
 	id = luxembourg.13
 	title = luxembourg.13.t
-	desc = luxembourg.12.d
+	desc = luxembourg.13.d
 	picture = GFX_report_event_chad
 
 	fire_only_once = yes
@@ -372,6 +372,8 @@ country_event = { #Luxembourg buys Belgium
 				target = BEL
 				transfer_troops = no
 			}
+			add_state_core = 34
+			add_state_core = 6
 		}
 	}
 	option = {
@@ -383,10 +385,89 @@ country_event = { #Luxembourg buys Belgium
 				target = BEL
 				expire = 730
 			}
+			add_state_claim = 6
+			add_state_claim = 34
 			add_political_power = 250
 		}
 	}
 }
+
+
+country_event = { #Luxembourg buys Maginot
+	id = luxembourg.14
+	title = luxembourg.14.t
+	desc = luxembourg.14.d
+	picture = GFX_report_event_chad
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = luxembourg.14.a	#yes
+		ai_chance = { factor = 100 }
+		LUX = {
+			transfer_state = 28
+			transfer_state = 17
+			add_state_core = 28
+			add_state_core = 17
+		}
+	}
+	option = {
+		name = luxembourg.14.b	#no
+		ai_chance = { factor = 0 }
+		LUX = {
+			create_wargoal = {
+				type = annex_everything
+				target = FRA
+				expire = 730
+			}
+			add_state_claim = 28
+			add_state_claim = 17
+			add_political_power = 300
+		}
+	}
+}
+
+
+country_event = { #Luxembourg buys half of switzerland
+	id = luxembourg.15
+	title = luxembourg.15.t
+	desc = luxembourg.15.d
+	picture = GFX_report_event_chad
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = luxembourg.15.a	#yes
+		ai_chance = { factor = 100 }
+		LUX = {
+			transfer_state = 28
+			transfer_state = 17
+			add_state_core = 28
+			add_state_core = 17
+		}
+	}
+	option = {
+		name = luxembourg.15.b	#no
+		ai_chance = { factor = 0 }
+		LUX = {
+			create_wargoal = {
+				type = annex_everything
+				target = FRA
+				expire = 730
+			}
+			add_state_claim = 28
+			add_state_claim = 17
+			add_political_power = 300
+		}
+	}
+}
+
+
+
+
+
 
 
 

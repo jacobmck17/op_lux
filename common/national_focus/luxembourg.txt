@@ -9,7 +9,7 @@
 #This is a comment
 
 focus_tree = {
-	id = luxemburg_focus
+	id = luxembourg_focus
 	
 	country = {
 		factor = 0
@@ -192,7 +192,7 @@ focus_tree = {
 			#add_ideas = big_brain4_usa_aid
 			#USA = { add_ideas = received_research_aid }
 			USA = {
-				country_event = { id = luxemburg.1 days = 1 }
+				country_event = { id = luxembourg.1 days = 1 }
 				custom_effect_tooltip = needs_approval
 			}
 		}
@@ -220,7 +220,7 @@ focus_tree = {
 			#add_ideas = big_brain4_ger_aid
 			#GER = { add_ideas = received_research_aid }
 			GER = {
-				country_event = { id = luxemburg.1 days = 1 }
+				country_event = { id = luxembourg.1 days = 1 }
 				custom_effect_tooltip = needs_approval
 			}
 		}
@@ -248,7 +248,7 @@ focus_tree = {
 			#add_ideas = big_brain4_sov_aid
 			#SOV = { add_ideas = received_research_aid }
 			SOV = {
-				country_event = { id = luxemburg.1 days = 1 }
+				country_event = { id = luxembourg.1 days = 1 }
 				custom_effect_tooltip = needs_approval
 			}
 		}
@@ -691,7 +691,7 @@ focus_tree = {
 			#add_stability = -0.1
 			add_popularity = { ideology = democratic popularity = -0.05 }
 			swap_ideas = {remove_idea = unstable_council add_idea = fear_in_the_council}
-			country_event = { id = luxemburg.4 days = 0 }
+			country_event = { id = luxembourg.4 days = 0 }
 		}
 		ai_will_do = {
 			factor = 12
@@ -1067,7 +1067,7 @@ focus_tree = {
         prerequisite = { focus = LUX_larger_loan }
         
         completion_reward = {
-            
+            add_political_power = 2000
         }
 
         search_filters = {}
@@ -1175,6 +1175,7 @@ focus_tree = {
         
         completion_reward = {
             add_political_power = -150
+			add_stability = 10
 			#unlock political advisors
         }
 
@@ -1186,35 +1187,6 @@ focus_tree = {
 	#INVESTMENTS ^
 
 	#LAND PURCHASES v
-	focus = {
-        id = LUX_purchase_belgium
-        icon = GFX_
-        
-        x = 3
-        y = 2
-        
-        cost = 10
-
-        relative_position_id = LUX_raise_taxes
-        prerequisite = {
-			focus = LUX_forget_the_past
-			focus = LUX_raise_taxes 
-		}
-
-		available = {
-			has_political_power > 250
-		}
-        
-        completion_reward = {
-            add_political_power = -250
-			BEL = { country_event = luxemburg.13 }
-        }
-
-        search_filters = {}
-        ai_will_do = {
-            factor = 10
-        }
-    }
 	focus = {
         id = LUX_forget_the_past
         icon = GFX_
@@ -1236,9 +1208,11 @@ focus_tree = {
         completion_reward = {
             add_political_power = -50
 			# make Belgium like us
-			add_opinion_modifier = {
-    			target = BEL
-    			modifier = bribed_friendship
+			BEL = {
+				add_opinion_modifier = {
+					target = LUX
+					modifier = bribed_friendship
+				}
 			}
 			# Belgium is states 6 and 34
 			add_state_claim = 6
@@ -1250,6 +1224,105 @@ focus_tree = {
             factor = 10
         }
     }
+	focus = {
+        id = LUX_purchase_belgium
+        icon = GFX_
+        
+        x = 3
+        y = 2
+        
+        cost = 10
+
+        relative_position_id = LUX_raise_taxes
+        prerequisite = {
+			focus = LUX_forget_the_past
+			focus = LUX_raise_taxes 
+		}
+
+		available = {
+			has_political_power > 250
+		}
+        
+        completion_reward = {
+            add_political_power = -250
+			BEL = { country_event = luxembourg.13 }
+        }
+
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	focus = {
+        id = LUX_expand_southwards
+        icon = GFX_
+        
+        x = -1
+        y = 1
+        
+        cost = 10
+
+        relative_position_id = LUX_purchase_belgium
+        prerequisite = { focus = LUX_purchase_belgium }
+
+		available = {
+			has_political_power > 300
+		}
+        
+        completion_reward = {
+            add_political_power = -300
+			FRA = { country_event = luxembourg.14 }
+        }
+
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	focus = {
+        id = LUX_arrangements_for_alps
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 20
+
+        relative_position_id = LUX_expand_southwards
+        prerequisite = { focus = LUX_expand_southwards }
+
+		available = {
+			has_political_power > 50
+		}
+        
+        completion_reward = {
+            add_political_power = -50
+			FRA = {
+				add_opinion_modifier = {
+					target = LUX
+					modifier = deal_negotiated
+				}
+			}
+			SWI = {
+				add_opinion_modifier = {
+					target = LUX
+					modifier = deal_negotiated
+				}
+			}
+			ITA = {
+				add_opinion_modifier = {
+					target = LUX
+					modifier = deal_negotiated
+				}
+			}
+        }
+
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	
 
 
 
@@ -1269,7 +1342,7 @@ focus_tree = {
 		cost = 10
 		relative_position_id = LUX_replace_the_council
 		prerequisite = { focus = LUX_replace_the_council  }
-		mutually_exclusive = { focus = LUX_the_one_true_king }
+		mutually_exclusive = { focus = LUX_make_investments }
 		
 		search_filters = { }
 		completion_reward = {
