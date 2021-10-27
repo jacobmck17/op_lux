@@ -1207,7 +1207,7 @@ focus_tree = {
         
         completion_reward = {
             add_political_power = -250
-			BEL = { country_event = luxemburg.9 }
+			BEL = { country_event = luxemburg.13 }
         }
 
         search_filters = {}
