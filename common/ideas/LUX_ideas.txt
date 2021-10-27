@@ -9,6 +9,41 @@ ideas = {
 		#############
 		# POLITICAL #
 		#############
+		
+		LUX_planning = { #created for focus: LUX_planning_branch
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = air_war_plans_division_focus
+
+			removal_cost = -1
+
+			modifier = {
+				planning_speed = 0.25
+			}
+		}
+		LUX_invasions = { #created for focus: LUX_naval_invasions
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = escort_effort_focus
+
+			removal_cost = -1
+
+			modifier = {
+				invasion_preparation = -0.75
+			}
+		}
 
 		LUX_reduced_consumer_demands = {
 			allowed = {

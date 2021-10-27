@@ -122,7 +122,7 @@ LUX_war_plans = {
 	LUX_execute_war_plan_SPA = {
 		icon = generic_operation
 		available = {
-			has_war_with = {original_tag = SPA }
+			has_war_with = SPR
 		}
 		visible = {
 			has_completed_focus = LUX_war_plan_iberia
@@ -133,7 +133,7 @@ LUX_war_plans = {
 		fire_only_once = yes
 		days_remove = 365
 		targeted_modifier = {
-			original_tag = SPA
+			tag = SPR
 			attack_bonus_against = 0.15
 			defense_bonus_against = 0.15
 		}

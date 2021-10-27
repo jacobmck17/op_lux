@@ -149,7 +149,7 @@ country_event = {
 		name = luxembourg.4.a	#yes
 		ai_chance = { factor = 100 }
 		#set_country_flag = interrogated_council
-		war_support_factor = 0.5
+		add_war_support = 0.5
 	}
 }
 
@@ -343,7 +343,7 @@ country_event = {
 			#id = 1
 			picture = "Portrait_LUX_got_your_nose.dds"
 			traits = { got_your_nose }
-			skill = 11
+			skill = 9
 			attack_skill = 11
 			defense_skill = 11
 			planning_skill = 11

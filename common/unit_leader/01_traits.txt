@@ -62,7 +62,7 @@ leader_traits = {
 			reassignment_duration_factor = 0.5
 			sickness_chance = 100
 			wounded_chance_factor = 1
-			max_marshal_army_size = -2
+			max_army_group_size = -2
 		}
 	}
 }

@@ -26,6 +26,11 @@
  revenge_on_ger_desc:0 "Germany has robbed us of our must needed research agreement. We must make them suffer for that they've done to us!"
  revenge_on_sov:0 "Seek Revenge on the Soviet Union"
  revenge_on_sov_desc:0 "The Soviet Union has robbed us of our must needed research agreement. We must make them suffer for that they've done to us!"
+
+ LUX_planning:0 "Expert Planning"
+ LUX_planning_desc:0 "Luxembourg has begun developing war plans and has now overall improved their planning as part of it."
+ LUX_invasions:0 "Experienced Naval Forces"
+ LUX_invasions_desc:0 "After studying the navy, the Luxembourg Naval Forces have found better tactics to conduct naval invasions."
  
  #POLITICAL
  industrial_nation:0 ""

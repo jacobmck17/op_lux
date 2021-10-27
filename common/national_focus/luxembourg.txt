@@ -867,7 +867,7 @@ focus_tree = {
 				ideology = neutrality
 				popularity = 0.2
 			}
-			add_timed_ideas = {
+			add_timed_idea = {
 				idea = LUX_search_for_royal_council
 				days = 365
 			}
@@ -972,7 +972,7 @@ focus_tree = {
 				limit = {
 					has_idea = terrorists_attacked
 				}
-				remove_idea = terrorists_attacked
+				remove_ideas = terrorists_attacked
 			}
 		}
 		ai_will_do = {
@@ -1064,13 +1064,14 @@ focus_tree = {
 			add_stability = 0.1
 			add_popularity = { ideology = democratic popularity = 1 }
 
-			add_opinion_modifier = {
-				every_country = {
-					limit = {
-						has_government = democratic
-					}
+			every_other_country = {
+				limit = {
+					has_government = democratic
 				}
-				modifier = democracy_friends
+				add_opinion_modifier = {
+					target = PREV
+					modifier = democracy_friends
+				}
 			}
 		}
 		ai_will_do = {
@@ -1113,7 +1114,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			ENG = { country_event = luxemburg.9 }
-			add_idea = LUX_using_british_industry
+			add_ideas = LUX_using_british_industry
 		}
 		ai_will_do = {
 			factor = 10
@@ -2151,7 +2152,8 @@ focus_tree = {
 		
 		completion_reward = {
 			navy_experience = 100
-			invasion_preparation 0.75
+			#invasion_preparation = 0.75 #invasion_preparation switched to be an idea
+			add_ideas = LUX_invasions
 		}
 	}
 
@@ -2173,7 +2175,8 @@ focus_tree = {
 		search_filters = {}
 		
 		completion_reward = {
-			planning_speed = 0.25
+			#planning_speed = 0.25 #cannot add planning speed as effect
+			add_ideas = LUX_planning
 			unlock_decision_category_tooltip = LUX_war_plans
 		}
 	}
