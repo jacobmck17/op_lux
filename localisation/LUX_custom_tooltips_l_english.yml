@@ -3,3 +3,5 @@
  LUX_tooltip_1:0 "Unlocks §Ydecisions§ §W to send spies to neighbouring countries to §Yfind the enemy§ §W.\n§"
  LUX_tooltip_2:0 "§GRemoves§! §YImpending Terrorist Attack§! §Gmission.§!\n"
  LUX_tooltip_3:0 "Annexing Belgium will trigger a civil war!\n"
+ LUX_tooltip_4:0 "The Council and their supports start a civil war against Kaiser Scott."
+ LUX_tooltip_5:0 "Will trigger a §Ycivil war§W if has less than §Y50%§W stability."

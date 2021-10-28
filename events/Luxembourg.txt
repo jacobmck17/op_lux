@@ -465,7 +465,141 @@ country_event = { #Luxembourg buys half of switzerland
 }
 
 
+country_event = { #Luxembourg demands compensation from belgium
+	id = luxembourg.16
+	title = luxembourg.16.t
+	desc = luxembourg.16.d
+	picture = GFX_report_event_canada_treaty
 
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = luxembourg.16.a	#yes
+		ai_chance = { factor = 100 }
+		LUX = {
+			country_event = luxembourg.17
+		}
+	}
+	option = {
+		name = luxembourg.16.b	#no
+		ai_chance = { factor = 0 }
+		LUX = {
+			country_event = luxembourg.18
+		}
+	}
+}
+country_event = { #Belgium Accepts Compensation
+	id = luxembourg.17
+	title = luxembourg.17.t
+	desc = luxembourg.17.d
+	picture = GFX_report_event_canada_treaty
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = luxembourg.17.a	#yes
+		ai_chance = { factor = 100 }
+		LUX = {
+			annex_country = {
+				target = BEL
+				transfer_troops = no
+			}
+		}
+	}
+}
+country_event = { #Belgium Refuses Compensation
+	id = luxembourg.18
+	title = luxembourg.18.t
+	desc = luxembourg.18.d
+	picture = GFX_report_event_generic_army
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = luxembourg.18.a	#yes
+		ai_chance = { factor = 100 }
+		LUX = {
+			create_wargoal = {
+				type = annex_everything
+				target = BEL
+			}
+		}
+	}
+}
+country_event = { #Scott Rises to Power
+	id = luxembourg.19
+	title = luxembourg.19.t
+	desc = luxembourg.19.d
+	picture = GFX_report_event_generic_conference
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = luxembourg.19.a	#civil war
+		ai_chance = { factor = 100 }
+		trigger = { has_country_flag = scott_civil_war }
+		hidden_effect = {
+			start_civil_war = {
+				ruling_party = neutrality #ideology of new player country
+				ideology = ROOT #ideology of ai country created
+				size = 0.5
+				#only_own_territory = yes
+			}
+			set_cosmetic_tag = LUX_NEU
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.5
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+			set_political_party = {
+				ideology = democratic
+				popularity = 0.0
+			}
+			
+			
+			random_other_country = { # OLD COUNTRY EFFECTS
+				limit = {
+					original_tag = ROOT
+					NOT = { has_country_flag = scott_civil_war }
+				}
+				set_stability = 0.7
+				set_war_support = 0.6
+			}
+			
+		}
+		custom_effect_tooltip = LUX_tooltip_4
+		add_stability = -0.25
+		
+	}
+	option = {
+		name = luxembourg.19.b	#peaceful takeover
+		ai_chance = { factor = 100 }
+		trigger = { has_country_flag = scott_peaceful_takeover }
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.5
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+			set_cosmetic_tag = LUX_NEU
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+	}
+}
 
 
 

@@ -711,6 +711,15 @@ ideas = {
 			allowed = {
 				tag = LUX
 			}
+			
+			cancel = {
+				NOT = {
+					has_country_leader = {
+						name = "The Council"
+						ruling_only = yes
+					}
+				}
+			}
 
 			allowed_civil_war = {
 				always = yes
@@ -728,6 +737,15 @@ ideas = {
 			allowed = {
 				tag = LUX
 			}
+			
+			cancel = {
+				NOT = {
+					has_country_leader = {
+						name = "The Council"
+						ruling_only = yes
+					}
+				}
+			}
 
 			allowed_civil_war = {
 				always = yes
@@ -744,6 +762,15 @@ ideas = {
 			
 			allowed = {
 				tag = LUX
+			}
+			
+			cancel = {
+				NOT = {
+					has_country_leader = {
+						name = "The Council"
+						ruling_only = yes
+					}
+				}
 			}
 
 			allowed_civil_war = {

@@ -861,7 +861,7 @@ focus_tree = {
 		cost = 10
 		relative_position_id = LUX_internal_political_adjustments
 		prerequisite = { focus = LUX_internal_political_adjustments  }
-		mutually_exclusive = { focus = LUX_replace_the_council }
+		mutually_exclusive = { focus = LUX_the_greater_purge }
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
@@ -1352,6 +1352,10 @@ focus_tree = {
         
         x = -6
         y = 1
+		
+		bypass = {
+			NOT = { country_exists = BEL }
+		}
         
         cost = 10
         relative_position_id = LUX_replace_the_council
@@ -1359,7 +1363,15 @@ focus_tree = {
 		mutually_exclusive = { focus = LUX_make_investments }
         
         completion_reward = {
-            
+			#trigger event for belgium
+			#compensate losses through being annexed
+			BEL = {
+				country_event = luxembourg.16
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			} 
         }
         search_filters = {}
         ai_will_do = {
@@ -1373,13 +1385,20 @@ focus_tree = {
         
         x = 0
         y = 1
+		
+		available = {
+			controls_state = 6	#vlaanderen
+			controls_state = 34	#wallonie
+		}
         
-        cost = 10
+        cost = 5
         relative_position_id = LUX_demand_compensation
         prerequisite = { focus = LUX_demand_compensation}
         
         completion_reward = {
-            
+			#adds cores to belgium
+            add_state_core = 6
+			add_state_core = 34
         }
         search_filters = {}
         ai_will_do = {
@@ -1392,12 +1411,35 @@ focus_tree = {
         
         x = 0
         y = 1
+		
+		available = {
+			#has >40% support for non-aligned
+			neutrality > 0.4
+			num_of_controlled_states > 1
+			has_war = no
+		}
         
         cost = 10
         relative_position_id = LUX_integrate_belgium
         prerequisite = { focus = LUX_integrate_belgium}
         
         completion_reward = {
+			#if stability is < 50% then start a civil war
+			#change country leader to scott
+			#ruling party to non-aligned
+			#add 5% non-aligned support
+			#add 5% fascist support
+			hidden_effect = {
+				IF = { 
+					limit = { has_stability < 0.5 }
+					set_country_flag = scott_civil_war
+				}
+				ELSE = {
+					set_country_flag = scott_peaceful_takeover
+				}
+			}
+			custom_effect_tooltip = LUX_tooltip_5
+			country_event = luxembourg.19
             
         }
         search_filters = {}
