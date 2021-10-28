@@ -653,7 +653,7 @@ focus_tree = {
 	focus = {
 		id = LUX_political_effort
 		icon = GFX_goal_molotov_ribbentrop_pact
-		x = 22
+		x = 32
 		y = 0
 		
 		cost = 10
@@ -796,13 +796,13 @@ focus_tree = {
 	focus = {
 		id = LUX_the_greater_purge
 		icon = GFX_focus_generic_soviet_politics
-		x = -3
+		x = -15
 		y = 1
 		
 		cost = 20
 		relative_position_id = LUX_internal_political_adjustments
 		prerequisite = { focus = LUX_internal_political_adjustments  }
-		#mutually_exclusive = { focus = LUX_change_gov }
+		mutually_exclusive = { focus = LUX_replace_the_council }
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
@@ -849,17 +849,17 @@ focus_tree = {
 	}
 
 
-	#NON-ALIGNED
+	#NON-ALIGNED / COMMUNIST
 	focus = {
 		id = LUX_replace_the_council
 		icon = GFX_focus_generic_soviet_politics
-		x = 3
+		x = 15
 		y = 1
 		
 		cost = 10
 		relative_position_id = LUX_internal_political_adjustments
 		prerequisite = { focus = LUX_internal_political_adjustments  }
-		#mutually_exclusive = { focus = LUX_change_gov }
+		mutually_exclusive = { focus = LUX_replace_the_council }
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
@@ -880,7 +880,12 @@ focus_tree = {
 			factor = 12
 		}
 	}
-
+	
+	
+	
+	
+	
+	
 
 
 
@@ -890,13 +895,14 @@ focus_tree = {
         id = LUX_make_investments
         icon = GFX_
         
-        x = 2
+        x = 6
         y = 1
         
         cost = 10
 
         relative_position_id =  LUX_replace_the_council
         prerequisite = {focus = LUX_replace_the_council}
+		mutually_exclusive = { focus = LUX_demand_compensation }
         
         completion_reward = {
 			add_political_power = 50
@@ -1333,32 +1339,1007 @@ focus_tree = {
 
 	#Non-Aligned
 
+	 ###			   ###
+	## NON-ALIGNED SCOTT ##
+	 ###			   ###
+	
+	
 	focus = {
-		id = LUX_welcome_the_kaiser
-		icon = GFX_focus_generic_soviet_politics
-		x = -3
-		y = 1
-		
-		cost = 10
-		relative_position_id = LUX_replace_the_council
-		prerequisite = { focus = LUX_replace_the_council  }
+        id = LUX_demand_compensation
+        icon = GFX_
+        
+        x = -6
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_replace_the_council
+        prerequisite = { focus = LUX_replace_the_council }
 		mutually_exclusive = { focus = LUX_make_investments }
-		
-		search_filters = { }
-		completion_reward = {
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
 
-		}
-		ai_will_do = {
-			factor = 12
-		}
-	}
+    focus = {
+        id = LUX_integrate_belgium
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_demand_compensation
+        prerequisite = { focus = LUX_demand_compensation}
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_bring_scott_to_power
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_integrate_belgium
+        prerequisite = { focus = LUX_integrate_belgium}
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+	#NAVAL
+	focus = {
+        id = LUX_naval_expansion
+        icon = GFX_
+        
+        x = -4
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_bring_scott_to_power
+        prerequisite = { focus = LUX_bring_scott_to_power }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_innovate_naval_production
+        icon = GFX_
+        
+        x = -3
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_naval_expansion
+        prerequisite = { focus = LUX_naval_expansion }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_threaten_british_dominance
+        icon = GFX_
+        
+        x = -2
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_innovate_naval_production
+        prerequisite = { focus = LUX_innovate_naval_production }
+		mutually_exclusive = { focus = LUX_explore_all_options }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_iron_shield
+        icon = GFX_
+        
+        x = -1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_threaten_british_dominance
+        prerequisite = { focus = LUX_threaten_british_dominance }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_pride_of_the_navy
+        icon = GFX_
+        
+        x = 1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_threaten_british_dominance
+        prerequisite = { focus = LUX_threaten_british_dominance }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_our_place_in_the_seas
+        icon = GFX_
+        
+        x = 1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_iron_shield
+		prerequisite = { focus = LUX_iron_shield }
+        prerequisite = { focus = LUX_pride_of_the_navy }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_explore_all_options
+        icon = GFX_
+        
+        x = 2
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_innovate_naval_production
+        prerequisite = { focus = LUX_innovate_naval_production }
+		mutually_exclusive = { focus = LUX_threaten_british_dominance }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_attack_from_the_skies
+        icon = GFX_
+        
+        x = -1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_explore_all_options
+        prerequisite = { focus = LUX_explore_all_options }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_innovate_bomber_designs
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_attack_from_the_skies
+        prerequisite = { focus = LUX_attack_from_the_skies }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_improved_submarine_designs
+        icon = GFX_
+        
+        x = 1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_explore_all_options
+        prerequisite = { focus = LUX_explore_all_options }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_seek_new_ports
+        icon = GFX_
+        
+        x = 2
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_naval_expansion
+        prerequisite = { focus = LUX_naval_expansion }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_naval_powerhouse
+        icon = GFX_
+        
+        x = 1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_seek_new_ports
+        prerequisite = { focus = LUX_seek_new_ports }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_look_north
+        icon = GFX_
+        
+        x = -1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_seek_new_ports
+        prerequisite = { focus = LUX_seek_new_ports }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_atlantic_expansion
+        icon = GFX_
+        
+        x = 1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_look_north
+        prerequisite = { focus = LUX_look_north }
+		prerequisite = { focus = LUX_naval_powerhouse }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	
+	#POLITICAL BRANCH - NON-ALIGNED
+	focus = {
+        id = LUX_seek_english_aid
+        icon = GFX_
+        
+        x = 4	
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_bring_scott_to_power
+        prerequisite = { focus = LUX_bring_scott_to_power }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_improve_trade_relations
+        icon = GFX_
+        
+        x = -2
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_seek_english_aid
+        prerequisite = { focus = LUX_seek_english_aid }
+		mutually_exclusive = { focus = LUX_compete_with_the_british }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_influence_british_politics
+        icon = GFX_
+        
+        x = -1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_improve_trade_relations
+        prerequisite = { focus = LUX_improve_trade_relations }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_london_agreement
+        icon = GFX_
+        
+        x = 1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_improve_trade_relations
+        prerequisite = { focus = LUX_improve_trade_relations }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_turn_the_government
+        icon = GFX_
+        
+        x = -1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_influence_british_politics
+        prerequisite = { focus = LUX_influence_british_politics }
+		prerequisite = { focus = LUX_london_agreement }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_secure_trust
+        icon = GFX_
+        
+        x = -1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_london_agreement
+        prerequisite = { focus = LUX_london_agreement }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_persuade_the_british
+        icon = GFX_
+        
+        x = -1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_secure_trust
+        prerequisite = { focus = LUX_secure_trust focus = LUX_turn_the_government }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_war_with_british
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_persuade_the_british
+        prerequisite = { focus = LUX_persuade_the_british }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_join_the_allies
+        icon = GFX_
+        
+        x = 1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_secure_trust
+        prerequisite = { focus = LUX_secure_trust }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_allied_safety
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_join_the_allies
+        prerequisite = { focus = LUX_join_the_allies }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_compete_with_the_british
+        icon = GFX_
+        
+        x = 2
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_seek_english_aid
+        prerequisite = { focus = LUX_seek_english_aid }
+		mutually_exclusive = { focus = LUX_improve_trade_relations }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_dispatch_mercenaries
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_compete_with_the_british
+        prerequisite = { focus = LUX_compete_with_the_british }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_analyze_british_tactics
+        icon = GFX_
+        
+        x = -1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_dispatch_mercenaries
+        prerequisite = { focus = LUX_dispatch_mercenaries }
+		mutually_exclusive = { focus = LUX_survey_british_beaches }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_survey_british_beaches
+        icon = GFX_
+        
+        x = 1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_dispatch_mercenaries
+        prerequisite = { focus = LUX_dispatch_mercenaries }
+		mutually_exclusive = { focus = LUX_analyze_british_tactics }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_demand_colonial_territory
+        icon = GFX_
+        
+        x = -1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_survey_british_beaches
+        prerequisite = { focus = LUX_survey_british_beaches focus = LUX_analyze_british_tactics }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_westward_expansion
+        icon = GFX_
+        
+        x = -1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_demand_colonial_territory
+        prerequisite = { focus = LUX_demand_colonial_territory }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_seek_resources
+        icon = GFX_
+        
+        x = 1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_demand_colonial_territory
+        prerequisite = { focus = LUX_demand_colonial_territory }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_side_with_the_french
+        icon = GFX_
+        
+        x = 1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_war_with_british
+        prerequisite = { focus = LUX_allied_safety focus = LUX_war_with_british focus = LUX_westward_expansion focus = LUX_seek_resources }
+		mutually_exclusive = { focus = LUX_stand_alone focus = LUX_side_with_the_germans }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_defensive_tactics
+        icon = GFX_
+        
+        x = -4
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_side_with_the_french
+        prerequisite = { focus = LUX_side_with_the_french }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_tackle_the_german_threat
+        icon = GFX_
+        
+        x = -2
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_side_with_the_french
+        prerequisite = { focus = LUX_side_with_the_french }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_integrate_the_germans
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_tackle_the_german_threat
+        prerequisite = { focus = LUX_tackle_the_german_threat }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_study_french_tech
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_side_with_the_french
+        prerequisite = { focus = LUX_side_with_the_french }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_develop_worker_laws
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_study_french_tech
+        prerequisite = { focus = LUX_study_french_tech }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_irish_occupation
+        icon = GFX_
+        
+        x = -1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_war_with_british
+        prerequisite = { focus = LUX_war_with_british }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_side_with_the_germans
+        icon = GFX_
+        
+        x = -1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_westward_expansion
+        prerequisite = { focus = LUX_westward_expansion focus = LUX_war_with_british focus = LUX_seek_resources }
+		mutually_exclusive = { focus = LUX_side_with_the_french focus = LUX_stand_alone }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_study_german_tech
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_side_with_the_germans
+        prerequisite = { focus = LUX_side_with_the_germans }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_military_propaganda
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_study_german_tech
+        prerequisite = { focus = LUX_study_german_tech }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_french_vassalization
+        icon = GFX_
+        
+        x = 2
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_side_with_the_germans
+        prerequisite = { focus = LUX_side_with_the_germans focus = LUX_stand_alone }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_integrate_the_french
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_french_vassalization
+        prerequisite = { focus = LUX_french_vassalization }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_stand_alone
+        icon = GFX_
+        
+        x = 1
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_seek_resources
+        prerequisite = { focus = LUX_westward_expansion focus = LUX_war_with_british focus = LUX_seek_resources }
+		mutually_exclusive = { focus = LUX_side_with_the_french focus = LUX_side_with_the_germans }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_unite_luxembourg_and_germany
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_stand_alone
+        prerequisite = { focus = LUX_stand_alone }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_a_new_empire
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_unite_luxembourg_and_germany
+        prerequisite = { focus = LUX_unite_luxembourg_and_germany }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_for_the_king
+        icon = GFX_
+        
+        x = 2
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_stand_alone
+        prerequisite = { focus = LUX_stand_alone }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    focus = {
+        id = LUX_final_stand
+        icon = GFX_
+        
+        x = 0
+        y = 1
+        
+        cost = 10
+        relative_position_id = LUX_for_the_king
+        prerequisite = { focus = LUX_for_the_king }
+        
+        completion_reward = {
+            
+        }
+        search_filters = {}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	
+	
 
 
 	#DEMOCRATIC
 	focus = {
 		id = LUX_keep_gov
 		icon = GFX_goal_generic_neutrality_focus
-		x = 6
+		x = 22
 		y = 1
 		
 		cost = 10
@@ -2019,7 +3000,7 @@ focus_tree = {
 	focus = {
 		id = LUX_army_training
 		icon = GFX_goal_generic_axis_build_infantry
-		x = 18
+		x = 36
 		y = 0
 
 		relative_position_id = LUX_political_effort
