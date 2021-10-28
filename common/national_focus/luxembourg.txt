@@ -1455,6 +1455,13 @@ focus_tree = {
         
         x = -4
         y = 1
+		
+		available = {
+			any_owned_state = {
+				is_controlled_by = ROOT
+				is_coastal = yes
+			}
+		}
         
         cost = 10
         relative_position_id = LUX_bring_scott_to_power
